@@ -157,11 +157,11 @@ export default function Navbar({ darkMode, setDarkMode }) {
           </button>
 
           {/* ================= MOBILE MENU BUTTON ================= */}
-          <button
-            type="button"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="
+         <button
+  type="button"
+  aria-label={menuOpen ? "Close menu" : "Open menu"}
+  onClick={() => setMenuOpen(!menuOpen)}
+  className="
     lg:hidden
     flex
     h-10
@@ -169,11 +169,6 @@ export default function Navbar({ darkMode, setDarkMode }) {
     items-center
     justify-center
   "
-          >
-          <button
-  type="button"
-  onClick={() => setMenuOpen(!menuOpen)}
-  aria-label={menuOpen ? "Close menu" : "Open menu"}
 >
   {menuOpen ? (
     <IoCloseOutline
@@ -185,7 +180,6 @@ export default function Navbar({ darkMode, setDarkMode }) {
     />
   )}
 </button>
-          </button>
         </div>
       </nav>
       {/* ================= MOBILE MENU PANEL ================= */}
@@ -200,7 +194,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
      py-2
     "
         >
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3">
             {navLinks.map((link) => {
               const active = pathname === link.href;
 
@@ -212,10 +206,10 @@ export default function Navbar({ darkMode, setDarkMode }) {
     text-xs
     lg:text-sm
     font-normal
-    px-5
+    px-2
 pt-0
 pb-[5px]
-    border-b-2
+    border-b
     transition-colors
     duration-200
 
@@ -239,8 +233,9 @@ pb-[5px]
           border
          border-[var(--theme-title-text)]
           bg-transparent
-          px-5
-          py-2
+          px-3
+py-1
+text-sm
           text-[var(--theme-title-text)]
         "
               >
@@ -255,8 +250,9 @@ pb-[5px]
           border
           border-[var(--theme-btn-bg)]
           bg-[var(--theme-btn-bg)]
-          px-5
-          py-2
+          px-3
+py-1
+text-sm
           text-white
         "
               >
