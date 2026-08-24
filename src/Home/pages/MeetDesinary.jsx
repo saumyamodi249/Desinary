@@ -2,31 +2,28 @@ import { meetDesinary } from "../data/data";
 
 export default function MeetDesinary() {
   return (
-<section className="meet-desinary-page w-full">
-        <div className="w-full px-10 py-16 md:px-12 md:py-20 lg:px-4 lg:py-16">
+    <section className="meet-desinary-page w-full">
+      <div className="w-full px-6 py-12 md:px-12 md:py-16">
         {/* Top Content */}
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.05fr_0.95fr] md:gap-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20">
+        <div className="mx-auto max-w-6xl grid grid-cols-1 gap-10 md:grid-cols-[1.05fr_0.95fr] md:gap-14">
           {/* Heading */}
-          <div className="flex w-full items-start justify-center lg:translate-x-20 lg:translate-y-12">
+          <div className="flex w-full items-start justify-center">
             <h2
               className="
                 max-w-[760px]
                 font-['Poppins',sans-serif]
-                text-[48px]
+                text-[36px]
                 font-bold
                 leading-[1.2]
-                tracking-[-1.8px]
+                tracking-[-1.5px]
                 text-[var(--theme-title-text)]
-                md:text-[52px]
-                lg:text-[50px]
-                lg:leading-[1.5]
-                
+                md:text-[44px]
+                lg:text-[48px]
               "
             >
               <span className="text-[var(--theme-accent-text)]">
                 {meetDesinary.titleHighlight}
-              </span>
-
+              </span>{" "}
               {meetDesinary.titleSuffix}
               <br />
               <span className="text-[var(--theme-accent-text)]">
@@ -36,20 +33,16 @@ export default function MeetDesinary() {
           </div>
 
           {/* Description */}
-        <div className="w-full max-w-[560px] pt-1 lg:mr-24 lg:pt-0">
+          <div className="w-full max-w-[520px]">
             <div
               className="
-                space-y-7
+                space-y-4
                 font-['Poppins',sans-serif]
-                text-[16px]
+                text-[14px]
                 font-normal
-                leading-[1.75]
+                leading-[1.7]
                 text-[var(--theme-body-text)]
-                md:text-[17px]
-                lg:text-[13px]
-                lg:leading-[2.25]
-                translate-y-4
-                translate-x-1
+                md:text-[15px]
               "
             >
               {meetDesinary.paragraphs.map((p, i) => (
@@ -59,74 +52,38 @@ export default function MeetDesinary() {
           </div>
         </div>
 
-        {/* Stats */}
-        <div
-          className="
-            mt-16
-            overflow-hidden
-            rounded-[4px]
-            border
-            border-[var(--theme-border-color)]
-            bg-[var(--theme-card-bg)]
-            md:mt-20
-            lg:mt-24
-          "
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4">
-            {meetDesinary.stats.map((s, index) => (
-              <div
-                key={s.label}
-                className={`
-                  flex
-                  min-h-[115px]
-                  flex-col
-                  items-center
-                  justify-center
-                  px-4
-                  py-6
-                  text-center
-
-                  ${index !== 0 ? "border-l border-[var(--theme-divider-color)]" : ""}
-
-                  ${
-                    index === 1 || index === 2 || index === 3
-                      ? "border-t border-[var(--theme-divider-color)] md:border-t-0"
-                      : ""
-                  }
-                `}
-              >
-                <p
-                  className="
-                    font-['Poppins',sans-serif]
-                    text-[34px]
-                    font-semibold
-                    leading-none
-                    tracking-[-1px]
-                    text-[var(--theme-title-text)]
-                    md:text-[36px]
-                  "
+        {/* Small & Compact Centered Stats Box */}
+        {/* Stretched Outer Box with Fixed/Stuck Inner Items */}
+        <div className="mx-auto mt-12 w-full max-w-[1150px]">
+          <div className="w-full rounded-2xl border border-[var(--theme-border-color)] bg-[var(--theme-card-bg)] px-4 py-5 shadow-sm sm:py-6">
+            {/* Inner Container: Elements ki location locked rahegi */}
+            <div className="mx-auto flex max-w-[850px] items-center justify-between">
+              {meetDesinary.stats.map((s, index) => (
+                <div
+                  key={s.label}
+                  className="flex flex-1 items-center justify-between"
                 >
-                  {s.value}
-                </p>
+                  {/* Stat Content (Fixed size & alignment) */}
+                  <div className="flex flex-1 flex-col items-center justify-center text-center">
+                    <p className="font-family text-[26px] font-bold tracking-tight text-[var(--theme-title-text)] md:text-[30px]">
+                      {s.value}
+                    </p>
 
-                <p
-                  className="
-                    mt-3
-                    font-['Poppins',sans-serif]
-                    text-[14px]
-                    font-normal
-                    text-[var(--theme-accent-text)]
-                    md:text-[15px]
-                  "
-                >
-                  {s.label}
-                </p>
-              </div>
-            ))}
+                    <p className="mt-1 font-family text-[12px] font-medium text-[var(--theme-accent-text)] md:text-[13px]">
+                      {s.label}
+                    </p>
+                  </div>
+
+                  {/* Vertical Divider */}
+                  {index !== meetDesinary.stats.length - 1 && (
+                    <div className="hidden h-14 w-[1px] bg-[var(--theme-divider-color)] opacity-70 sm:block" />
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-
     </section>
   );
 }
