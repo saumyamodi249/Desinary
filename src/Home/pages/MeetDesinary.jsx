@@ -2,36 +2,131 @@ import { meetDesinary } from "../data/data";
 
 export default function MeetDesinary() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-16">
-      <div className="rounded-3xl border border-dashed border-coral-200 p-8 md:p-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <h2 className="text-3xl font-extrabold leading-snug text-ink-900 md:text-4xl">
-            {meetDesinary.titlePrefix}
-            <span className="text-coral-500">
-              {meetDesinary.titleHighlight}
-            </span>
-            {meetDesinary.titleSuffix}
-          </h2>
-          <div className="space-y-4 text-sm text-gray-500">
-            {meetDesinary.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+<section className="meet-desinary-page w-full">
+        <div className="w-full px-10 py-16 md:px-12 md:py-20 lg:px-4 lg:py-16">
+        {/* Top Content */}
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.05fr_0.95fr] md:gap-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20">
+          {/* Heading */}
+          <div className="flex w-full items-start justify-center lg:translate-x-20 lg:translate-y-12">
+            <h2
+              className="
+                max-w-[760px]
+                font-['Poppins',sans-serif]
+                text-[48px]
+                font-bold
+                leading-[1.2]
+                tracking-[-1.8px]
+                text-[var(--theme-title-text)]
+                md:text-[52px]
+                lg:text-[50px]
+                lg:leading-[1.5]
+                
+              "
+            >
+              <span className="text-[var(--theme-accent-text)]">
+                {meetDesinary.titleHighlight}
+              </span>
+
+              {meetDesinary.titleSuffix}
+              <br />
+              <span className="text-[var(--theme-accent-text)]">
+                {meetDesinary.titleHighlight2}
+              </span>
+            </h2>
+          </div>
+
+          {/* Description */}
+        <div className="w-full max-w-[560px] pt-1 lg:mr-24 lg:pt-0">
+            <div
+              className="
+                space-y-7
+                font-['Poppins',sans-serif]
+                text-[16px]
+                font-normal
+                leading-[1.75]
+                text-[var(--theme-body-text)]
+                md:text-[17px]
+                lg:text-[13px]
+                lg:leading-[2.25]
+                translate-y-4
+                translate-x-1
+              "
+            >
+              {meetDesinary.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 divide-x divide-coral-200 rounded-2xl bg-coral-50 md:grid-cols-4">
-          {meetDesinary.stats.map((s) => (
-            <div key={s.label} className="px-4 py-6 text-center">
-              <p className="text-2xl font-extrabold text-ink-900 md:text-3xl">
-                {s.value}
-              </p>
-              <p className="mt-1 text-xs font-medium text-coral-500 md:text-sm">
-                {s.label}
-              </p>
-            </div>
-          ))}
+        {/* Stats */}
+        <div
+          className="
+            mt-16
+            overflow-hidden
+            rounded-[4px]
+            border
+            border-[var(--theme-border-color)]
+            bg-[var(--theme-card-bg)]
+            md:mt-20
+            lg:mt-24
+          "
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {meetDesinary.stats.map((s, index) => (
+              <div
+                key={s.label}
+                className={`
+                  flex
+                  min-h-[115px]
+                  flex-col
+                  items-center
+                  justify-center
+                  px-4
+                  py-6
+                  text-center
+
+                  ${index !== 0 ? "border-l border-[var(--theme-divider-color)]" : ""}
+
+                  ${
+                    index === 1 || index === 2 || index === 3
+                      ? "border-t border-[var(--theme-divider-color)] md:border-t-0"
+                      : ""
+                  }
+                `}
+              >
+                <p
+                  className="
+                    font-['Poppins',sans-serif]
+                    text-[34px]
+                    font-semibold
+                    leading-none
+                    tracking-[-1px]
+                    text-[var(--theme-title-text)]
+                    md:text-[36px]
+                  "
+                >
+                  {s.value}
+                </p>
+
+                <p
+                  className="
+                    mt-3
+                    font-['Poppins',sans-serif]
+                    text-[14px]
+                    font-normal
+                    text-[var(--theme-accent-text)]
+                    md:text-[15px]
+                  "
+                >
+                  {s.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
     </section>
   );
 }
