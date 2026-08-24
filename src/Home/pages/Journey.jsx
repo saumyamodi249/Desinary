@@ -2,43 +2,57 @@ import { journey } from "../data/data";
 
 export default function Journey() {
   return (
-    <section className="mx-auto max-w-4xl px-6 py-16">
-      <div className="mb-12 text-center">
-        <h2 className="text-3xl font-extrabold text-ink-900 md:text-4xl">
-          {journey.titlePrefix}
+    <section className="w-full bg-[var(--theme-bg-journey)] py-16 md:py-24">
+      {/* Heading */}
+      <div className="mb-14 text-center">
+        <h2 className="text-3xl font-extrabold text-[var(--theme-title-text)] md:text-5xl">
+          {journey.titlePrefix}{" "}
           <span className="text-coral-500">{journey.titleHighlight}</span>
+          <span> {journey.titlePostfix}</span>
         </h2>
-        <p className="mx-auto mt-3 max-w-xl text-sm text-gray-500">
+
+        <p className="mx-auto mt-4 max-w-2xl text-sm text-[var(--theme-body-text)] md:text-base">
           {journey.subtitle}
         </p>
       </div>
 
-      <div className="space-y-14">
-        {journey.steps.map((step, i) => (
-          <div
-            key={step.number}
-            className={`grid grid-cols-1 items-center gap-6 md:grid-cols-2 ${
-              i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
-            }`}
-          >
-            <div>
-              <span className="text-sm font-bold text-coral-500">
-                {step.number}
-              </span>
-              <h3 className="mt-1 text-xl font-bold text-ink-900">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-sm text-gray-500">{step.description}</p>
+      {/* Main Outer Box */}
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-8 lg:px-12">
+        <div className="space-y-10 rounded-[36px] bg-[var(--theme-bg-journey)] p-6 md:p-10">
+          {journey.steps.map((step, i) => (
+            /* Inside Card Box */
+            <div
+              key={step.number}
+              className={`group flex w-full flex-col items-center gap-8 rounded-[30px] border border-[var(--theme-border-color)] bg-[var(--theme-card-bg)] p-6 shadow-sm transition-all duration-300 hover:border-[var(--theme-divider-color)] hover:shadow-xl sm:p-8 lg:flex-row lg:gap-14 lg:p-10 ${
+                i % 2 === 1 ? "lg:flex-row-reverse" : ""
+              }`}
+            >
+              {/* Wide Rectangle Image */}
+              <div className="w-full shrink-0 overflow-hidden rounded-[20px] lg:w-[54%]">
+                <img
+                  src={step.image}
+                  alt={step.title}
+                  className="aspect-[16/11] h-auto w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                />
+              </div>
+
+              {/* Text Content */}
+              <div className="flex w-full flex-col justify-center space-y-4 px-2 lg:w-[46%] lg:px-4">
+                <span className="text-xl font-bold text-[var(--theme-divider-color)] md:text-2xl">
+                  {step.number}
+                </span>
+
+                <h3 className="text-2xl font-bold tracking-tight text-[var(--theme-title-text)] md:text-4xl">
+                  {step.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-[var(--theme-body-text)] md:text-[17px]">
+                  {step.description}
+                </p>
+              </div>
             </div>
-            <div className="overflow-hidden rounded-2xl">
-              <img
-                src={step.image}
-                alt={step.title}
-                className="h-48 w-full object-cover md:h-56"
-              />
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
