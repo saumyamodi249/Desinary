@@ -84,8 +84,6 @@ export default function Navbar({ darkMode, setDarkMode }) {
               items-center
               justify-center
               rounded-sm
-              border
-              border-[var(--theme-border-color)]
               bg-[var(--theme-toggle-bg)]
               transition-all
               duration-300
@@ -149,8 +147,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
               items-center
               justify-center
               rounded-sm
-              border
-              border-[var(--theme-border-color)]
+        
               bg-[var(--theme-toggle-bg)]
               transition-all
               duration-300
