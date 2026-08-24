@@ -43,17 +43,17 @@ export default function Hero() {
             {/* Start Designing Button */}
             <div className="mt-4 lg:mt-8">
               <button
-                type="button"
-                className="text-sm lg:text-base rounded-md bg-[var(--theme-btn-bg)] px-[10px] sm:px-[14px] py-[8px] lg:py-[10px] !text-[var(--theme-bg-primary)] tracking-wide transition-all duration-300 ease-in-out hover:bg-[var(--theme-btn-bg-hover)] flex gap-2 items-center"
-              >
-                Start Designing
+  type="button"
+  className="flex items-center gap-2 rounded-md bg-[var(--theme-btn-bg)] px-[10px] py-[8px] text-sm tracking-wide text-white transition-all duration-300 ease-in-out hover:bg-[var(--theme-btn-bg-hover)] sm:px-[14px] lg:py-[10px] lg:text-base"
+>
+  Start Designing
 
-                <img
-                  src="/Home/1st/arrow.svg"
-                  alt="Arrow"
-                  className="h-3.5 w-3.5 translate-y-[1px]"
-                />
-              </button>
+  <img
+    src="/Home/1st/arrow.svg"
+    alt="Arrow"
+    className="h-3.5 w-3.5 translate-y-[1px]"
+  />
+</button>
             </div>
           </div>
 

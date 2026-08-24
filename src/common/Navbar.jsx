@@ -157,11 +157,11 @@ export default function Navbar({ darkMode, setDarkMode }) {
           </button>
 
           {/* ================= MOBILE MENU BUTTON ================= */}
-         <button
-  type="button"
-  aria-label={menuOpen ? "Close menu" : "Open menu"}
-  onClick={() => setMenuOpen(!menuOpen)}
-  className="
+          <button
+            type="button"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="
     lg:hidden
     flex
     h-10
@@ -169,17 +169,17 @@ export default function Navbar({ darkMode, setDarkMode }) {
     items-center
     justify-center
   "
->
-  {menuOpen ? (
-    <IoCloseOutline
-      className={`text-3xl ${darkMode ? "text-white" : "text-black"}`}
-    />
-  ) : (
-    <HiOutlineBars3
-      className={`text-3xl ${darkMode ? "text-white" : "text-black"}`}
-    />
-  )}
-</button>
+          >
+            {menuOpen ? (
+              <IoCloseOutline
+                className={`text-3xl ${darkMode ? "text-white" : "text-black"}`}
+              />
+            ) : (
+              <HiOutlineBars3
+                className={`text-3xl ${darkMode ? "text-white" : "text-black"}`}
+              />
+            )}
+          </button>
         </div>
       </nav>
       {/* ================= MOBILE MENU PANEL ================= */}
