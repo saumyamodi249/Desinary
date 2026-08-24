@@ -22,11 +22,12 @@ export default function Journey() {
           {journey.steps.map((step, i) => (
             /* Inside Card Box */
             <div
-              key={step.number}
-              className={`group flex w-full flex-col items-center gap-8 rounded-[30px] border border-[var(--theme-border-color)] bg-[var(--theme-card-bg)] p-6 shadow-sm transition-all duration-300 hover:border-[var(--theme-divider-color)] hover:shadow-xl sm:p-8 lg:flex-row lg:gap-14 lg:p-10 ${
-                i % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
-            >
+  key={step.number}
+  className={`group flex w-full flex-col items-center gap-8 rounded-[30px] border border-[var(--theme-border-color)] bg-[var(--theme-bg-primary)] p-6 shadow-sm transition-all duration-300 hover:border-[var(--theme-bg-bg-box-hover)] hover:shadow-xl sm:p-8 lg:flex-row lg:gap-14 lg:p-10
+     ${
+    i % 2 === 1 ? "lg:flex-row-reverse" : ""
+  }`}
+>
               {/* Wide Rectangle Image */}
               <div className="w-full shrink-0 overflow-hidden rounded-[20px] lg:w-[54%]">
                 <img
