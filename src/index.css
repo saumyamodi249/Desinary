@@ -6,6 +6,32 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --theme-bg-primary: #ffffff;
+  --theme-bg-secondary: #f8fafc;
+  --theme-title-text: #111827;
+  --theme-btn-bg: #d05741;
+  --theme-btn-bg-hover: #b94734;
+  --theme-border-color: #e5e7eb;
+  --theme-white: #ffffff;
+}
+
+.dark {
+  --theme-bg-primary: #000000;
+  --theme-bg-secondary: #111111;
+  --theme-title-text: #ffffff;
+  --theme-btn-bg: #d05741;
+  --theme-btn-bg-hover: #b94734;
+  --theme-border-color: #333333;
+  --theme-white: #ffffff;
+}
+
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--theme-bg-primary);
+  color: var(--theme-title-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }

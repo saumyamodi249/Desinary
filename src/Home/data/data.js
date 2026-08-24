@@ -27,7 +27,7 @@ export const hero = {
     "https://i.pravatar.cc/64?img=5",
   ],
   image:
-    "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1616486338d812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop",
 };
 
 export const meetDesinary = {
