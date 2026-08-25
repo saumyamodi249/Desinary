@@ -5,27 +5,146 @@
 html {
   scroll-behavior: smooth;
 }
-
 :root {
+  --theme-white:#F8F8F8;
   --theme-bg-primary: #ffffff;
   --theme-bg-secondary: #f8fafc;
-  --theme-title-text: #111827;
+
+  --theme-title-text: #202020;
+  --theme-body-text: #666666;
+  --theme-accent-text: #d97967;
+
   --theme-btn-bg: #d05741;
   --theme-btn-bg-hover: #b94734;
+
   --theme-border-color: #e5e7eb;
+  --theme-divider-color: #e98b7c;
+
   --theme-white: #ffffff;
+  --theme-toggle-bg: #fffaf9;
+
+  --theme-bg-MeetDesinary: #2A110D;
+  --theme-bg-MeetDesinary-description: #656565;
+  --theme-bg-MeetDesinary-border:#FFE6E1;
+
+
+  /* Stats box */
+  --theme-card-bg: #fffaf9;
+  --theme-bg-journey: #FFFAF9;
+  --theme-bg-journey-inside: #e5e7eb;
+  --theme-bg-bg-box:#EFEFEF;
+  --theme-bg-bg-box-hover:#d97967;
+  --theme-bg-box-journey-inside:#FFFAF9;
+
+   --theme-journey-number:#2A110D;
+  --theme-journey-title:#2A110D;
+  --theme-journey-description:#656565;
+  --theme-journey-text-small: #656565;
+
+  --theme-Features-text:#ffffff;
+  --theme-Features-text-right:#656565;
+
+--theme-Features-img-text-left:#2A110D;
+--theme-Features-img-text-left:#FFFFFF;
+--theme-Features-img-text-right:#656565;
+
+--theme-about-us-bg: #f8f8f8;
+  --theme-about-us-border: #efefef;
+
+  --theme-about-us-bg-hover: #fffaf9;
+  --theme-about-us-border-hover: #ffd9d2;
+
+  --theme-Footer-text:#2A110D;
+  --theme-Footer-text-small:#656565;
+
+ --theme-FAQ-bg: #FFFFFF;
+  --theme-FAQ-text: #2A110D;
+  --theme-FAQ-text-org: #D97967;
+  --theme-FAQ-text-small: #656565;
+  --theme-FAQ-text-hover: #D05741;
+  --theme-FAQ-hover-text: #FFFFFF;
+  --theme-FAQ-border: #E5E5E5;
+
+
+  --theme-BeforeAfter-title:#2A110D;
+   --theme-BeforeAfter-text-org: #D97967;
+     --theme-bg-BeforeAfter-description: #656565;
+
 }
+
+
+
+
+
+
 
 .dark {
+
+   --theme-white:#F8F8F8;
   --theme-bg-primary: #000000;
   --theme-bg-secondary: #111111;
+
   --theme-title-text: #ffffff;
+  --theme-body-text: #cccccc;
+  --theme-accent-text: #d97967;
+
   --theme-btn-bg: #d05741;
   --theme-btn-bg-hover: #b94734;
+
   --theme-border-color: #333333;
+  --theme-divider-color: #d97967;
+
   --theme-white: #ffffff;
+  --theme-toggle-bg: #2b2b2b;
+
+
+   --theme-bg-MeetDesinary: #ffffff;
+     --theme-bg-MeetDesinary-description: ##BBBBBB;
+      --theme-bg-MeetDesinary-border:#3E3E3E;
+
+
+
+  /* Stats box */
+  --theme-card-bg: #2A2A2A;
+  --theme-bg-journey: #303030;
+  --theme-bg-journey-inside:#3E3E3E;
+  --theme-bg-bg-box:#303030;
+  --theme-bg-bg-box-hover:#cccccc;
+  -theme-bg-box-journey-inside:#2A2A2A;
+  --theme-journey-number:#FFF2F0;
+  --theme-journey-title:#FFFFFF;
+  --theme-journey-description:#BBBBBB;
+
+--theme-Features-text:#BBBBBB;
+  --theme-Features-text-right:#BBBBBB;
+--theme-Features-img-text-left:#FFFFFF;
+--theme-Features-img-text-right:#BBBBBB;
+
+--theme-about-us-bg: #303030;
+  --theme-about-us-border: #303030;
+  --theme-about-us-bg-hover: #333333;
+  --theme-about-us-border-hover: #7b7b7b;
+  
+  --theme-Footer-text:#FFFFFF;
+  --theme-Footer-text-small:#BBBBBB;
+
+ --theme-FAQ-bg: #1B1B1B;
+  --theme-FAQ-text: #FFFFFF;
+  --theme-FAQ-text-org: #D97967;
+  --theme-FAQ-text-small: #D0D0D0;
+  --theme-FAQ-text-hover: #F05B43;
+  --theme-FAQ-hover-text: #FFFFFF;
+  --theme-FAQ-border: #3A3A3A;
+}
+.meet-desinary-page {
+  background-color: #ffffff;
 }
 
+.dark .meet-desinary-page {
+  background-color: #1c1c1c;
+}
+
+html,
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -35,3 +154,28 @@ body {
     background-color 0.3s ease,
     color 0.3s ease;
 }
+
+/* Testimonials Swiper Pagination */
+
+  .testimonial-pagination .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    margin: 0 !important;
+    border-radius: 9999px;
+    background: #eeeeee;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-pagination .swiper-pagination-bullet-active {
+    width: 7px;
+    height: 7px;
+    background: #d97662;
+  }
+
+  /* Hide Swiper's default navigation */
+  .testimonials-swiper .swiper-button-prev,
+  .testimonials-swiper .swiper-button-next {
+    display: none;
+  }
+  

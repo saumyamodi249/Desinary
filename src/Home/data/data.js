@@ -31,13 +31,13 @@ export const hero = {
 };
 
 export const meetDesinary = {
-  titlePrefix: "Meet ",
-  titleHighlight: "Desinary",
-  titleSuffix: " — your intelligent interior design partner",
+  titleHighlight: "Meet Desinary",
+  titleSuffix: " — your intelligent interior ",
+  titleHighlight2: " design partner",
   paragraphs: [
-    "Desinary blends the power of AI with manual flexibility to help you create beautiful, functional living spaces effortlessly.",
-    "Upload a room scan, pick a template or style, and explore smart layouts or design it all yourself.",
-    "From concept to cost review, Desinary brings your vision to life — fast, accurate, and truly personalized. Step into the future of interior design with Desinary.",
+    "Desinary combines the power of AI with the freedom of manual control, helping you create beautiful, functional spaces effortlessly.",
+    "Simply upload a room scan, choose your preferred style or template, and explore smart, pre-optimized layouts, or design everything your way.",
+    "From concept to cost planning, Desinary brings your vision to life — fast, accurate, and fully personalized. Step into the future of interior design, where intelligence meets creativity, and your space becomes truly yours.",
   ],
   stats: [
     { value: "50k+", label: "Satisfied Clients" },
@@ -48,132 +48,184 @@ export const meetDesinary = {
 };
 
 export const journey = {
-  titlePrefix: "Your Journey with ",
-  titleHighlight: "Desinary",
+  titlePrefix: "Your",
+  titleHighlight: "Journey",
+  titlePostfix: "with Desinary",
   subtitle:
-    "A simple, guided path from your first sign-up to a finished, move-in-ready space.",
+    "From inspiration to installation, discover how Desinary seamlessly transformsyour vision into a beautifully designed and personalized living space.",
+
   steps: [
     {
       number: "01",
-      title: "Sign up and Get Started",
+      title: "Sign Up and Register",
       description:
-        "Create your free Desinary account in seconds and unlock access to every design tool the platform offers.",
-      image:
-        "https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=800&auto=format&fit=crop",
+        "Get started by creating your Desinary account. The quick and secure sign-up process opens the door to your personalized interior design journey. Whether you're a homeowner or a design enthusiast, Desinary adapts to your needs. Gain access to powerful AI tools and intuitive manual features—all in one smart platform.",
+      image: "/Home/2nd/1st.svg",
     },
     {
       number: "02",
-      title: "Enter Your Design Space",
+      title: "Select Your Design Input",
       description:
-        "Upload a scan, drawing, or photo of your room so Desinary can map the space accurately before you design.",
-      image:
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800&auto=format&fit=crop",
+        "Kickstart your project by uploading basic room inputs—images, measurements, or a simple room scan. Then, define your design vision:Choose a preferred interior style (e.g. Japandi, Boho, Modern Luxe, Scandinavian, etc.)Set your design goals (maximize space, create a cozy vibe, add multifunctional furniture)Choose your budget range so our system aligns layout suggestions and product picks with your financial comfort Desinary’s AI uses this data to build a design logic tailored to your space type, usage pattern, and personality—eliminating guesswork right from the start.",
+      image: "/Home/2nd/2nd.svg",
     },
     {
       number: "03",
-      title: "Pick a Template, Style or Apply Custom Setting",
+      title: "Personalize Your Space with Style and Furniture",
       description:
-        "Choose from curated templates and styles, or set your own preferences and let Desinary tailor the layout to you.",
-      image:
-        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop",
+        "Once your 3D room model is ready, explore a range of interior styles tailored to you. After selecting a style, you can manually place furniture or let Desinary auto-generate a furnished space from a predefined list. Every detail reflects your vision.",
+      image: "/Home/2nd/3rd.svg",
     },
     {
       number: "04",
-      title: "Design with AI or Manual Assistance",
+      title: "Design with AI-Powered Assistance",
       description:
-        "Let AI generate a full layout instantly, or fine-tune every piece yourself with simple drag-and-drop controls.",
-      image:
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      number: "05",
-      title: "Review Pricing and Finalize",
-      description:
-        "See real-time, transparent pricing for every item in your design before you confirm and check out.",
-      image:
-        "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?q=80&w=800&auto=format&fit=crop",
+        "Describe your interior preferences using voice or text, and Desinary’s AI will automatically generate a complete room layout with matching styles and furniture. The design is fully editable, giving you the freedom to fine-tune each element to match your vision perfectly. You can also review detailed pricing at the end to keep track of your budget.",
+      image: "/Home/2nd/4th.svg",
     },
   ],
-};
+   result: {
+    titlePrefix: "The",
+    titleHighlight: "Result",
+    titlePostfix: ", You Will Get",
 
+    image: "/Home/2nd/5th.svg",
+
+    points: [
+      "A fully customized layout ready for execution",
+      "A design file that’s printable, shareable, and editable",
+      "Real-time AI support to continue iterating if needed",
+      "Smart, beautiful, and personalized interiors—powered by logic, built for life",
+    ],
+  },
+};
 export const features = {
-  titlePrefix: "Trusted Choice for ",
-  titleHighlight: "Interior Innovation",
+  titleLine1: "Trusted Choice for",
+  titleLine2Prefix: "Interior",
+  titleHighlight: "Innovation",
+
   description:
     "Discover the powerful tools, intelligent design options, and seamless experience that make Desinary the ultimate solution for modern interior transformations.",
+
   items: [
     {
       title: "Multiple Layout Input Options",
+      heading: "Start your project your way.",
       description:
-        "Design rooms using templates, drawings, scans, or uploads — choose the input method that suits you.",
-      image:
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=400&auto=format&fit=crop",
+        "Upload room photos, measurements, or scanned layouts, or choose from existing templates to begin designing instantly. Desinary adapts to the input method that best suits your space and comfort level.",
+      image: "/Home/3rd/1st.svg",
     },
+
     {
       title: "AI-Powered Smart Design Assistance",
+      heading: "Let our intelligent engine do the heavy lifting.",
       description:
-        "Automatically generate personalized layouts and furniture using AI with voice or text-based inputs.",
-      image:
-        "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=400&auto=format&fit=crop",
+        "Describe your preferences through voice or text, and Desinary's AI will generate a complete, style-aligned layout—complete with furniture suggestions, functional zoning, and optimized spacing logic.",
+      image: "/Home/3rd/2nd.svg",
     },
+
     {
       title: "Manual Customization with Drag & Drop",
+      heading: "Love to get hands-on? You can.",
       description:
-        "Manually place and adjust furniture in an interactive 3D space with simple drag-and-drop tools.",
-      image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop",
+        "Use our intuitive drag-and-drop interface to manually place furniture, adjust finishes, change colors, or refine layout details—all in a fully interactive 3D environment that reflects your unique style.",
+      image: "/Home/3rd/3rd.svg",
     },
+
     {
       title: "Dynamic Style and Budget Matching",
+      heading: "Design that fits your aesthetic—and your wallet.",
       description:
         "Select styles and budget; Desinary suggests furniture and layouts tailored to your design and cost preferences.",
-      image:
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=400&auto=format&fit=crop",
+      image: "/Home/3rd/4th.svg",
     },
+
     {
       title: "Real-Time Pricing and Final Review",
+      heading: "Know what you're getting before you commit.",
       description:
         "View furniture costs and total pricing dynamically, with full transparency before proceeding to checkout.",
-      image:
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=400&auto=format&fit=crop",
+      image: "/Home/3rd/5th.svg",
     },
   ],
 };
-
 export const transformBanner = {
   titleLine1: "Transform Your Space Into A Masterpiece",
   titleLine2: "With Our Design Platform.",
   image:
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop",
+    "/Home/4th/hall.png",
 };
-
 export const testimonials = {
   titlePrefix: "Voices of Satisfaction",
   titleLine2Prefix: "— Our ",
   titleHighlight: "Clients Speak",
+
   description:
-    "Hear firsthand how Desinary's innovative interior design solutions have transformed spaces and exceeded expectations, earning the trust and satisfaction of our valued clients.",
+    "Hear firsthand how Desinary’s innovative interior design solutions have transformed spaces and exceeded expectations, earning the trust and satisfaction of our valued clients.",
+
   reviews: [
     {
-      name: "Jenny Wilson",
+      name: "Jacob Jones",
       rating: 5,
       quote:
-        "Work With Archspace Architecte Mastery Every Corner of Serenity Beckons You",
-      avatar: "https://i.pravatar.cc/80?img=47",
+        "Collaborate with Lovora to master the art of interior.",
+      avatar: "https://i.pravatar.cc/300?img=47",
     },
+
+    {
+      name: "Kristin Watson",
+      rating: 5,
+      quote:
+        "Partner with Desinary to achieve mastery in living room interiors.",
+      avatar: "https://i.pravatar.cc/300?img=47",
+    },
+
+    {
+      name: "Marvin McKinney",
+      rating: 5,
+      quote:
+        "Join forces with Desinary and perfect your living room design.",
+      avatar: "https://i.pravatar.cc/300?img=12",
+    },
+
     {
       name: "Jenny Wilson",
       rating: 5,
       quote:
-        "Work With Archspace Architecte Mastery Every Corner of Serenity Beckons You",
-      avatar: "https://i.pravatar.cc/80?img=47",
+        "Work with Desinary to transform every corner into a beautiful and peaceful space.",
+      avatar: "https://i.pravatar.cc/300?img=45",
     },
+
     {
-      name: "Jenny Wilson",
+      name: "Cameron Williamson",
       rating: 5,
       quote:
-        "Work With Archspace Architecte Mastery Every Corner of Serenity Beckons You",
-      avatar: "https://i.pravatar.cc/80?img=47",
+        "Desinary helped us create a modern interior that perfectly matches our lifestyle.",
+      avatar: "https://i.pravatar.cc/300?img=11",
+    },
+
+    {
+      name: "Robert Fox",
+      rating: 5,
+      quote:
+        "A beautiful combination of smart design, personalization and simplicity.",
+      avatar: "https://i.pravatar.cc/300?img=13",
+    },
+
+    {
+      name: "Esther Howard",
+      rating: 5,
+      quote:
+        "The AI suggestions made it incredibly easy to visualize our dream home.",
+      avatar: "https://i.pravatar.cc/300?img=32",
+    },
+
+    {
+      name: "Wade Warren",
+      rating: 5,
+      quote:
+        "Every detail felt personalized. Desinary completely changed how we approach interiors.",
+      avatar: "https://i.pravatar.cc/300?img=14",
     },
   ],
 };
@@ -194,7 +246,8 @@ export const faq = {
   titlePrefix: "Frequently Ask ",
   titleHighlight: "Questions",
   subtitle: "Browse our Frequently Asked Questions.",
-  subtitle2: "If you don't find what you're looking for, feel free to contact us below.",
+  subtitle2:
+    "If you don't find what you're looking for, feel free to contact us below.",
   items: [
     {
       question: "What services do you offer",

@@ -1,65 +1,284 @@
-import { useState } from "react";
+import { useEffect, useRef } from "react";
 import { testimonials } from "../data/data";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 export default function Testimonials() {
-  const [index, setIndex] = useState(0);
-  const total = testimonials.reviews.length;
+  const swiperRef = useRef(null);
+  const sliderContainerRef = useRef(null);
 
-  const prev = () => setIndex((i) => (i - 1 + total) % total);
-  const next = () => setIndex((i) => (i + 1) % total);
+  useEffect(() => {
+    const container = sliderContainerRef.current;
 
-  // Show 3 cards (wraps around) so it mirrors the reference carousel
-  const visible = [0, 1, 2].map(
-    (offset) => testimonials.reviews[(index + offset) % total],
-  );
+    if (!container) return;
+
+    const handleWheel = (e) => {
+      if (!e.target.closest(".testimonial-card")) return;
+
+      e.preventDefault();
+
+      const swiper = swiperRef.current;
+
+      if (!swiper || swiper.destroyed) return;
+
+      if (e.deltaY > 0) {
+        swiper.slideNext();
+      } else if (e.deltaY < 0) {
+        swiper.slidePrev();
+      }
+    };
+
+    container.addEventListener("wheel", handleWheel, {
+      passive: false,
+    });
+
+    return () => {
+      container.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-16">
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <h2 className="text-3xl font-extrabold leading-snug text-ink-900 md:text-4xl">
-          {testimonials.titlePrefix}
-          <br />
-          {testimonials.titleLine2Prefix}
-          <span className="text-coral-500">{testimonials.titleHighlight}</span>
-        </h2>
-        <p className="text-sm text-gray-500">{testimonials.description}</p>
-      </div>
+    <section className="w-full bg-[var(--theme-about-us-bg)] py-16 md:py-20">
+      <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
 
-      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {visible.map((r, i) => (
-          <div key={i} className="rounded-2xl bg-gray-50 p-5">
-            <div className="flex items-center gap-3">
-              <img
-                src={r.avatar}
-                alt={r.name}
-                className="h-14 w-14 rounded-xl object-cover"
-              />
-              <div>
-                <p className="text-coral-500">{"★".repeat(r.rating)}</p>
-              </div>
-            </div>
-            <p className="mt-3 text-sm font-medium text-ink-900">{r.quote}</p>
-            <p className="mt-3 text-sm font-bold text-ink-900">{r.name}</p>
+       {/* ================= HEADER ================= */}
+<div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+
+  {/* TITLE */}
+  <div>
+    <h2 className="  whitespace-nowrap text-5xl font-extrabold leading-[1.2] tracking-tight text-[var(--theme-title-text)] ">
+      {testimonials.titlePrefix}
+      <br />
+
+      {testimonials.titleLine2Prefix}
+
+      <span className="text-[var(--theme-accent-text)]">
+        {testimonials.titleHighlight}
+      </span>
+    </h2>
+  </div>
+
+  {/* DESCRIPTION */}
+  <div className="pt-3 md:pl-12 lg:pl-20">
+    <p className="max-w-[500px] font-poppins text-[14px] font-normal leading-[1.8] text-[var(--theme-body-text)] align-middle">
+      {testimonials.description}
+    </p>
+  </div>
+
+</div>
+
+        {/* ================= REVIEW SLIDER ================= */}
+        <div
+          ref={sliderContainerRef}
+          className="relative mt-10"
+        >
+          <Swiper
+            modules={[Navigation, Pagination]}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            onDestroy={() => {
+              swiperRef.current = null;
+            }}
+            slidesPerView={1}
+            spaceBetween={20}
+            loop={true}
+            speed={600}
+            grabCursor={true}
+            navigation={{
+              prevEl: ".testimonial-prev",
+              nextEl: ".testimonial-next",
+            }}
+            pagination={{
+              el: ".testimonial-pagination",
+              clickable: true,
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 15,
+              },
+
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+
+              768: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+              },
+
+              1024: {
+                slidesPerView: 2.35,
+                spaceBetween: 20,
+              },
+
+              1280: {
+                slidesPerView: 2.35,
+                spaceBetween: 20,
+              },
+            }}
+            className="testimonials-swiper"
+          >
+            {testimonials.reviews.map((review, index) => (
+              <SwiperSlide
+  key={index}
+  className="!h-[168px] !overflow-visible !p-[1px]"
+>
+  <div
+    className="
+      testimonial-card
+      relative
+      z-0
+      flex
+      h-full
+      w-full
+      items-center
+      gap-4
+      rounded-md
+      border
+      border-solid
+      border-[var(--theme-about-us-border)]
+      bg-[var(--theme-card-bg)]
+      p-3
+      transition-all
+      duration-300
+      ease-out
+      hover:z-10
+      hover:scale-[1.03]
+      hover:border-[var(--theme-about-us-border-hover)]
+      hover:bg-[var(--theme-about-us-bg-hover)]
+      lg:gap-6
+      lg:p-7
+    "
+  >
+                  {/* IMAGE */}
+                  <div className="h-[128px] w-[128px] shrink-0 overflow-hidden rounded-[4px]">
+                    <img
+                      src={review.avatar}
+                      alt={review.name}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="flex min-w-0 flex-1 flex-col justify-center">
+
+                    {/* STARS */}
+                    <div className="mb-5 flex gap-[4px]">
+                      {Array.from({
+                        length: review.rating,
+                      }).map((_, starIndex) => (
+                        <span
+                          key={starIndex}
+                          className="text-[22px] leading-none text-[#D97662]"
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* QUOTE */}
+                    <p className="line-clamp-3 font-poppins text-[14px] font-normal leading-[1.7] text-[var(--theme-body-text)] align-middle">
+                      {review.quote}
+                    </p>
+
+                    {/* NAME */}
+                    <p className="mt-4 text-[18px] font-medium text-[var(--theme-title-text)]">
+                      {review.name}
+                    </p>
+
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* ================= CONTROLS ================= */}
+          <div
+            className="
+              mt-7
+              flex
+              w-full
+              items-center
+              justify-center
+              gap-4
+            "
+          >
+
+            {/* LEFT ARROW */}
+            <button
+              type="button"
+              aria-label="Previous testimonial"
+              className="
+                testimonial-prev
+                !static
+                flex
+                h-8
+                w-8
+                shrink-0
+                items-center
+                justify-center
+                p-0
+                text-[24px]
+                leading-none
+                font-light
+                text-gray-400
+                transition
+                hover:text-[#D97662]
+              "
+            >
+              ←
+            </button>
+
+            {/* DOTS */}
+            <div
+              className="
+                testimonial-pagination
+                !static
+                !m-0
+                !w-auto
+                !translate-x-0
+                flex
+                items-center
+                justify-center
+                gap-2
+              "
+            />
+
+            {/* RIGHT ARROW */}
+            <button
+              type="button"
+              aria-label="Next testimonial"
+              className="
+                testimonial-next
+                !static
+                flex
+                h-8
+                w-8
+                shrink-0
+                items-center
+                justify-center
+                p-0
+                text-[24px]
+                leading-none
+                font-light
+                text-[#D97662]
+                transition
+                hover:text-[#D97662]
+              "
+            >
+              →
+            </button>
+
           </div>
-        ))}
-      </div>
-
-      <div className="mt-8 flex items-center justify-center gap-4">
-        <button
-          onClick={prev}
-          aria-label="Previous testimonial"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:border-coral-300"
-        >
-          ←
-        </button>
-        <span className="h-2 w-2 rounded-full bg-coral-500" />
-        <button
-          onClick={next}
-          aria-label="Next testimonial"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:border-coral-300"
-        >
-          →
-        </button>
+        </div>
       </div>
     </section>
   );

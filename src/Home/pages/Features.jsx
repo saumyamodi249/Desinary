@@ -14,8 +14,7 @@ export default function Features() {
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-start">
           
           {/* 1st Div: Title */}
-          <div className="w-full md:w-[59%]">
-            <h2 className="font-poppins text-[32px] font-semibold leading-[1.2] tracking-tight text-[var(--theme-title-text)] sm:text-[38px] lg:text-[60px]">
+          <div className="w-full md:w-[59%] font-poppins text-[32px] font-semibold leading-[1.2] tracking-tight text-[var(--theme-title-text)] sm:text-[38px] lg:text-[48px]">
               <span className="block">{line1}</span>
               <span className="whitespace-nowrap">
                 {line2Prefix}{" "}
@@ -23,12 +22,12 @@ export default function Features() {
                   {highlight}
                 </span>
               </span>
-            </h2>
+            
           </div>
 
           {/* 2nd Div: Top Description */}
           <div className="w-full md:w-[38%] md:shrink-0 md:pt-2">
-            <p className="font-lato text-[15px] font-normal leading-[170%] text-[var(--theme-Features-text-right)] md:text-[16px]">
+            <p className="font-lato text-[16px] font-normal leading-[170%] text-[var(--theme-Features-text-right)] align-middle">
               {features.description}
             </p>
           </div>
@@ -58,18 +57,18 @@ export default function Features() {
 </div>          
 
                   {/* Heading Text */}
-                  <h3 className="font-poppins text-base font-semibold text-[var(--theme-title-text)] transition-colors duration-300 group-hover:text-[#D05741] sm:text-lg md:text-[20px]">
+                  <h3 className="font-poppins text-[20px] font-medium text-[var(--theme-title-text)] transition-colors duration-300 group-hover:text-[#D05741]">
                     {headingText}
                   </h3>
                 </div>
 
                 {/* 2nd Div: Row Description */}
                 <div className="w-full md:w-[38%] md:shrink-0">
-  <h3 className="font-poppins text-[15px] font-semibold leading-[1.3] text-[var(--theme-title-text)] transition-colors duration-300 group-hover:text-[#D05741]">
+  <h3 className="font-poppins text-xl font-medium leading-[1.3] text-[var(--theme-title-text)] transition-colors duration-300 group-hover:text-[#D05741]">
     {item.heading}
   </h3>
 
-  <p className="mt-1 font-lato text-[14px] font-normal leading-relaxed text-[var(--theme-body-text)] md:text-[15px]">
+  <p className="mt-1 font-poppins text-[14px] font-normal leading-relaxed text-[var(--theme-body-text)] align-middle">
     {item.description}
   </p>
 </div>

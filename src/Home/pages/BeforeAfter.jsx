@@ -6,12 +6,12 @@ export default function BeforeAfter() {
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-16 text-center">
-      <h2 className="text-3xl font-extrabold text-ink-900 md:text-4xl">
+      <h2 className="font-poppins text-5xl font-semibold text-[var(--theme-BeforeAfter-title)]">
         {beforeAfter.titlePrefix}
-        <span className="text-coral-500">{beforeAfter.titleHighlight}</span>
+        <span className="text-[var(--theme-BeforeAfter-text-org)]">{beforeAfter.titleHighlight}</span>
         {beforeAfter.titleSuffix}
       </h2>
-      <p className="mx-auto mt-3 max-w-xl text-sm text-gray-500">
+      <p className="mx-auto mt-3 max-w-xl font-poppins text-[14px] font-normal text-[var(--theme-bg-BeforeAfter-description)] text-center align-middle">
         {beforeAfter.description}
       </p>
 

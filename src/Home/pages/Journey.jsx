@@ -2,25 +2,25 @@ import { journey } from "../data/data";
 
 export default function Journey() {
   return (
-    <section className="w-full bg-[var(--theme-bg-journey)] py-16 md:py-24">
+    <section className="w-full bg-[var(--theme-bg-journey)] py-16 ">
       {/* Heading */}
-      <div className="mb-14 text-center">
-        <h2 className="text-3xl font-extrabold text-[var(--theme-title-text)] md:text-5xl">
+     <div className="mb-14 flex flex-col items-center gap-6 text-center">
+        <h2 className="text-3xl font-extrabold text-[var(--theme-title-text)] ">
           {journey.titlePrefix}{" "}
-          <span className="text-coral-500">
+          <span className="text-[var(--theme-bg-bg-box-hover)]">
             {journey.titleHighlight}
           </span>
           <span> {journey.titlePostfix}</span>
         </h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-sm text-[var(--theme-body-text)] md:text-base">
+        <p className="mx-auto mt-4 max-w-2xl text-sm text-[var(--theme-journey-text-small)]">
           {journey.subtitle}
         </p>
       </div>
 
       {/* Journey Cards */}
       <div className="mx-auto w-full max-w-[1680px] px-2 sm:px-4 lg:px-6">
-        <div className="space-y-10 rounded-[36px] bg-[var(--theme-bg-journey)] p-4 md:p-6 lg:p-8">
+        <div className="space-y-10 rounded-[36px] bg-[var(--theme-bg-journey)] p-4  lg:p-8">
           
           {journey.steps.map((step, i) => (
             <div
@@ -40,15 +40,15 @@ export default function Journey() {
 
               {/* Text */}
               <div className="flex w-full flex-col justify-center space-y-4 px-2 lg:w-[46%] lg:px-6">
-                <span className="text-xl font-bold text-[var(--theme-journey-number)] md:text-2xl">
+                <span className="text-xl font-medium  text-[var(--theme-journey-number)] ">
                   {step.number}
                 </span>
 
-                <h3 className="text-2xl font-bold tracking-tight text-[var(--theme-journey-title)]">
+                <h3 className="text-xl font-medium  text-[var(--theme-journey-title)]">
                   {step.title}
                 </h3>
 
-                <p className="text-sm leading-relaxed text-[var(--theme-journey-description)] md:text-[17px]">
+                <p className="text-sm font-normal  text-[var(--theme-journey-description)] ">
                   {step.description}
                 </p>
               </div>
@@ -70,7 +70,9 @@ export default function Journey() {
             {/* Result Content - RIGHT */}
             <div className="flex w-full flex-col justify-center space-y-6 px-2 lg:w-[50%] lg:px-6">
               
-              <h3 className="text-2xl font-bold tracking-tight text-[var(--theme-journey-title)] md:text-3xl">
+              <h3 className="text-2xl font-bold tracking-tight text-[var(--theme-journey-title)] 
+              
+              ">
                 {journey.result.titlePrefix}{" "}
                 <span className="text-coral-500">
                   {journey.result.titleHighlight}
@@ -92,7 +94,7 @@ export default function Journey() {
       />
     </span>
 
-    <p className="text-sm leading-relaxed text-[var(--theme-journey-description)] md:text-[16px]">
+    <p className="text-sm leading-relaxed text-[var(--theme-journey-description)] ">
       {point}
     </p>
   </div>

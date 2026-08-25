@@ -5,15 +5,15 @@ export default function Footer() {
   return (
     <footer className="w-full">
       {/* CTA strip */}
-      <div className="bg-[var(--theme-card-bg)] py-16 text-center">
-        <h2 className="mx-auto text-center font-[Poppins] text-[32px] font-semibold leading-[150%] text-[var(--theme-Footer-text)] md:text-[48px]">
+      <div className="bg-[var(--theme-card-bg)] py-[60px] text-center gap-8">
+        <h2 className="mx-auto text-center font-[Poppins] text-5xl font-semibold text-[var(--theme-Footer-text)] ">
           {ctaBanner.title}
         </h2>
 
         <p className="mx-auto mt-3 max-w-xl text-center font-[Poppins] text-[14px] font-normal leading-[180%] text-[var(--theme-Footer-text-small)]">
           {ctaBanner.description}
         </p>
-        <button className="mt-6 rounded-sm bg-[var(--theme-btn-bg)] px-6 py-3 font-[Poppins] text-[14px] font-normal leading-[180%] text-[#FFFFFF] hover:bg-coral-600">
+        <button className="mt-8 rounded-md border border-[#EFEFEF] bg-[var(--theme-btn-bg)] px-6 py-3 font-[Poppins] text-[14px] font-normal text-[var(--theme-white)] hover:bg-[var(--theme-btn-bg)]">
           {ctaBanner.ctaLabel}
         </button>
       </div>
@@ -34,12 +34,12 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="mt-5 max-w-xs font-[Poppins] text-[16px] leading-[160%] text-[#9da7b5]">
+            <p className="mt-5 max-w-xs font-[Poppins] font-normal text-[14px] text-[var(--theme-white)] ">
               {footer.tagline}
             </p>
 
             {/* Social Icons */}
-           <div className="mt-6 flex items-center gap-6">
+           <div className="flex items-center gap-3 rounded-[50px] p-[10px]">
   <a
     href="#"
     aria-label="Facebook"
@@ -81,32 +81,32 @@ export default function Footer() {
 
           {/* ================= QUICK LINKS ================= */}
           <div>
-            <h3 className="mb-5 font-[Poppins] text-[18px] font-semibold text-white">
+            <h3 className="mb-5 font-[Poppins] text-[20px] font-medium text-[var(--theme-white)] ">
               Quick Links
             </h3>
 
-            <ul className="space-y-3 font-[Poppins] text-[16px]">
-              {footer.quickLinks.map((l) => (
-                <li key={l.label}>
-                  <Link
-                    to={l.href}
-                    className="text-[#9da7b5] transition hover:text-white"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <ul className="space-y-6 font-[Poppins] text-[14px] font-normal">
+  {footer.quickLinks.map((l) => (
+    <li key={l.label}>
+      <Link
+        to={l.href}
+        className="text-[var(--theme-white)] transition hover:text-white hover:underline"
+      >
+        {l.label}
+      </Link>
+    </li>
+  ))}
+</ul>
           </div>
 
 
           {/* ================= CONTACT ================= */}
           <div>
-            <h3 className="mb-5 font-[Poppins] text-[18px] font-semibold text-white">
+            <h3 className="mb-5 font-[Poppins] text-[20px] font-medium text-[var(--theme-white)] ">
               Contact
             </h3>
 
-            <ul className="space-y-5 font-[Poppins] text-[16px]">
+            <ul className="space-y-6 font-[Poppins] text-[14px]">
 
               {/* Location */}
               <li className="flex items-start gap-4">
@@ -116,7 +116,7 @@ export default function Footer() {
                   className="mt-1 h-5 w-5 shrink-0"
                 />
 
-                <span className="leading-[160%] text-[#9da7b5]">
+                <span className=" text-[var(--theme-white)] ">
                   {footer.contact.address}
                 </span>
               </li>
@@ -129,7 +129,7 @@ export default function Footer() {
                   className="h-5 w-5 shrink-0"
                 />
 
-                <span className="text-[#9da7b5]">
+                <span className="text-[var(--theme-white)] ">
                   {footer.contact.phone}
                 </span>
               </li>
@@ -142,7 +142,7 @@ export default function Footer() {
                   className="h-5 w-5 shrink-0"
                 />
 
-                <span className="text-[#9da7b5]">
+                <span className="text-[var(--theme-white)] ">
                   {footer.contact.email}
                 </span>
               </li>
@@ -153,37 +153,36 @@ export default function Footer() {
 
           {/* ================= NEWSLETTER ================= */}
           <div>
-            <h3 className="mb-5 font-[Poppins] text-[18px] font-semibold text-white">
+            <h3 className="mb-5 gap-4 font-[Poppins] text-[18px] font-medium text-[var(--theme-white)] ">
               Newsletter
             </h3>
 
-            <p className="mb-5 max-w-sm font-[Poppins] text-[16px] leading-[160%] text-[#9da7b5]">
+            <p className="mb-5 max-w-sm font-[Poppins] text-[14px] text-[var(--theme-white)] ">
               {footer.newsletter.description}
             </p>
 
             <form
-              onSubmit={(e) => e.preventDefault()}
-              className="flex h-[52px] items-center overflow-hidden rounded-md border border-[#3d4650]"
-            >
-              <input
-                type="email"
-                placeholder={footer.newsletter.placeholder}
-                className="w-full bg-transparent px-5 font-[Poppins] text-[15px] text-white placeholder-[#737b86] outline-none"
-              />
+  onSubmit={(e) => e.preventDefault()}
+  className="flex h-[52px] items-center overflow-hidden rounded-md border border-[#3d4650] bg-[var(--theme-card-bg)]"
+>
+  <input
+    type="email"
+    placeholder={footer.newsletter.placeholder}
+    className="w-full bg-transparent px-5 font-[Poppins] text-[15px] text-[var(--theme-white)] placeholder-[#737b86] outline-none"
+  />
 
-              <button
-                type="submit"
-                aria-label="Subscribe"
-                className="flex h-full w-[55px] shrink-0 items-center justify-center"
-              >
-                <img
-                  src="/navbar/mess.svg"
-                  alt="Subscribe"
-                  className="h-5 w-5"
-                />
-              </button>
-            </form>
-          </div>
+  <button
+    type="submit"
+    aria-label="Subscribe"
+    className="flex h-full w-[55px] shrink-0 items-center justify-center"
+  >
+    <img
+      src="/navbar/mess.svg"
+      alt="Subscribe"
+      className="h-5 w-5"
+    />
+  </button>
+</form>         </div>
 
         </div>
             </div>

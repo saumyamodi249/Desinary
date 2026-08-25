@@ -19,7 +19,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
         duration-300
       "
     >
-      <nav className="max-w-[1400px] mx-auto px-4 lg:px-0 py-3 flex items-center justify-between">
+      <nav className="max-w-[1440px] mx-auto px-4 lg:px-0 py-3 flex items-center justify-between">
         {/* ================= LOGO ================= */}
         <div className="flex-shrink-0">
           <Link to="/welcome" className="w-full">
@@ -31,10 +31,10 @@ export default function Navbar({ darkMode, setDarkMode }) {
                     : "/Home/1st/Logo_black.svg"
                 }
                 alt="Desinary"
-                className="w-full h-auto"
+                className="w-full lg:h-10 object-contain"
               />
             </div>
-          </Link>
+          </Link> 
         </div>
 
         {/* ================= NAVIGATION ================= */}
@@ -50,7 +50,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
                   text-xs
                   lg:text-sm
                   font-normal
-                  px-5
+                  px-4
                   py-[10px]
                   border-b-2
                   transition-colors
@@ -92,7 +92,8 @@ export default function Navbar({ darkMode, setDarkMode }) {
               <img
                 src={darkMode ? "/Home/1st/sun.svg" : "/Home/1st/moon.svg"}
                 alt={darkMode ? "Light mode" : "Dark mode"}
-                className="h-7 w-8"
+                className="w-6 h-6 rounded top-1
+left-1"
               />
             </button>
           </div>
@@ -100,14 +101,20 @@ export default function Navbar({ darkMode, setDarkMode }) {
           <button
             type="button"
             className="
-             hidden lg:inline-block
-             border
-          border-[var(--theme-title-text)]
-             rounded-sm
-             bg-transparent
-               px-[15px] py-[8px]
-              text-[var(--theme-title-text)]
-  "
+  hidden
+  lg:inline-block
+  px-4
+  py-[10px]
+  border
+  border-[var(--theme-title-text)]
+  rounded
+  bg-transparent
+  text-[var(--theme-title-text)]
+  font-Poppins
+  text-sm
+  font-normal
+  align-middle
+"
           >
             Workspace
           </button>
@@ -122,14 +129,17 @@ export default function Navbar({ darkMode, setDarkMode }) {
               bg-[var(--theme-btn-bg)]
               border
               border-[var(--theme-btn-bg)]
-              px-[15px]
-              py-[8px]
+             p-2
+              font-Poppins
+             font-normal
               text-white
               tracking-wide
               transition-all
               duration-300
               ease-in-out
               hover:bg-[var(--theme-btn-bg-hover)]
+              gap-1
+              text-base 
             "
           >
             Design Now
@@ -140,20 +150,20 @@ export default function Navbar({ darkMode, setDarkMode }) {
             type="button"
             aria-label="Account"
             className="
-    ant-dropdown-trigger
+            ant-dropdown-trigger
               flex
-              h-10
-              w-10
+            w-10 h-10
               items-center
               justify-center
-              rounded-sm
-        
               bg-[var(--theme-toggle-bg)]
               transition-all
               duration-300
+              p-2
+              gap-1
+              rounded
   "
           >
-            <img src="/Home/1st/person.svg" alt="Account" className="h-7 w-7" />
+            <img src="/Home/1st/person.svg" alt="Account" className="h-6 w-6" />
           </button>
 
           {/* ================= MOBILE MENU BUTTON ================= */}
