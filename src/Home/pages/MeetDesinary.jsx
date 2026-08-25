@@ -69,7 +69,7 @@ export default function MeetDesinary() {
                       {s.value}
                     </p>
 
-                    <p className="mt-1 font-poppins text-[12px] font-medium text-[var(--theme-accent-text)] md:text-[13px]">
+                    <p className="mt-1 font-family text-[12px] font-medium text-[var(--theme-accent-text)] md:text-[13px]">
                       {s.label}
                     </p>
                   </div>
