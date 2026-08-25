@@ -65,11 +65,11 @@ export default function MeetDesinary() {
                 >
                   {/* Stat Content (Fixed size & alignment) */}
                   <div className="flex flex-1 flex-col items-center justify-center text-center">
-                    <p className="font-family text-[26px] font-bold tracking-tight text-[var(--theme-title-text)] md:text-[30px]">
+                    <p className="font-poppins text-[26px] font-bold tracking-tight text-[var(--theme-title-text)] md:text-[30px]">
                       {s.value}
                     </p>
 
-                    <p className="mt-1 font-family text-[12px] font-medium text-[var(--theme-accent-text)] md:text-[13px]">
+                    <p className="mt-1 font-poppins text-[12px] font-medium text-[var(--theme-accent-text)] md:text-[13px]">
                       {s.label}
                     </p>
                   </div>
