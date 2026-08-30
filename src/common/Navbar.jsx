@@ -19,7 +19,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
         duration-300
       "
     >
-      <nav className="max-w-[1440px] mx-auto px-4 lg:px-0 py-3 flex items-center justify-between">
+      <nav className="w-full  px-[120px] py-4 flex items-center justify-between gap-2">
         {/* ================= LOGO ================= */}
         <div className="flex-shrink-0">
           <Link to="/welcome" className="w-full">
@@ -34,7 +34,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
                 className="w-full lg:h-10 object-contain"
               />
             </div>
-          </Link> 
+          </Link>
         </div>
 
         {/* ================= NAVIGATION ================= */}

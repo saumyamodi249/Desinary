@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="w-full">
       {/* CTA strip */}
-      <div className="bg-[var(--theme-card-bg)] py-[60px] text-center gap-8">
+      <div className="bg-[var(--theme-bg-Footer)] pt-[60px] pr-[242.5px] pl-[242.5px] text-center gap-8">
         <h2 className="mx-auto text-center font-[Poppins] text-5xl font-semibold text-[var(--theme-Footer-text)] ">
           {ctaBanner.title}
         </h2>
@@ -13,7 +13,7 @@ export default function Footer() {
         <p className="mx-auto mt-3 max-w-xl text-center font-[Poppins] text-[14px] font-normal leading-[180%] text-[var(--theme-Footer-text-small)]">
           {ctaBanner.description}
         </p>
-        <button className="mt-8 rounded-md border border-[#EFEFEF] bg-[var(--theme-btn-bg)] px-6 py-3 font-[Poppins] text-[14px] font-normal text-[var(--theme-white)] hover:bg-[var(--theme-btn-bg)]">
+        <button className="mt-8 mb-[60px] rounded-md border border-[#EFEFEF] bg-[var(--theme-btn-bg)] px-6 py-3 font-[Poppins] text-[14px] font-normal text-[var(--theme-white)] hover:bg-[var(--theme-btn-bg)]">
           {ctaBanner.ctaLabel}
         </button>
       </div>

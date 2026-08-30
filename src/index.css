@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --theme-white:#F8F8F8;
+  --theme-white: #f8f8f8;
   --theme-bg-primary: #ffffff;
   --theme-bg-secondary: #f8fafc;
 
@@ -23,64 +23,69 @@ html {
   --theme-white: #ffffff;
   --theme-toggle-bg: #fffaf9;
 
-  --theme-bg-MeetDesinary: #2A110D;
+  --theme-bg-MeetDesinary: #2a110d;
   --theme-bg-MeetDesinary-description: #656565;
-  --theme-bg-MeetDesinary-border:#FFE6E1;
+  --theme-bg-MeetDesinary-border: #EFEFEF;
+ --theme-bg-MeetDesinary-box:#FFFAF9;
+  --theme-bg-MeetDesinary-box-text:#D97967;
 
-
-  /* Stats box */
   --theme-card-bg: #fffaf9;
-  --theme-bg-journey: #FFFAF9;
+  --theme-bg-journey: #fffaf9;
   --theme-bg-journey-inside: #e5e7eb;
-  --theme-bg-bg-box:#EFEFEF;
-  --theme-bg-bg-box-hover:#d97967;
-  --theme-bg-box-journey-inside:#FFFAF9;
+  --theme-bg-bg-box: #efefef;
+  --theme-bg-bg-box-hover: #d97967;
+  --theme-bg-box-journey-inside: #fffaf9;
 
-   --theme-journey-number:#2A110D;
-  --theme-journey-title:#2A110D;
-  --theme-journey-description:#656565;
+  --theme-journey-number: #2a110d;
+  --theme-journey-title: #2a110d;
+  --theme-journey-description: #656565;
   --theme-journey-text-small: #656565;
 
-  --theme-Features-text:#ffffff;
-  --theme-Features-text-right:#656565;
+  --theme-Features-text: #ffffff;
+  --theme-Features-text-right: #656565;
 
---theme-Features-img-text-left:#2A110D;
---theme-Features-img-text-left:#FFFFFF;
---theme-Features-img-text-right:#656565;
+  --theme-Features-img-text-left: #2a110d;
+  --theme-Features-img-text-right: #656565;
+  --theme-Features-heading:#020C13;
 
---theme-about-us-bg: #f8f8f8;
+
+  --theme-about-us-bg: #f8f8f8;
   --theme-about-us-border: #efefef;
 
   --theme-about-us-bg-hover: #fffaf9;
   --theme-about-us-border-hover: #ffd9d2;
 
-  --theme-Footer-text:#2A110D;
-  --theme-Footer-text-small:#656565;
+  --theme-Footer-text: #2a110d;
+  --theme-Footer-text-small: #656565;
 
- --theme-FAQ-bg: #FFFFFF;
-  --theme-FAQ-text: #2A110D;
-  --theme-FAQ-text-org: #D97967;
+  --theme-FAQ-bg: #ffffff;
+  --theme-FAQ-text: #2a110d;
+  --theme-FAQ-text-org: #d97967;
   --theme-FAQ-text-small: #656565;
-  --theme-FAQ-text-hover: #D05741;
-  --theme-FAQ-hover-text: #FFFFFF;
-  --theme-FAQ-border: #E5E5E5;
+  --theme-FAQ-text-hover: #d05741;
+  --theme-FAQ-hover-text: #ffffff;
+  --theme-FAQ-border: #e5e5e5;
+
+  --theme-bg-page:#FFFAF9;
+  --theme-BeforeAfter-title: #2a110d;
+  --theme-BeforeAfter-text-org: #d97967;
+  --theme-bg-BeforeAfter-description: #656565;
+
+ --theme-FAQ-BeforeAfter-hover: #d97967;
+ --theme-FAQ-BeforeAfter-left-right: #d05741;
 
 
-  --theme-BeforeAfter-title:#2A110D;
-   --theme-BeforeAfter-text-org: #D97967;
-     --theme-bg-BeforeAfter-description: #656565;
+  --theme-bg-Testimonials-title-text:#2A110D;
+  --theme-bg-Testimonials-title-description:#656565;
+  --theme-bg-Testimonials-bg:#EFEFEF;
+
+  --theme-bg-Footer:#EFEFEF;
+
 
 }
 
-
-
-
-
-
-
 .dark {
-
-   --theme-white:#F8F8F8;
+  --theme-white: #f8f8f8;
   --theme-bg-primary: #000000;
   --theme-bg-secondary: #111111;
 
@@ -97,44 +102,62 @@ html {
   --theme-white: #ffffff;
   --theme-toggle-bg: #2b2b2b;
 
-
-   --theme-bg-MeetDesinary: #ffffff;
-     --theme-bg-MeetDesinary-description: ##BBBBBB;
-      --theme-bg-MeetDesinary-border:#3E3E3E;
-
-
+  --theme-bg-MeetDesinary: #ffffff;
+  --theme-bg-MeetDesinary-description: #bbbbbb;
+  --theme-bg-MeetDesinary-border: #3e3e3e;
+  --theme-bg-MeetDesinary-box:#FFFFFF;
+  --theme-bg-MeetDesinary-box-text:#D97967;
 
   /* Stats box */
-  --theme-card-bg: #2A2A2A;
+  --theme-card-bg: #2a2a2a;
   --theme-bg-journey: #303030;
-  --theme-bg-journey-inside:#3E3E3E;
-  --theme-bg-bg-box:#303030;
-  --theme-bg-bg-box-hover:#cccccc;
-  -theme-bg-box-journey-inside:#2A2A2A;
-  --theme-journey-number:#FFF2F0;
-  --theme-journey-title:#FFFFFF;
-  --theme-journey-description:#BBBBBB;
+  --theme-bg-journey-inside: #3e3e3e;
+  --theme-bg-bg-box: #303030;
+  --theme-bg-bg-box-hover: #cccccc;
+  --theme-bg-box-journey-inside: #2a2a2a;
 
---theme-Features-text:#BBBBBB;
-  --theme-Features-text-right:#BBBBBB;
---theme-Features-img-text-left:#FFFFFF;
---theme-Features-img-text-right:#BBBBBB;
+  --theme-journey-number: #fff2f0;
+  --theme-journey-title: #ffffff;
+  --theme-journey-description: #bbbbbb;
+  --theme-journey-text-small: #656565;
 
---theme-about-us-bg: #303030;
+  --theme-Features-text: #bbbbbb;
+  --theme-Features-text-right: #bbbbbb;
+  --theme-Features-img-text-left: #ffffff;
+  --theme-Features-img-text-right: #bbbbbb;
+  --theme-Features-heading:#FFFFFF;
+
+  --theme-about-us-bg: #303030;
   --theme-about-us-border: #303030;
   --theme-about-us-bg-hover: #333333;
-  --theme-about-us-border-hover: #7b7b7b;
-  
-  --theme-Footer-text:#FFFFFF;
-  --theme-Footer-text-small:#BBBBBB;
+  --theme-about-us-border-hover: #7b7b7b; /* 1 */  
 
- --theme-FAQ-bg: #1B1B1B;
-  --theme-FAQ-text: #FFFFFF;
-  --theme-FAQ-text-org: #D97967;
-  --theme-FAQ-text-small: #D0D0D0;
-  --theme-FAQ-text-hover: #F05B43;
-  --theme-FAQ-hover-text: #FFFFFF;
-  --theme-FAQ-border: #3A3A3A;
+  --theme-Footer-text: #ffffff;
+  --theme-Footer-text-small: #bbbbbb;
+
+  --theme-FAQ-bg: #1b1b1b;
+  --theme-FAQ-text: #ffffff;
+  --theme-FAQ-text-org: #d97967;
+  --theme-FAQ-text-small: #d0d0d0;
+  --theme-FAQ-text-hover: #f05b43;
+  --theme-FAQ-hover-text: #ffffff;
+  --theme-FAQ-border: #3a3a3a;
+
+  /* 3 down all changes */
+  --theme-bg-page:#303030;
+  --theme-BeforeAfter-title: #2a110d;
+  --theme-BeforeAfter-text-org: #d97967;
+  --theme-bg-BeforeAfter-description: #656565;
+
+  --theme-FAQ-BeforeAfter-hover: #d97967;
+  --theme-FAQ-BeforeAfter-left-right: #d05741;
+
+
+  --theme-bg-Testimonials-title-text:#FFFFFF;
+  --theme-bg-Testimonials-title-description:#656565;
+  --theme-bg-Testimonials-bg:#EFEFEF;
+
+  --theme-bg-Footer:#EFEFEF;
 }
 .meet-desinary-page {
   background-color: #ffffff;
@@ -142,6 +165,10 @@ html {
 
 .dark .meet-desinary-page {
   background-color: #1c1c1c;
+}
+
+.font-lato {
+  font-family: "Lato", sans-serif;
 }
 
 html,
@@ -157,25 +184,24 @@ body {
 
 /* Testimonials Swiper Pagination */
 
-  .testimonial-pagination .swiper-pagination-bullet {
-    width: 7px;
-    height: 7px;
-    margin: 0 !important;
-    border-radius: 9999px;
-    background: #eeeeee;
-    opacity: 1;
-    transition: all 0.3s ease;
-  }
+.testimonial-pagination .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin: 0 !important;
+  border-radius: 9999px;
+  background: #eeeeee;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
 
-  .testimonial-pagination .swiper-pagination-bullet-active {
-    width: 7px;
-    height: 7px;
-    background: #d97662;
-  }
+.testimonial-pagination .swiper-pagination-bullet-active {
+  width: 7px;
+  height: 7px;
+  background: #d97662;
+}
 
-  /* Hide Swiper's default navigation */
-  .testimonials-swiper .swiper-button-prev,
-  .testimonials-swiper .swiper-button-next {
-    display: none;
-  }
-  
+/* Hide Swiper's default navigation */
+.testimonials-swiper .swiper-button-prev,
+.testimonials-swiper .swiper-button-next {
+  display: none;
+}

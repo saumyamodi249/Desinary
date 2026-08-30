@@ -11,10 +11,10 @@ export default function TransformBanner() {
       />
 
       {/* Centered Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center p-4">
+      <div className="absolute inset-0 flex items-center justify-center pl-[275px] pr-[263px] pt-[234px] pb-[222px]">
         {/* Dark Box with wider max-width taaki 'Masterpiece' 1st line mein rahe */}
-        <div className="max-w-[950px] rounded-xl bg-black/65 px-8 py-8 text-center shadow-2xl backdrop-blur-xs sm:px-12 sm:py-10 md:px-16 md:py-12">
-          <h2 className="font-poppins text-[32px] font-bold leading-[1.35] tracking-tight text-white text-center capitalize">
+<div className="w-[742px] h-[128px] gap-[10px] rounded bg-black/60 p-4 text-center font-bold shadow-2xl backdrop-blur-xs">
+          <h2 className="text-[32px] font-bold tracking-tight text-white text-center capitalize">
             <span className="block whitespace-nowrap">
               {transformBanner.titleLine1}
             </span>

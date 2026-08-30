@@ -52,7 +52,7 @@ export const journey = {
   titleHighlight: "Journey",
   titlePostfix: "with Desinary",
   subtitle:
-    "From inspiration to installation, discover how Desinary seamlessly transformsyour vision into a beautifully designed and personalized living space.",
+    "From inspiration to installation, discover how Desinary seamlessly transforms your vision into a beautifully designed and personalized living space.",
 
   steps: [
     {
@@ -66,7 +66,7 @@ export const journey = {
       number: "02",
       title: "Select Your Design Input",
       description:
-        "Kickstart your project by uploading basic room inputs—images, measurements, or a simple room scan. Then, define your design vision:Choose a preferred interior style (e.g. Japandi, Boho, Modern Luxe, Scandinavian, etc.)Set your design goals (maximize space, create a cozy vibe, add multifunctional furniture)Choose your budget range so our system aligns layout suggestions and product picks with your financial comfort Desinary’s AI uses this data to build a design logic tailored to your space type, usage pattern, and personality—eliminating guesswork right from the start.",
+        "Kickstart your project by uploading basic room inputs—images, measurements, or a simple room scan. Then, define your design vision:Choose a preferred interior style (e.g. Japandi, Boho, Modern Luxe, Scandinavian, etc.)Set your design goals (maximize space, create a cozy vibe, add multifunctional furniture)Choose your budget range so our system aligns layout suggestions and product picks with your financial comfortDesinary’s AI uses this data to build a design logic tailored to your space type, usage pattern, and personality—eliminating guesswork right from the start.",
       image: "/Home/2nd/2nd.svg",
     },
     {

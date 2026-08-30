@@ -16,10 +16,10 @@ export default function Home() {
       <Hero />
       <MeetDesinary />
       <Journey />
-      <Features />
+       <Features />
       <TransformBanner />
-      <Testimonials />
-      <BeforeAfter />
+       <Testimonials />
+        <BeforeAfter />
       <FAQ />
     </>
   );

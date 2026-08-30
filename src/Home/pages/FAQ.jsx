@@ -8,7 +8,7 @@ export default function FAQ() {
 
   return (
     <section
-      className="w-full px-6 py-16 md:px-10 lg:px-12 lg:py-20"
+      className="w-full px-[120px] py-[108px] md:px-10 "
       style={{
         backgroundColor: "var(--theme-FAQ-bg)",
       }}
@@ -41,7 +41,7 @@ export default function FAQ() {
           <p
             className="
   mx-auto
-  mt-5
+  mt-8
   max-w-[850px]
   font-[Poppins]
   text-[14px]
@@ -116,7 +116,7 @@ export default function FAQ() {
       pr-6
       font-[Poppins]
       text-[16px]
-      font-semibold
+      font-medium
       leading-[150%]
       text-[var(--theme-FAQ-text)]
       transition-colors
