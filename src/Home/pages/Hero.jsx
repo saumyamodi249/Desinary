@@ -41,45 +41,48 @@ export default function Hero() {
 
       <div className="relative w-full mx-auto">
         {/* Clients */}
-        <div className="absolute max-w-[1440px] mx-auto px-[118px] pb-[103px] z-20 ">
-          <div className="flex items-center">
-            <img
-              src="/Home/1st/4th person.svg"
-              alt="Client"
-              className="relative z-10 w-[58px] h-[58px] rounded-full object-cover border-[3px] border-[#D97967]"
-            />
+      {/* Clients */}
+<div className="relative z-20 w-full px-[118px] pb-[103px]">
+  {/* Client Images */}
+  <div className="flex items-center">
+    <img
+      src="/Home/1st/4th person.svg"
+      alt="Client"
+      className="relative z-10 h-[58px] w-[58px] rounded-full border-[3px] border-[#D97967] object-cover"
+    />
 
-            <img
-              src="/Home/1st/3rd person.svg"
-              alt="Client"
-              className="relative z-20 -ml-4 w-[58px] h-[58px] rounded-full object-cover border-[3px] border-[#D97967]"
-            />
+    <img
+      src="/Home/1st/3rd person.svg"
+      alt="Client"
+      className="relative z-20 -ml-4 h-[58px] w-[58px] rounded-full border-[3px] border-[#D97967] object-cover"
+    />
 
-            <img
-              src="/Home/1st/2nd person.svg"
-              alt="Client"
-              className="relative z-30 -ml-4 w-[58px] h-[58px]  rounded-full object-cover border-[3px] border-[#D97967]"
-            />
+    <img
+      src="/Home/1st/2nd person.svg"
+      alt="Client"
+      className="relative z-30 -ml-4 h-[58px] w-[58px] rounded-full border-[3px] border-[#D97967] object-cover"
+    />
 
-            <img
-              src="/Home/1st/1st person.svg"
-              alt="Client"
-              className="relative z-40 -ml-4 w-[58px] h-[58px]  rounded-full object-cover border-[3px] border-[#D97967]"
-            />
-          </div>
+    <img
+      src="/Home/1st/1st person.svg"
+      alt="Client"
+      className="relative z-40 -ml-4 h-[58px] w-[58px] rounded-full border-[3px] border-[#D97967] object-cover"
+    />
+  </div>
 
-          <div className="flex items-center mt-2 gap-1">
-            <span className="flex items-center text-center lg:text-left font-normal text-[24px] text-[var(--theme-black)] whitespace-nowrap">
-              200
-              <PiPlusThin className="inline-block w-4 h-4 lg:w-6 lg:h-6  font-normal text-[24px] text-[var(--theme-black)]" />
-            </span>
+  {/* Client Count */}
+  <div className="mt-2 flex items-center gap-1">
+    <span className="flex items-center text-[36px] font-normal text-[var(--theme-black)]">
+      200
+      <PiPlusThin className="h-6 w-6" />
+    </span>
 
-            <span className="ml-1 text-sm  lg:text-3xl font-normal text-[24px] text-[#D97967] whitespace-nowrap">
-              Clients
-            </span>
-          </div>
-        </div>
-      </div>
+    <span className="text-[36px] font-normal text-[#D97967]">
+      Clients
+    </span>
+  </div>
+</div>      </div>
     </section>
   );
 }
+  
