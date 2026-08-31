@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
@@ -8,6 +8,19 @@ import Home from "./Home/flow/Home";
 import AboutUs from "./AboutUs/flow/AboutUs";
 import Contact from "./Contact/flow/Contact";
 import Portfolio from "./Portfolio/flow/Portfolio";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
+
+  return null;
+}
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,6 +31,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 transition-colors duration-300 dark:bg-[#121212] dark:text-white">
+      <ScrollToTop />
 
       <Navbar
         darkMode={darkMode}
@@ -32,7 +46,6 @@ export default function App() {
       </Routes>
 
       <Footer />
-
     </div>
   );
 }
