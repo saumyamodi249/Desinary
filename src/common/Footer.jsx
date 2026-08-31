@@ -13,7 +13,7 @@ export default function Footer() {
         <p className="mx-auto mt-3 max-w-xl text-center font-[Poppins] text-[14px] font-normal leading-[180%] text-[var(--theme-Footer-text-small)]">
           {ctaBanner.description}
         </p>
-        <button className="mt-8 mb-[60px] rounded-md border border-[#EFEFEF] bg-[var(--theme-btn-bg)] px-6 py-3 font-[Poppins] text-[14px] font-normal text-[var(--theme-white)] hover:bg-[var(--theme-btn-bg)]">
+        <button className="mt-8 mb-[60px] rounded-md  bg-[var(--theme-btn-bg)] px-6 py-3 font-[Poppins] text-[14px] font-normal text-[var(--theme-white)] hover:bg-[var(--theme-btn-bg)]">
           {ctaBanner.ctaLabel}
         </button>
       </div>

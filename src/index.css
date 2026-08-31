@@ -86,7 +86,7 @@ html {
 
 .dark {
   --theme-white: #f8f8f8;
-  --theme-bg-primary: #000000;
+  --theme-bg-primary: #2A2A2A;
   --theme-bg-secondary: #111111;
 
   --theme-title-text: #ffffff;
@@ -104,22 +104,24 @@ html {
 
   --theme-bg-MeetDesinary: #ffffff;
   --theme-bg-MeetDesinary-description: #bbbbbb;
-  --theme-bg-MeetDesinary-border: #3e3e3e;
-  --theme-bg-MeetDesinary-box:#FFFFFF;
+  --theme-bg-MeetDesinary-border: #3E3E3E;
+  --theme-bg-MeetDesinary-box:#2a2a2a;
   --theme-bg-MeetDesinary-box-text:#D97967;
+  --theme-margin:#2a2a2a;
+
 
   /* Stats box */
   --theme-card-bg: #2a2a2a;
   --theme-bg-journey: #303030;
   --theme-bg-journey-inside: #3e3e3e;
   --theme-bg-bg-box: #303030;
-  --theme-bg-bg-box-hover: #cccccc;
+  --theme-bg-bg-box-hover: #D97967;
   --theme-bg-box-journey-inside: #2a2a2a;
 
   --theme-journey-number: #fff2f0;
   --theme-journey-title: #ffffff;
   --theme-journey-description: #bbbbbb;
-  --theme-journey-text-small: #656565;
+  --theme-journey-text-small: #BBBBBB;
 
   --theme-Features-text: #bbbbbb;
   --theme-Features-text-right: #bbbbbb;
@@ -144,8 +146,8 @@ html {
   --theme-FAQ-border: #3a3a3a;
 
   /* 3 down all changes */
-  --theme-bg-page:#303030;
-  --theme-BeforeAfter-title: #2a110d;
+  --theme-bg-page:#1C1C1C;
+  --theme-BeforeAfter-title: #FFFFFF;
   --theme-BeforeAfter-text-org: #d97967;
   --theme-bg-BeforeAfter-description: #656565;
 
@@ -154,10 +156,10 @@ html {
 
 
   --theme-bg-Testimonials-title-text:#FFFFFF;
-  --theme-bg-Testimonials-title-description:#656565;
-  --theme-bg-Testimonials-bg:#EFEFEF;
+  --theme-bg-Testimonials-title-description:#BBBBBB;
+  --theme-bg-Testimonials-bg:#2A2A2A;
 
-  --theme-bg-Footer:#EFEFEF;
+  --theme-bg-Footer:#303030 ;
 }
 .meet-desinary-page {
   background-color: #ffffff;

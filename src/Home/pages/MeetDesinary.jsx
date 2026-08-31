@@ -2,7 +2,7 @@ import { meetDesinary } from "../data/data";
 
 export default function MeetDesinary() {
   return (
-    <section className="meet-desinary-page w-full">
+<section className="meet-desinary-page w-full pb-[108px]">
       <div className=" px-[120px] pt-[108px] pb-[60px]">
         {/* Top Content */}
         <div className="mx-auto max-w-[1140px] grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] md:gap-14 ">
@@ -32,10 +32,10 @@ export default function MeetDesinary() {
         </div>
       </div>
 
-    <div className="mx-auto mb-[108px] w-full max-w-[1270px]">
-  <div className="w-full border rounded border-[var(--theme-bg-MeetDesinary-border)] bg-[var(--theme-bg-MeetDesinary-box)] py-[16px]  pl-[89px] pr-[90px] shadow-sm">
+    <div className="mx-auto bg-[var(--theme-bg-MeetDesinary-description)] w-full max-w-[1270px]">
+  <div className="w-full border rounded-sm border-[var(--theme-bg-MeetDesinary-border)] bg-[var(--theme-bg-MeetDesinary-box)] pt-[16px]  pl-[89px] pr-[90px] shadow-sm">
     {/* Inner Container */}
-    <div className="mx-auto flex max-w-[1140px] items-center justify-between">
+    <div className="mx-auto flex max-w-[1140px] items-center justify-between ">
       {meetDesinary.stats.map((s, index) => (
         <div
           key={s.label}
