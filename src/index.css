@@ -81,6 +81,28 @@ html {
 
   --theme-bg-Footer:#EFEFEF;
 
+   /* AboutUs */
+
+  --theme-bg: #ffffff;
+  --theme-title: #2a110d;
+  --theme-org: #d97967;
+  --theme-description: #656565;
+  --theme-bg-baby-pink: #fffaf9;
+
+  --theme-vision-mission-story: #2a110d;
+  --theme-vision-mission-story-description: #656565;
+  --theme-vision-mission-story-border: #EFEFEF;
+  --theme-vision-mission-story-box:#F8F8F8;
+  --theme-vision-mission-story-hover-box :#FFFAF9;
+  --theme-vision-mission-story-hover-border:#d97967;
+
+
+  --theme-magic-title: #2a110d;
+  --theme-magic-description: #656565;
+  --theme-box: #efefef;
+  --theme-box-name: #d97967;
+  --theme-box-bio: #2a110d;
+  --theme-box-bio-description: #656565;
 
 }
 
@@ -109,8 +131,6 @@ html {
   --theme-bg-MeetDesinary-box-text:#D97967;
   --theme-margin:#2a2a2a;
 
-
-  /* Stats box */
   --theme-card-bg: #2a2a2a;
   --theme-bg-journey: #303030;
   --theme-bg-journey-inside: #3e3e3e;
