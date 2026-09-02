@@ -18,7 +18,7 @@ html {
   --theme-btn-bg-hover: #b94734;
 
   --theme-border-color: #e5e7eb;
-  --theme-divider-color: #e98b7c;
+  --theme-divider-color: #D97967;
 
   --theme-white: #ffffff;
   --theme-toggle-bg: #fffaf9;
@@ -26,7 +26,7 @@ html {
   --theme-bg-MeetDesinary: #2a110d;
   --theme-bg-MeetDesinary-description: #656565;
   --theme-bg-MeetDesinary-border: #EFEFEF;
- --theme-bg-MeetDesinary-box:#FFFAF9;
+  --theme-bg-MeetDesinary-box:#FFFAF9;
   --theme-bg-MeetDesinary-box-text:#D97967;
 
   --theme-card-bg: #fffaf9;
@@ -90,7 +90,7 @@ html {
   --theme-bg-baby-pink: #fffaf9;
 
   --theme-vision-mission-story: #2a110d;
-  --theme-vision-mission-story-description: #656565;
+  --theme-vision-mission-story-description: #BBBBBB;
   --theme-vision-mission-story-border: #EFEFEF;
   --theme-vision-mission-story-box:#F8F8F8;
   --theme-vision-mission-story-hover-box :#FFFAF9;
@@ -103,6 +103,25 @@ html {
   --theme-box-name: #d97967;
   --theme-box-bio: #2a110d;
   --theme-box-bio-description: #656565;
+
+   /* ContactUs */
+   
+  --theme-Contact-bg:#FFFAF9;
+  --theme-Contact-title:#2A110D;
+  --theme-Contact-org:#D97967;
+  --theme-Contact-description:#656565;
+  --theme-Contact-Form-border:#EFEFEF;
+  --theme-Contact-Form-title:#2A110D;
+  --theme-Contact-Form-description:#656565;
+  --theme-Contact-Form-description-border:#EFEFEF;
+  --theme-Contact-Form-description-border-hover:#2A110D;
+  --theme-Contact-Form-button:#D05741;
+  --theme-Contact-bg-card:#FFFFFF;
+  
+  --theme-loction-bg:#FFFFFF;
+  --theme-loction-title:#2A110D;
+  --theme-loction-org:#D97967;
+  --theme-loction-description:#656565;
 
 }
 
@@ -118,7 +137,7 @@ html {
   --theme-btn-bg: #d05741;
   --theme-btn-bg-hover: #b94734;
 
-  --theme-border-color: #333333;
+  --theme-border-color:#3E3E3E;
   --theme-divider-color: #d97967;
 
   --theme-white: #ffffff;
@@ -129,13 +148,13 @@ html {
   --theme-bg-MeetDesinary-border: #3E3E3E;
   --theme-bg-MeetDesinary-box:#2a2a2a;
   --theme-bg-MeetDesinary-box-text:#D97967;
-  --theme-margin:#2a2a2a;
+
 
   --theme-card-bg: #2a2a2a;
   --theme-bg-journey: #303030;
   --theme-bg-journey-inside: #3e3e3e;
   --theme-bg-bg-box: #303030;
-  --theme-bg-bg-box-hover: #D97967;
+  --theme-bg-bg-box-hover: #BBBBBB;
   --theme-bg-box-journey-inside: #2a2a2a;
 
   --theme-journey-number: #fff2f0;
@@ -169,7 +188,7 @@ html {
   --theme-bg-page:#1C1C1C;
   --theme-BeforeAfter-title: #FFFFFF;
   --theme-BeforeAfter-text-org: #d97967;
-  --theme-bg-BeforeAfter-description: #656565;
+  --theme-bg-BeforeAfter-description: #BBBBBB;
 
   --theme-FAQ-BeforeAfter-hover: #d97967;
   --theme-FAQ-BeforeAfter-left-right: #d05741;
@@ -180,6 +199,50 @@ html {
   --theme-bg-Testimonials-bg:#2A2A2A;
 
   --theme-bg-Footer:#303030 ;
+
+  /* AboutUs */
+
+  --theme-bg: #1C1C1C;
+  --theme-title: #ffffff;
+  --theme-org: #d97967;
+  --theme-description: #BBBBBB;
+  --theme-bg-baby-pink: #303030;
+
+  --theme-vision-mission-story: #ffffff;
+  --theme-vision-mission-story-description: #BBBBBB;
+  --theme-vision-mission-story-border: #3E3E3E;
+  --theme-vision-mission-story-box:#303030;
+  --theme-vision-mission-story-hover-box :#303030;
+  --theme-vision-mission-story-hover-border:#BBBBBB;
+
+
+  --theme-magic-title: #ffffff;
+  --theme-magic-description: #BBBBBB;
+  --theme-box: #3E3E3E;
+  --theme-box-name: #d97967;
+  --theme-box-bio:#ffffff;
+  --theme-box-bio-description: #BBBBBB;
+
+   /* ContactUs */
+
+  --theme-Contact-bg:#303030;
+  --theme-Contact-title:#FFFFFF;
+  --theme-Contact-org:#D97967;
+  --theme-Contact-description:#BBBBBB;
+  --theme-Contact-Form-border:#EFEFEF;
+  --theme-Contact-Form-title:#FFFFFF;
+  --theme-Contact-Form-description:#BBBBBB;
+  --theme-Contact-Form-description-border:#7b7b7b;
+  --theme-Contact-Form-description-border-hover:#7b7b7b;
+  --theme-Contact-Form-button:#D05741;
+  --theme-Contact-bg-card:#2A2A2A;
+  
+  --theme-loction-bg:#1C1C1C;
+  --theme-loction-title:#FFFFFF;
+  --theme-loction-org:#D97967;
+  --theme-loction-description:#BBBBBB;
+
+
 }
 .meet-desinary-page {
   background-color: #ffffff;

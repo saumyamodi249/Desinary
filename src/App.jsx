@@ -6,7 +6,7 @@ import Footer from "./common/Footer";
 
 import Home from "./Home/flow/Home";
 import AboutUs from "./AboutUs/flow/AboutUs";
-import Contact from "./Contact/flow/Contact";
+import ContactUs from "./ContactUs/flow/ContactUs";
 import Portfolio from "./Portfolio/flow/Portfolio";
 
 function ScrollToTop() {
@@ -41,7 +41,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
 

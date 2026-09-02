@@ -33,7 +33,7 @@ export default function MeetDesinary() {
       </div>
 
     <div className="mx-auto bg-[var(--theme-bg-MeetDesinary-description)] w-full max-w-[1270px]">
-  <div className="w-full border rounded-sm border-[var(--theme-bg-MeetDesinary-border)] bg-[var(--theme-bg-MeetDesinary-box)] pt-[16px]  pl-[89px] pr-[90px] shadow-sm">
+  <div className="w-full border rounded-sm border-[var(--theme-bg-MeetDesinary-border)] bg-[var(--theme-bg-MeetDesinary-box)] py-[16px] pl-[89px] pr-[90px] shadow-sm">
     {/* Inner Container */}
     <div className="mx-auto flex max-w-[1140px] items-center justify-between ">
       {meetDesinary.stats.map((s, index) => (
