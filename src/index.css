@@ -123,6 +123,18 @@ html {
   --theme-loction-org:#D97967;
   --theme-loction-description:#656565;
 
+  /* Portfolio */
+
+    --theme-Portfolio-bg:#FFFFFF;
+    --theme-Portfolio-title:#2A110D;
+    --theme-Portfolio-org:#D05741;
+    --theme-Portfolio-description:#656565;
+    --theme-body-text-color: #656565;
+    --theme-about-us-border:#efefef;
+    --theme-about-us-border-hover:#ffd9d2;
+    --theme-portfolio-btn-bg-hover:#B64C38;
+    --theme-portfolio-btn-bg:#fffaf9;
+
 }
 
 .dark {
@@ -242,6 +254,18 @@ html {
   --theme-loction-org:#D97967;
   --theme-loction-description:#BBBBBB;
 
+  /* Portfolio */
+
+  --theme-Portfolio-bg:#1C1C1C;
+
+  --theme-Portfolio-title:#FFFFFF;
+  --theme-Portfolio-org:#D05741;
+  --theme-Portfolio-description:#BBBBBB;
+  --theme-body-text-color: #656565;
+  --theme-about-us-border:#efefef;
+  --theme-about-us-border-hover:#ffd9d2;
+  --theme-portfolio-btn-bg-hover:#f26c53;
+  --theme-portfolio-btn-bg:#303030;
 
 }
 .meet-desinary-page {

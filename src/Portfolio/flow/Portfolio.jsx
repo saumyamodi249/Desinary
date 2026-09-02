@@ -1,9 +1,11 @@
-function Portfolio() {
+import Portfolioshow from "../pages/Portfolioshow";
+
+const Portfolio = () => {
   return (
-    <div>
-      <h1>About Us</h1>
-    </div>
+    <>
+      <Portfolioshow />
+    </>
   );
-}
+};
 
 export default Portfolio;
