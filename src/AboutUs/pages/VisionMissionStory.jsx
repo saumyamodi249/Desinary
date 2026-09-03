@@ -17,7 +17,7 @@ const VisionMissionStory = () => {
   flex
   items-start
   gap-[137px] 
-  rounded-sm
+  rounded-md
   border
   border-[var(--theme-vision-mission-story-border)]
   bg-[var(--theme-vision-mission-story-box)]

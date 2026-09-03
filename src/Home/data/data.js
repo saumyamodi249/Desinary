@@ -237,9 +237,9 @@ export const beforeAfter = {
   description:
     "Experience the extraordinary potential of Desinary, where every detail is transformed to elevate your space to unmatched perfection",
   before:
-    "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200&auto=format&fit=crop",
+    "https://www.desinary.com/assets/images/before-img.jpg",
   after:
-    "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1200&auto=format&fit=crop",
+    "	https://www.desinary.com/assets/images/after-img.jpg",
 };
 
 export const faq = {

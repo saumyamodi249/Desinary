@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { teamData } from "../data/data";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,18 +12,11 @@ const Team = () => {
   const sliderContainerRef = useRef(null);
   const wheelLockRef = useRef(false);
 
-const [expandedCard, setExpandedCard] = useState(null);
+  const [expandedCard, setExpandedCard] = useState(null);
   // ================= READ MORE / LESS =================
-  const toggleReadMore = (id) => {
-setExpandedCard((prevId) => (prevId === id ? null : id));
-
-setTimeout(() => {
-swiperRef.current?.updateAutoHeight();
-swiperRef.current?.update();
-}, 50);
+ const toggleReadMore = (id) => {
+  setExpandedCard((prevId) => (prevId === id ? null : id));
 };
-
-
   // ================= SMOOTH WHEEL =================
   useEffect(() => {
     const container = sliderContainerRef.current;
@@ -68,6 +61,35 @@ swiperRef.current?.update();
       container.removeEventListener("wheel", handleWheel);
     };
   }, []);
+  useLayoutEffect(() => {
+  const swiper = swiperRef.current;
+
+  if (!swiper || swiper.destroyed) return;
+
+  requestAnimationFrame(() => {
+    const slides = swiper.slides;
+
+    let maxHeight = 0;
+
+    slides.forEach((slide) => {
+      const card = slide.querySelector(".team-card");
+
+      if (card) {
+        const height = card.getBoundingClientRect().height;
+
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      }
+    });
+
+    swiper.wrapperEl.style.height = `${maxHeight}px`;
+
+    swiper.updateSize();
+    swiper.updateSlides();
+    swiper.update();
+  });
+}, [expandedCard]);
 
   return (
     <section className="w-full overflow-hidden bg-[var(--theme-bg)] py-[80px] transition-colors duration-300">
@@ -103,44 +125,44 @@ swiperRef.current?.update();
 
       {/* ================= SLIDER ================= */}
       <div ref={sliderContainerRef} className="relative w-full">
-        <Swiper
-          modules={[Pagination]}
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-          onDestroy={() => {
-            swiperRef.current = null;
-          }}
-          loop={true}
-          speed={500}
-          grabCursor={true}
-          simulateTouch={true}
-          pagination={{
-            el: ".team-pagination",
-            clickable: true,
-          }}
-          breakpoints={{
-            0: {
-              slidesPerView: 1.1,
-              spaceBetween: 16,
-            },
-            640: {
-              slidesPerView: 1.5,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2.3,
-              spaceBetween: 24,
-            },
-            1024: {
-              slidesPerView: 3.5,
-              spaceBetween: 24,
-            },
-          }}
-          className="team-swiper !overflow-visible !px-[96px]"
-        >
+      <Swiper
+  modules={[Pagination]}
+  onSwiper={(swiper) => {
+    swiperRef.current = swiper;
+  }}
+  onDestroy={() => {
+    swiperRef.current = null;
+  }}
+  loop={true}
+  speed={500}
+  grabCursor={true}
+  simulateTouch={true}
+  pagination={{
+    el: ".team-pagination",
+    clickable: true,
+  }}
+  breakpoints={{
+    0: {
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+    },
+    640: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2.3,
+      spaceBetween: 24,
+    },
+    1024: {
+      slidesPerView: 3.5,
+      spaceBetween: 24,
+    },
+  }}
+  className="team-swiper !overflow-visible !px-[96px]"
+>
           {teamData.members.map((member, index) => {
-const isExpanded = expandedCard === member.id;
+            const isExpanded = expandedCard === member.id;
             return (
               <SwiperSlide key={member.id} className="!h-auto">
                 <div
@@ -154,13 +176,13 @@ const isExpanded = expandedCard === member.id;
                     border-[var(--theme-about-us-border)]
                     bg-[var(--theme-box)]
                     p-8
-                    transition-[height]
+                    transition-all
                     duration-300
                     ease-in-out
                     hover:border-[var(--theme-vision-mission-story-hover-border)]
                     hover:bg-[var(--theme-vision-mission-story-hover-box)]
 
-                    ${isExpanded ? "min-h-[520px]" : "h-[328px]"}
+                    ${isExpanded ? "min-h-[520px] h-auto" : "h-[328px]"}}
                   `}
                 >
                   {/* IMAGE */}

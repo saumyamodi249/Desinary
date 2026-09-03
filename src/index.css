@@ -130,8 +130,7 @@ html {
     --theme-Portfolio-org:#D05741;
     --theme-Portfolio-description:#656565;
     --theme-body-text-color: #656565;
-    --theme-about-us-border:#efefef;
-    --theme-about-us-border-hover:#ffd9d2;
+    
     --theme-portfolio-btn-bg-hover:#B64C38;
     --theme-portfolio-btn-bg:#fffaf9;
 
@@ -241,11 +240,11 @@ html {
   --theme-Contact-title:#FFFFFF;
   --theme-Contact-org:#D97967;
   --theme-Contact-description:#BBBBBB;
-  --theme-Contact-Form-border:#EFEFEF;
+  --theme-Contact-Form-border:#3e3e3e;
   --theme-Contact-Form-title:#FFFFFF;
   --theme-Contact-Form-description:#BBBBBB;
   --theme-Contact-Form-description-border:#7b7b7b;
-  --theme-Contact-Form-description-border-hover:#7b7b7b;
+  --theme-Contact-Form-description-border-hover:#1c1c1c;
   --theme-Contact-Form-button:#D05741;
   --theme-Contact-bg-card:#2A2A2A;
   
@@ -261,9 +260,8 @@ html {
   --theme-Portfolio-title:#FFFFFF;
   --theme-Portfolio-org:#D05741;
   --theme-Portfolio-description:#BBBBBB;
-  --theme-body-text-color: #656565;
-  --theme-about-us-border:#efefef;
-  --theme-about-us-border-hover:#ffd9d2;
+  --theme-body-text-color: #BBBBBB;
+  
   --theme-portfolio-btn-bg-hover:#f26c53;
   --theme-portfolio-btn-bg:#303030;
 
