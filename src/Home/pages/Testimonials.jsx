@@ -88,7 +88,7 @@ export default function Testimonials() {
       {/* ================= SLIDER ================= */}
       <div
         ref={sliderContainerRef}
-        className="relative mt-10 w-full overflow-visible"
+        className="relative mt-[60px] w-full overflow-visible"
       >
         <Swiper
           modules={[Navigation, Pagination]}

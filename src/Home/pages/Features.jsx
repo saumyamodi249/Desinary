@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { features } from "../data/data";
 
 export default function Features() {
@@ -10,12 +11,13 @@ export default function Features() {
         {/* Main Header Wrapper */}
         <div className="flex flex-col justify-between md:flex-row md:items-start">
           
-          {/* 1st Div: Title */}
+          {/* 1st Div: Title - NO ANIMATION */}
           <div className="w-full font-poppins text-5xl font-semibold tracking-tight text-[var(--theme-Features-heading)]">
             
             <span className="block">
               {features.titleLine1}
             </span>
+
             <span className="whitespace-nowrap">
               {features.titleLine2Prefix}{" "}
               <span className="text-[var(--theme-accent-text)]">
@@ -25,9 +27,9 @@ export default function Features() {
 
           </div>
 
-          {/* 2nd Div: Top Description */}
+          {/* 2nd Div: Top Description - NO ANIMATION */}
           <div className="w-full gap-[10px] md:w-[38%] md:shrink-0 md:pt-2">
-            <p className="pb-[19px] font-lato text-base text-[var(--theme-Features-text-right)] align-middle">
+            <p className="pb-[19px] font-lato text-base align-middle text-[var(--theme-Features-text-right)]">
               {features.description}
             </p>
           </div>
@@ -38,9 +40,26 @@ export default function Features() {
         <div className="mt-[60px]">
           
           {features.items.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="group flex cursor-pointer flex-col justify-between  border-b border-[var(--theme-border-color)] py-6 transition-colors duration-300 hover:border-[#D97967] md:flex-row md:items-center md:py-8"
+              initial={{
+                opacity: 0,
+                y: 60,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.9,
+                delay: index * 0.14,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              className="group flex cursor-pointer flex-col justify-between border-b border-[var(--theme-border-color)] py-6 transition-colors duration-300 hover:border-[#D97967] md:flex-row md:items-center md:py-8"
             >
               
               {/* 1st Div: Image + Title */}
@@ -75,7 +94,7 @@ export default function Features() {
 
               </div>
 
-            </div>
+            </motion.div>
           ))}
 
         </div>

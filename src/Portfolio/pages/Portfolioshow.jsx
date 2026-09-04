@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "motion/react";
 
 import {
   portfolioCategories,
@@ -20,15 +21,15 @@ const Portfolioshow = () => {
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 ">
         {/* Heading */}
         <div className="max-w-xl">
-         <h2 className="text-5xl font-semibold text-[var(--theme-Portfolio-title)] leading-tight mb-[64.19px]">
-  {portfolioHeading.titleLine1}
-  <br />
-  {portfolioHeading.titleLine2Normal}
-  <span className="text-[var(--theme-Portfolio-org)]">
-    {portfolioHeading.titleLine2Highlight}
-  </span>
-  {portfolioHeading.titleLine2End}
-</h2>
+          <h2 className="text-5xl font-semibold text-[var(--theme-Portfolio-title)] leading-tight mb-[64.19px]">
+            {portfolioHeading.titleLine1}
+            <br />
+            {portfolioHeading.titleLine2Normal}
+            <span className="text-[var(--theme-Portfolio-org)]">
+              {portfolioHeading.titleLine2Highlight}
+            </span>
+            {portfolioHeading.titleLine2End}
+          </h2>
         </div>
 
         {/* Description */}
@@ -40,29 +41,36 @@ const Portfolioshow = () => {
       </div>
 
       {/* ================= FILTER BUTTONS ================= */}
-    {/* ================= FILTER BUTTONS ================= */}
-<div className="flex gap-2 mb-8">
+ <div className="flex gap-2 mb-8">
   {portfolioCategories.map((category) => (
-    
-   <button
-  key={category}
-  onClick={() => setActiveCategory(category)}
-  className={`w-[130px] h-[36px] rounded-md border text-sm font-medium transition-colors duration-200 cursor-pointer ${
-    activeCategory === category
-      ? "bg-[var(--theme-Portfolio-org)] text-white border-[var(--theme-Portfolio-org)] hover:bg-[var(--theme-portfolio-btn-bg-hover)]"
-      : "text-[var(--theme-body-text-color)] border-[var(--theme-about-us-border)] hover:border-[var(--theme-about-us-border-hover)] bg-[var(--theme-portfolio-btn-bg)]"
-  }`}
->
-  
+    <button
+      key={category}
+      onClick={() => setActiveCategory(category)}
+      
+      className={`w-[130px] h-[36px] rounded-md border text-sm font-medium transition-colors duration-200 cursor-pointer ${
+        activeCategory === category
+          ? "bg-[var(--theme-Portfolio-org)] text-white border-[var(--theme-Portfolio-org)] hover:bg-[var(--theme-portfolio-btn-bg-hover)]"
+          : "text-[var(--theme-body-text-color)] border-[var(--theme-about-us-border)] hover:border-[var(--theme-about-us-border-hover)] bg-[var(--theme-portfolio-btn-bg)]"
+      }`}
+    >
       {category}
     </button>
   ))}
 </div>
-
       {/* ================= IMAGE GRID ================= */}
       <div className="grid grid-cols-6 gap-6">
         {filteredData.map((item) => (
-          <div
+          <motion.div
+            initial={{ scale: 0.7, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{
+              duration: 0.9,
+              ease: "easeOut",
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
             key={item.id}
             className={`w-full overflow-hidden rounded-md ${
               item.className || "col-span-2"
@@ -73,7 +81,7 @@ const Portfolioshow = () => {
               alt={item.category}
               className="w-full h-full object-cover"
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
