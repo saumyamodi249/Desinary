@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { teamData } from "../data/data";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,9 +14,9 @@ const Team = () => {
 
   const [expandedCard, setExpandedCard] = useState(null);
   // ================= READ MORE / LESS =================
- const toggleReadMore = (id) => {
-  setExpandedCard((prevId) => (prevId === id ? null : id));
-};
+  const toggleReadMore = (id) => {
+    setExpandedCard((prevId) => (prevId === id ? null : id));
+  };
   // ================= SMOOTH WHEEL =================
   useEffect(() => {
     const container = sliderContainerRef.current;
@@ -62,61 +62,73 @@ const Team = () => {
     };
   }, []);
   useLayoutEffect(() => {
-  const swiper = swiperRef.current;
+    const swiper = swiperRef.current;
 
-  if (!swiper || swiper.destroyed) return;
+    if (!swiper || swiper.destroyed) return;
 
-  requestAnimationFrame(() => {
-    const slides = swiper.slides;
-
-    let maxHeight = 0;
-
-    slides.forEach((slide) => {
-      const card = slide.querySelector(".team-card");
-
-      if (card) {
-        const height = card.getBoundingClientRect().height;
-
-        if (height > maxHeight) {
-          maxHeight = height;
+    requestAnimationFrame(() => {
+      if (window.innerWidth < 1024) {
+        if (swiper.wrapperEl) {
+          swiper.wrapperEl.style.height = "";
         }
+        swiper.updateSize();
+        swiper.updateSlides();
+        swiper.update();
+        return;
       }
+
+      const slides = swiper.slides;
+
+      let maxHeight = 0;
+
+      slides.forEach((slide) => {
+        const card = slide.querySelector(".team-card");
+
+        if (card) {
+          const height = card.getBoundingClientRect().height;
+
+          if (height > maxHeight) {
+            maxHeight = height;
+          }
+        }
+      });
+
+      swiper.wrapperEl.style.height = `${maxHeight}px`;
+
+      swiper.updateSize();
+      swiper.updateSlides();
+      swiper.update();
     });
-
-    swiper.wrapperEl.style.height = `${maxHeight}px`;
-
-    swiper.updateSize();
-    swiper.updateSlides();
-    swiper.update();
-  });
-}, [expandedCard]);
+  }, [expandedCard]);
 
   return (
-    <section className="w-full overflow-hidden bg-[var(--theme-bg)] py-[80px] transition-colors duration-300">
+    <section className="w-full overflow-hidden bg-[var(--theme-bg)] py-10 lg:py-[80px] transition-colors duration-300">
       {/* ================= HEADER ================= */}
-      <div className="mx-auto mb-10 w-full max-w-[1520px] px-[120px]">
-        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2">
+      <div className="mx-auto mb-8 lg:mb-10 w-full max-w-[1520px] px-4 lg:px-[120px]">
+        <div className="grid grid-cols-1 items-start gap-4 lg:gap-10 md:grid-cols-2">
           {/* TITLE */}
-          <div>
-            <h2 className="text-[42px] font-semibold leading-[1.35] text-[var(--theme-magic-title)]">
+          <div className="text-center md:text-left">
+            <h2 className="text-[24px] sm:text-[34px] lg:text-[42px] font-semibold leading-[1.3] text-[var(--theme-magic-title)]">
               {teamData.heading.map((part, i) => (
-                <span
-                  key={i}
-                  className={
-                    part.variant === "org"
-                      ? "text-[var(--theme-org)]"
-                      : "text-[var(--theme-magic-title)]"
-                  }
-                >
-                  {part.text}
-                </span>
+                <React.Fragment key={i}>
+                  <span
+                    className={
+                      part.variant === "org"
+                        ? "text-[var(--theme-org)]"
+                        : "text-[var(--theme-magic-title)]"
+                    }
+                  >
+                    {part.text}
+                  </span>
+                  {i === 1 && <br />}
+                </React.Fragment>
               ))}
             </h2>
           </div>
 
           {/* DESCRIPTION */}
-          <div className="pt-2 md:pl-12 lg:pl-20">
-            <p className="max-w-[500px] text-[14px] leading-[1.7] text-[var(--theme-magic-description)]">
+          <div className="text-center md:text-left md:pt-2 md:pl-12 lg:pl-20">
+            <p className="max-w-[350px] sm:max-w-md lg:max-w-[500px] mx-auto md:mx-0 text-[13px] sm:text-[14px] leading-[1.7] text-[var(--theme-magic-description)]">
               {teamData.description}
             </p>
           </div>
@@ -125,42 +137,42 @@ const Team = () => {
 
       {/* ================= SLIDER ================= */}
       <div ref={sliderContainerRef} className="relative w-full">
-      <Swiper
-  modules={[Pagination]}
-  onSwiper={(swiper) => {
-    swiperRef.current = swiper;
-  }}
-  onDestroy={() => {
-    swiperRef.current = null;
-  }}
-  loop={true}
-  speed={500}
-  grabCursor={true}
-  simulateTouch={true}
-  pagination={{
-    el: ".team-pagination",
-    clickable: true,
-  }}
-  breakpoints={{
-    0: {
-      slidesPerView: 1.1,
-      spaceBetween: 16,
-    },
-    640: {
-      slidesPerView: 1.5,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 2.3,
-      spaceBetween: 24,
-    },
-    1024: {
-      slidesPerView: 3.5,
-      spaceBetween: 24,
-    },
-  }}
-  className="team-swiper !overflow-visible !px-[96px]"
->
+        <Swiper
+          modules={[Pagination]}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          onDestroy={() => {
+            swiperRef.current = null;
+          }}
+          loop={true}
+          speed={500}
+          grabCursor={true}
+          simulateTouch={true}
+          pagination={{
+            el: ".team-pagination",
+            clickable: true,
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 16,
+            },
+            640: {
+              slidesPerView: 1.5,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2.3,
+              spaceBetween: 24,
+            },
+            1024: {
+              slidesPerView: 3.5,
+              spaceBetween: 24,
+            },
+          }}
+          className="team-swiper !overflow-visible !px-4 lg:!px-[96px]"
+        >
           {teamData.members.map((member, index) => {
             const isExpanded = expandedCard === member.id;
             return (
@@ -171,52 +183,56 @@ const Team = () => {
                     flex
                     w-full
                     flex-col
-                    rounded-md
+                    rounded-xl
+                    lg:rounded-md
                     border
                     border-[var(--theme-about-us-border)]
                     bg-[var(--theme-box)]
-                    p-8
+                    p-6
+                    sm:p-8
                     transition-all
                     duration-300
                     ease-in-out
                     hover:border-[var(--theme-vision-mission-story-hover-border)]
                     hover:bg-[var(--theme-vision-mission-story-hover-box)]
 
-                    ${isExpanded ? "min-h-[520px] h-auto" : "h-[328px]"}}
+                    ${isExpanded ? "h-auto lg:min-h-[520px]" : "h-[328px]"}
                   `}
                 >
                   {/* IMAGE */}
                   <img
                     src={
                       member.image ||
-                      `https://randomuser.me/api/portraits/${
-                        index % 2 === 0 ? "women" : "men"
+                      `https://randomuser.me/api/portraits/${index % 2 === 0 ? "women" : "men"
                       }/${(index % 50) + 10}.jpg`
                     }
                     alt={member.name}
                     onError={(e) => {
-                      e.currentTarget.src = `https://randomuser.me/api/portraits/${
-                        index % 2 === 0 ? "women" : "men"
-                      }/${(index % 50) + 10}.jpg`;
+                      e.currentTarget.src = `https://randomuser.me/api/portraits/${index % 2 === 0 ? "women" : "men"
+                        }/${(index % 50) + 10}.jpg`;
                     }}
-                    className="h-[88px] w-[88px] shrink-0 rounded-[4px] object-cover"
+                    className="mx-auto md:mx-0 h-[88px] w-[88px] shrink-0 rounded-[6px] lg:rounded-[4px] object-cover"
                   />
 
                   {/* NAME */}
-                  <h3 className="mt-7 text-[20px] font-medium text-[var(--theme-org)]">
+                  <h3 className="mt-5 lg:mt-7 text-center md:text-left text-[14px] lg:text-[20px] font-medium text-[var(--theme-org)]">
                     {member.name}
                   </h3>
 
                   {/* ROLE */}
-                  <p className="mt-1 text-[13px] font-medium text-[var(--theme-box-bio)]">
+                  <p className="mt-1 text-center md:text-left text-[14px] lg:text-[20px] font-medium text-[var(--theme-box-bio)]">
                     {member.role}
                   </p>
 
                   {/* BIO */}
                   <p
                     className={`
-                      mt-5
-                      text-[14px]
+                      mt-4
+                      lg:mt-5
+                      text-center
+                      md:text-left
+                      text-[13px]
+                      sm:text-[14px]
                       leading-[1.7]
                       text-[var(--theme-box-bio-description)]
                       ${isExpanded ? "" : "line-clamp-4"}
@@ -234,6 +250,8 @@ const Team = () => {
                     }}
                     className="
                       mt-2
+                      mx-auto
+                      md:mx-0
                       w-fit
                       cursor-pointer
                       border-0
@@ -255,12 +273,12 @@ const Team = () => {
         </Swiper>
 
         {/* ================= CONTROLS ================= */}
-        <div className="mt-8 flex w-full items-center justify-center gap-4">
+        <div className="mt-8 flex w-full items-center justify-center gap-6 lg:gap-4">
           <button
             type="button"
             aria-label="Previous"
             onClick={() => swiperRef.current?.slidePrev()}
-            className="flex h-8 w-8 items-center justify-center bg-transparent p-0 text-[25px] font-light text-[var(--theme-org)] transition hover:scale-110"
+            className="flex h-8 w-8 items-center justify-center bg-transparent p-0 text-[26px] font-light text-[var(--theme-org)] transition hover:scale-110 cursor-pointer"
           >
             ←
           </button>
@@ -272,7 +290,8 @@ const Team = () => {
               !m-0
               !w-auto
               !translate-x-0
-              flex
+              hidden
+              lg:flex
               items-center
               justify-center
               gap-2
@@ -283,7 +302,7 @@ const Team = () => {
             type="button"
             aria-label="Next"
             onClick={() => swiperRef.current?.slideNext()}
-            className="flex h-8 w-8 items-center justify-center bg-transparent p-0 text-[25px] font-light text-[var(--theme-org)] transition hover:scale-110"
+            className="flex h-8 w-8 items-center justify-center bg-transparent p-0 text-[26px] font-light text-[var(--theme-org)] transition hover:scale-110 cursor-pointer"
           >
             →
           </button>

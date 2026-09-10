@@ -7,14 +7,14 @@
 export const heroData = {
   title: [
     { text: "Discover ", variant: "title" },
-    { text: "Desinary ", variant: "org" },
-    { text: "Crafting ", variant: "title" },
-    { text: "Unique ", variant: "org" },
-    { text: "Interior Spaces", variant: "title" },
+    { text: "Desinary", variant: "org" },
+    { text: "Crafting Intelligent Interiors, ", variant: "title" },
+    { text: "Uniquely ", variant: "org" },
+    { text: "for You", variant: "title" },
   ],
 
   description:
-    "From inspiration to installation, discover how Desinary seamlessly transforms your vision into a beautifully designed and personalized living space.",
+    "At Desinary, we merge design logic, creativity, and smart technology to craft interiors that are not just beautiful but built around your lifestyle. Whether it's a cozy apartment, a stylish home office, or a compact rental, our AI-powered platform helps you design spaces that feel like you, with functionality, flow, and flair.",
   // asset from public/AboutUs/2nd.jpg
   bgImage: "/AboutUs/2nd.jpg",
   // decorative asset from public/AboutUs/1st.svg
@@ -27,13 +27,13 @@ export const visionMissionStoryData = [
     id: "vision",
     title: "Vision",
     description:
-      "Our vision is to revolutionize interior design by making high-quality, personalized home transformations accessible to everyone. We aim to blend technology with creativity—empowering users to visualize, design, and execute their dream spaces effortlessly. Through AI-driven solutions, immersive tools, and expert support, we strive to simplify the journey from concept to completion while maintaining style, precision, and harmony.",
+      "To redefine interior design by making intelligent, personalized, and affordable transformations accessible to everyone. Desinary envisions a world where anyone regardless of space, style, or budget can bring their dream space to life using the power of AI, immersive design tools, and curated expertise. We aim to simplify the design journey and make beautiful living a universal experience.",
   },
   {
     id: "mission",
     title: "Mission",
     description:
-      "Our mission is to empower individuals to create beautiful, functional living spaces with ease. By combining intelligent design tools, expert guidance, and immersive technology, we make interior design more accessible, efficient, and inspiring—helping users turn their vision into reality, regardless of their experience, budget, or space size.",
+      "Our mission is to empower individuals to design smarter, not harder. By combining AI-driven design intelligence, interactive customization, and expert-backed layouts, we make it easy for anyone to create a space that is both functional and inspiring. Desinary is here to eliminate overwhelm, reduce cost, and deliver design that works for real life.",
   },
   {
     id: "story",
@@ -60,7 +60,7 @@ export const teamData = {
   ],
 
   description:
-    "Our team combines design expertise with smart technology to transform living spaces. We work together to make interiors more beautiful, functional, and uniquely yours.",
+    "We're a team of creators, strategists, and technologists on a mission to redefine interior design. By blending design intelligence with cutting-edge technology, we turn everyday spaces into personalized, functional, and inspiring environments. Every layout we craft is rooted in logic, guided by style, and made uniquely for you.",
 
   members: [
     {
@@ -98,9 +98,9 @@ export const teamData = {
     {
       id: 5,
       name: "Piyush Soni",
-      role: "Operations Lead",
+      role: "Co - Founder",
       image: "/AboutUs/team/piyush-soni.jpg",
-      bio: "Piyush leads operational strategy and helps ensure that ideas move smoothly from concept to execution. With strong problem-solving skills and attention to detail, he works closely with different teams to improve workflows and build efficient systems. His contribution helps Desinary deliver a seamless experience while maintaining quality and consistency across projects.",
+      bio: "An operations strategist and systems thinker, Piyush leads Desinary's execution, product workflows, and vendor integrations. With a strong foundation in backend operations and digital process optimization, he ensures the platform runs smoothly and scales efficiently. Beyond operations, Piyush brings a creative edge to Desinary's marketing strategies, contributing to brand storytelling, campaign ideation, and user engagement. His ability to blend logic with creativity makes him a vital force in both the growth and experience sides of the business. Piyush has been full-time on Desinary since inception.",
     },
 
     {

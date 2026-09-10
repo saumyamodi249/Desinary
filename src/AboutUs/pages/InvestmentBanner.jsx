@@ -8,39 +8,36 @@ export default function InvestmentBanner() {
       <img
         src={investmentBannerData.Image}
         alt="Interior transformed with Desinary"
-        className="h-screen w-full object-cover"
+        className="h-[260px] sm:h-[320px] lg:h-screen w-full object-cover"
       />
 
       {/* Centered Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center pr-[263px] pt-[234px] pl-[275px] pb-[222px]">
-        
+      <div className="absolute inset-0 flex items-center justify-center p-4 lg:pr-[263px] lg:pt-[234px] lg:pl-[275px] lg:pb-[222px]">
         <motion.div
-  initial={{
-    opacity: 0,
-    scale: 0.92,
-  }}
-  whileInView={{
-    opacity: 1,
-    scale: 1,
-  }}
-  transition={{
-    duration: 0.9,
-    ease: [0.22, 1, 0.36, 1],
-  }}
-  viewport={{
-    once: true,
-    amount: 0.2,
-  }}
-  className="flex h-[128px] w-[742px] items-center justify-center rounded bg-black/60 p-4 text-center shadow-2xl backdrop-blur-sm"
->
-         
-          <h2 className="text-center text-[32px] font-bold tracking-tight text-white capitalize">
-            <span className="block p-4">
+          initial={{
+            opacity: 0,
+            scale: 0.92,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.9,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          className="flex h-auto w-full max-w-[340px] sm:max-w-md lg:h-auto lg:w-[742px] items-center justify-center rounded-lg lg:rounded bg-black/60 text-center shadow-2xl backdrop-blur-sm"
+        >
+          <h2 className="text-center text-[20px] sm:text-[22px] lg:text-[32px] font-bold tracking-tight text-white capitalize leading-snug lg:leading-tight">
+            <span className="block py-[16px] px-[24px] md:py-[16px] md:px-[60px] lg:py-[16px] lg:px-[60px]">
               {investmentBannerData.heading}
             </span>
           </h2>
         </motion.div>
-
       </div>
     </section>
   );

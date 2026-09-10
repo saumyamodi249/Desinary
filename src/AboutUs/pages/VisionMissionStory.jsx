@@ -4,9 +4,34 @@ import { visionMissionStoryData } from "../data/data";
 
 const VisionMissionStory = () => {
   return (
-    <section className="w-full bg-[var(--theme-bg)] px-[120px] py-[80px] transition-colors duration-300">
-      <div className="relative mx-auto h-[680px] w-full max-w-[1200px]">
+    <section className="w-full bg-[var(--theme-bg)] px-2 py-10 lg:px-[120px] lg:py-[80px] transition-colors duration-300">
+      {/* ================= MOBILE VIEW (< lg) ================= */}
+      <div className="flex flex-col gap-4 lg:hidden">
+        {visionMissionStoryData.map((item, index) => (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.12,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            viewport={{ once: true, amount: 0.15 }}
+            className="rounded-xl border border-[var(--theme-vision-mission-story-border)] bg-[var(--theme-vision-mission-story-box)] p-6 transition-all duration-300"
+          >
+            <h2 className="text-[20px] font-medium text-[var(--theme-bg-Testimonials-title-text)] mb-4">
+              {item.title}
+            </h2>
+            <p className="text-[12px] font-normal leading-[1.7] text-[var(--theme-vision-mission-story-description)]">
+              {item.description}
+            </p>
+          </motion.div>
+        ))}
+      </div>
 
+      {/* ================= DESKTOP VIEW (lg+) ================= */}
+      <div className="relative mx-auto hidden h-[680px] w-full max-w-[1200px] lg:block">
         {visionMissionStoryData.map((item, index) => {
           const leftOffset = index * 200;
           const topOffset = index * 215;
@@ -14,30 +39,23 @@ const VisionMissionStory = () => {
           return (
             <motion.div
               key={item.id}
-
-              /* Smoothly comes from below */
               initial={{
                 opacity: 0,
                 y: 170,
               }}
-
-              /* Settles into its original position */
               whileInView={{
                 opacity: 1,
                 y: 0,
               }}
-
               transition={{
                 duration: 1.1,
                 delay: index * 0.18,
                 ease: [0.22, 1, 0.36, 1],
               }}
-
               viewport={{
                 once: true,
                 amount: 0.2,
               }}
-
               className="
                 absolute
                 flex
@@ -55,7 +73,6 @@ const VisionMissionStory = () => {
                 hover:bg-[var(--theme-vision-mission-story-hover-box)]
                 hover:border-[var(--theme-vision-mission-story-hover-border)]
               "
-
               style={{
                 top: `${topOffset}px`,
                 left: `${leftOffset}px`,
@@ -65,7 +82,6 @@ const VisionMissionStory = () => {
             >
               {/* Title + Description */}
               <div className="flex items-start gap-[137px]">
-
                 <h2 className="w-[180px] shrink-0 text-[32px] text-[var(--theme-bg-Testimonials-title-text)]">
                   {item.title}
                 </h2>
@@ -73,13 +89,10 @@ const VisionMissionStory = () => {
                 <p className="w-[450px] text-[14px] font-normal leading-relaxed text-[var(--theme-vision-mission-story-description)]">
                   {item.description}
                 </p>
-
               </div>
-
             </motion.div>
           );
         })}
-
       </div>
     </section>
   );
