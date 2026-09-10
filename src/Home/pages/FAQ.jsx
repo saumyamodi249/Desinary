@@ -13,158 +13,164 @@ initial={{ opacity: 0, y: 40 }}
 whileInView={{ opacity: 1, y: 0 }}
 viewport={{ once: true, amount: 0.2 }}
 transition={{ duration: 0.7, ease: "easeOut" }}
-className="w-full px-[120px] py-[108px] md:px-10 max-md:px-4 max-md:py-12"
-style={{
-backgroundColor: "var(--theme-FAQ-bg)",
-}}
-> <div className="mx-auto max-w-[1400px]">
-{/* ================= HEADING ================= */} <div className="text-center">
-<h2
-className="
-font-[Poppins]
-text-[48px]
-font-semibold
-text-center
-max-md:text-3xl
-"
-style={{
-color: "var(--theme-FAQ-text)",
-}}
->
-{faq.titlePrefix}
-<span
-style={{
-color: "var(--theme-FAQ-text-org)",
-}}
->
-{faq.titleHighlight} </span> </h2>
-
-      <p
-        className="
-          mx-auto
-          mt-8
-          max-w-[850px]
-          font-[Poppins]
-          text-[14px]
-          font-normal
-          leading-[180%]
-          text-center
-          align-middle
-          max-md:mt-4
-        "
-        style={{
-          color: "var(--theme-FAQ-text-small)",
-        }}
-      >
-        {faq.subtitle}
-      </p>
-
-      {faq.subtitle2 && (
-        <p
-          className="
-            mx-auto
-            max-w-[850px]
-            font-[Poppins]
-            text-[14px]
-            font-normal
-            leading-[180%]
-            text-center
-            align-middle
-          "
-          style={{
-            color: "var(--theme-FAQ-text-small)",
-          }}
-        >
-          {faq.subtitle2}
-        </p>
-      )}
-    </div>
-
-    {/* ================= FAQ LIST ================= */}
-    <div className="mt-10 md:mt-12">
-      {faq.items.map((item, i) => {
-        const isOpen = open === i;
-
-        return (
-          <div key={item.question}>
-            {/* ================= QUESTION ================= */}
-            <button
-              onClick={() => setOpen(isOpen ? -1 : i)}
-              aria-expanded={isOpen}
-              className="
-                group
-                flex
-                w-full
-                items-center
-                justify-between
-                rounded-[4px]
-                bg-transparent
-                px-4
-                py-5
-                font-[Poppins]
-                text-[20px]
-                font-medium
-                text-left
-                text-[var(--theme-FAQ-text)]
-                transition-all
-                duration-300
-                hover:bg-[var(--theme-FAQ-text-hover)]
-                hover:text-white
-              "
+      className="w-full px-4 md:px-10 lg:px-[120px] py-12 md:py-16 lg:py-[108px]"
+      style={{
+        backgroundColor: "var(--theme-FAQ-bg)",
+      }}
+    >
+      <div className="mx-auto max-w-[1400px]">
+        {/* ================= HEADING ================= */}
+        <div className="text-center">
+          <h2
+            className="font-[Poppins] text-3xl md:text-4xl lg:text-[48px] font-semibold text-center"
+            style={{
+              color: "var(--theme-FAQ-text)",
+            }}
+          >
+            {faq.titlePrefix}
+            <span
+              style={{
+                color: "var(--theme-FAQ-text-org)",
+              }}
             >
-              <span
-                className="
-                  pr-6
-                  font-[Poppins]
-                  text-[16px]
-                  font-medium
-                  leading-[150%]
-                  text-[var(--theme-FAQ-text)]
-                  transition-colors
-                  duration-300
-                  group-hover:text-white
-                  md:text-[20px]
-                "
-              >
-                {item.question}
-              </span>
+              {faq.titleHighlight}
+            </span>
+          </h2>
 
-              <span
-                className="
-                  flex
-                  h-6
-                  w-6
-                  shrink-0
-                  items-center
-                  justify-center
-                  text-[var(--theme-FAQ-text)]
-                  transition-colors
-                  duration-300
-                  group-hover:text-white
-                "
-              >
-                {isOpen ? (
-                  <FaAngleUp className="text-[18px]" />
-                ) : (
-                  <IoIosArrowDown className="text-[18px]" />
-                )}
-              </span>
-            </button>
+          <p
+            className="
+              mx-auto
+              mt-4
+              md:mt-6
+              lg:mt-8
+              max-w-[850px]
+              font-[Poppins]
+              text-[14px]
+              font-normal
+              leading-[180%]
+              text-center
+              align-middle
+            "
+            style={{
+              color: "var(--theme-FAQ-text-small)",
+            }}
+          >
+            {faq.subtitle}
+          </p>
 
-            {/* ================= ANSWER ================= */}
-            {isOpen && (
-              <div
-                className="
-                  px-5
-                  pb-6
-                  pt-4
-                  md:px-5
-                  md:pb-6
-                "
-                style={{
-                  borderBottom: "1px solid var(--theme-FAQ-border)",
-                }}
-              >
+          {faq.subtitle2 && (
+            <p
+              className="
+                mx-auto
+                max-w-[850px]
+                font-[Poppins]
+                text-[14px]
+                font-normal
+                leading-[180%]
+                text-center
+                align-middle
+              "
+              style={{
+                color: "var(--theme-FAQ-text-small)",
+              }}
+            >
+              {faq.subtitle2}
+            </p>
+          )}
+        </div>
+
+        {/* ================= FAQ LIST ================= */}
+        <div className="mt-8 md:mt-10 lg:mt-12">
+          {faq.items.map((item, i) => {
+            const isOpen = open === i;
+
+            return (
+              <div key={item.question}>
+                {/* ================= QUESTION ================= */}
+                <button
+                  onClick={() => setOpen(isOpen ? -1 : i)}
+                  aria-expanded={isOpen}
+                  className="
+                    group
+                    flex
+                    w-full
+                    items-center
+                    justify-between
+                    rounded-[4px]
+                    bg-transparent
+                    px-3
+                    md:px-4
+                    py-4
+                    md:py-5
+                    font-[Poppins]
+                    text-[16px]
+                    md:text-[18px]
+                    lg:text-[20px]
+                    font-medium
+                    text-left
+                    text-[var(--theme-FAQ-text)]
+                    transition-all
+                    duration-300
+                    hover:bg-[var(--theme-FAQ-text-hover)]
+                    hover:text-white
+                  "
+                >
+                  <span
+                    className="
+                      pr-4
+                      md:pr-6
+                      font-[Poppins]
+                      text-[16px]
+                      md:text-[18px]
+                      lg:text-[20px]
+                      font-medium
+                      leading-[150%]
+                      text-[var(--theme-FAQ-text)]
+                      transition-colors
+                      duration-300
+                      group-hover:text-white
+                    "
+                  >
+                    {item.question}
+                  </span>
+
+                  <span
+                    className="
+                      flex
+                      h-6
+                      w-6
+                      shrink-0
+                      items-center
+                      justify-center
+                      text-[var(--theme-FAQ-text)]
+                      transition-colors
+                      duration-300
+                      group-hover:text-white
+                    "
+                  >
+                    {isOpen ? (
+                      <FaAngleUp className="text-[18px]" />
+                    ) : (
+                      <IoIosArrowDown className="text-[18px]" />
+                    )}
+                  </span>
+                </button>
+
+                {/* ================= ANSWER ================= */}
+                {isOpen && (
+                  <div
+                    className="
+                      px-3
+                      md:px-5
+                      pb-5
+                      md:pb-6
+                      pt-3
+                      md:pt-4
+                    "
+                    style={{
+                      borderBottom: "1px solid var(--theme-FAQ-border)",
+                    }}
+                  >
                 <p
                   className="
                     font-[Poppins]

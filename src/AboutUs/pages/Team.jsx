@@ -102,13 +102,13 @@ const Team = () => {
   }, [expandedCard]);
 
   return (
-    <section className="w-full overflow-hidden bg-[var(--theme-bg)] py-10 lg:py-[80px] transition-colors duration-300">
+    <section className="w-full overflow-hidden bg-[var(--theme-bg)] py-10 md:py-14 lg:py-[80px] transition-colors duration-300">
       {/* ================= HEADER ================= */}
-      <div className="mx-auto mb-8 lg:mb-10 w-full max-w-[1520px] px-4 lg:px-[120px]">
-        <div className="grid grid-cols-1 items-start gap-4 lg:gap-10 md:grid-cols-2">
+      <div className="mx-auto mb-8 md:mb-10 w-full max-w-[1520px] px-4 md:px-10 lg:px-[120px]">
+        <div className="grid grid-cols-1 items-start gap-4 md:gap-8 lg:gap-10 md:grid-cols-2">
           {/* TITLE */}
           <div className="text-center md:text-left">
-            <h2 className="text-[24px] sm:text-[34px] lg:text-[42px] font-semibold leading-[1.3] text-[var(--theme-magic-title)]">
+            <h2 className="text-[24px] md:text-[34px] lg:text-[42px] font-semibold leading-[1.3] text-[var(--theme-magic-title)]">
               {teamData.heading.map((part, i) => (
                 <React.Fragment key={i}>
                   <span
@@ -127,8 +127,8 @@ const Team = () => {
           </div>
 
           {/* DESCRIPTION */}
-          <div className="text-center md:text-left md:pt-2 md:pl-12 lg:pl-20">
-            <p className="max-w-[350px] sm:max-w-md lg:max-w-[500px] mx-auto md:mx-0 text-[13px] sm:text-[14px] leading-[1.7] text-[var(--theme-magic-description)]">
+          <div className="text-center md:text-left md:pt-2 md:pl-8 lg:pl-20">
+            <p className="max-w-[350px] md:max-w-md lg:max-w-[500px] mx-auto md:mx-0 text-[13px] md:text-[14px] leading-[1.7] text-[var(--theme-magic-description)]">
               {teamData.description}
             </p>
           </div>
@@ -155,23 +155,19 @@ const Team = () => {
           }}
           breakpoints={{
             0: {
-              slidesPerView: 1,
+              slidesPerView: 1.15,
               spaceBetween: 16,
             },
-            640: {
-              slidesPerView: 1.5,
-              spaceBetween: 20,
-            },
             768: {
-              slidesPerView: 2.3,
-              spaceBetween: 24,
+              slidesPerView: 2.2,
+              spaceBetween: 20,
             },
             1024: {
               slidesPerView: 3.5,
               spaceBetween: 24,
             },
           }}
-          className="team-swiper !overflow-visible !px-4 lg:!px-[96px]"
+          className="team-swiper !overflow-visible !px-4 md:!px-10 lg:!px-[96px]"
         >
           {teamData.members.map((member, index) => {
             const isExpanded = expandedCard === member.id;
@@ -189,7 +185,7 @@ const Team = () => {
                     border-[var(--theme-about-us-border)]
                     bg-[var(--theme-box)]
                     p-6
-                    sm:p-8
+                    md:p-8
                     transition-all
                     duration-300
                     ease-in-out
@@ -232,7 +228,7 @@ const Team = () => {
                       text-center
                       md:text-left
                       text-[13px]
-                      sm:text-[14px]
+                      md:text-[14px]
                       leading-[1.7]
                       text-[var(--theme-box-bio-description)]
                       ${isExpanded ? "" : "line-clamp-4"}

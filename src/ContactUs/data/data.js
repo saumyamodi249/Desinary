@@ -3,9 +3,9 @@ export const ContactUs = {
     heading: "Contact ",
     headingAccent: "Us",
     description:
-      "We're here to help with your design journey—reach out for questions, support, or collaboration opportunities.",
-    email: "info@Desinary.com",
-    phone: "+91 85896 365 52",
+      "We’re more than just a platform, we’re your partners in creating thoughtful, functional, and beautiful spaces. Whether you’re a new user curious about how Desinary works, a current customer needing support, or a brand looking to collaborate, we’re here and happy to connect.",
+    email: "desinary.info@gmail.com",
+    phone: "+91 8630278040 , +91 8408080201",
   },
 
   blocks: [
@@ -22,8 +22,8 @@ export const ContactUs = {
   ],
 
   form: {
-    heading: "Get in Touch",
-    description: "Reach out to us anytime , we will get back to you as quickly as possible.",
+    heading: "Get In Touch",
+    description: "Reach out to us anytime, we’ll get back to you as quickly as possible.",
     messageMaxLength: 120,
     allowedEmailDomains: [
       "gmail.com",
@@ -38,7 +38,10 @@ export const Location = {
   intro: {
     heading: "Our ",
     headingAccent: "Location",
-    mapImage: "ContactUs/map.svg",
+    subtitle: "We’re proudly digital and available worldwide",
+    description:
+      "Desinary is an online-first platform, which means you can access our interior design solutions from anywhere, at any time. Whether you're designing your first home or refreshing your space, we're just a click away—ready to help you create interiors that reflect your style and fit your life.",
+    mapImage: "/ContactUs/map.svg",
     mapAlt: "Desinary offices marked on a world map",
   },
 

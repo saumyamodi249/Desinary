@@ -4,9 +4,9 @@ import { visionMissionStoryData } from "../data/data";
 
 const VisionMissionStory = () => {
   return (
-    <section className="w-full bg-[var(--theme-bg)] px-2 py-10 lg:px-[120px] lg:py-[80px] transition-colors duration-300">
-      {/* ================= MOBILE VIEW (< lg) ================= */}
-      <div className="flex flex-col gap-4 lg:hidden">
+    <section className="w-full bg-[var(--theme-bg)] px-4 md:px-10 lg:px-[120px] py-10 md:py-14 lg:py-[80px] transition-colors duration-300">
+      {/* ================= MOBILE & TABLET VIEW (< lg) ================= */}
+      <div className="flex flex-col gap-4 md:gap-6 lg:hidden max-w-2xl mx-auto">
         {visionMissionStoryData.map((item, index) => (
           <motion.div
             key={item.id}

@@ -189,7 +189,7 @@ const Contact = () => {
   // ================= STYLING =================
 
   const baseInputClasses =
-    "w-full rounded-sm border bg-transparent pl-[10px] py-[7.5px] text-sm font-normal text-[var(--theme-Contact-Form-title)] outline-none transition-colors hover:!border-[var(--theme-Contact-Form-description-border-hover)] focus:border-[var(--theme-Contact-org)]";
+    "w-full rounded-md border bg-transparent py-[9px] lg:py-[8px] text-sm font-normal text-[var(--theme-Contact-Form-title)] placeholder:text-[var(--theme-Contact-Form-description)] outline-none transition-colors hover:!border-[var(--theme-Contact-Form-description-border-hover)] focus:border-[var(--theme-Contact-org)]";
 
   const borderClasses = (hasError) =>
     hasError
@@ -197,53 +197,49 @@ const Contact = () => {
       : "border-[var(--theme-Contact-Form-description-border)]";
 
   return (
-    <section className="w-full bg-[var(--theme-Contact-bg)]">
-      <div className="mx-auto flex w-full max-w-[1680px] flex-col gap-[115px] px-[120px] pb-[91px] pt-[90px] md:flex-row">
+    <section className="w-full bg-[var(--theme-Contact-bg)] transition-colors duration-300">
+      <div className="mx-auto flex w-full max-w-[1680px] flex-col gap-10 md:gap-14 lg:gap-[115px] px-4 md:px-10 lg:px-[120px] pt-10 md:pt-14 lg:pt-[90px] pb-12 md:pb-16 lg:pb-[91px] lg:flex-row">
 
         {/* ================= LEFT COLUMN ================= */}
 
-        <div className="flex w-full flex-1 flex-col gap-16 py-[9.5px]">
+        <div className="flex w-full flex-1 flex-col gap-8 md:gap-10 lg:gap-16 py-0 lg:py-[9.5px]">
 
           {/* CONTACT INTRO */}
 
-          <div>
-            <h2 className="mb-8 text-5xl font-semibold text-[var(--theme-Contact-title)]">
+          <div className="text-center lg:text-left">
+            <h2 className="mb-4 lg:mb-8 text-[32px] md:text-[38px] lg:text-5xl font-semibold text-[var(--theme-Contact-title)]">
               {ContactUs.intro.heading}
-
-              <span className="text-5xl font-semibold text-[var(--theme-Contact-org)]">
+              <span className="text-[var(--theme-Contact-org)]">
                 {ContactUs.intro.headingAccent}
               </span>
             </h2>
 
-            <p className="mb-2 max-w-[340px] text-sm font-normal leading-[180%] text-[var(--theme-Contact-description)]">
+            <p className="mb-3 max-w-[620px] lg:max-w-[340px] mx-auto lg:mx-0 text-[13px] md:text-sm font-normal leading-[180%] text-[var(--theme-Contact-description)]">
               {ContactUs.intro.description}
             </p>
 
             <a
-              className="mb-2 block w-fit text-sm font-normal text-[var(--theme-Contact-description)] underline-offset-1 transition-colors hover:underline"
+              className="mb-2 block w-fit mx-auto lg:mx-0 text-sm font-normal text-[var(--theme-Contact-description)] underline-offset-1 transition-colors hover:underline"
               href={`mailto:${ContactUs.intro.email}`}
             >
               {ContactUs.intro.email}
             </a>
 
-            <a
-              className="block w-full text-sm font-normal text-[var(--theme-Contact-description)]"
-              href={`tel:${ContactUs.intro.phone.replace(/\s/g, "")}`}
-            >
+            <p className="block w-full text-center lg:text-left text-sm font-normal text-[var(--theme-Contact-description)]">
               {ContactUs.intro.phone}
-            </a>
+            </p>
           </div>
 
           {/* CONTACT BLOCKS */}
 
-          <div className="grid w-fit grid-cols-1 gap-[29px] md:grid-cols-2">
+          <div className="grid w-full lg:w-fit grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-[29px]">
             {ContactUs.blocks.map((block) => (
-              <div key={block.title}>
+              <div key={block.title} className="text-center md:text-left">
                 <h3 className="mb-2 text-xl font-medium text-[var(--theme-Contact-title)]">
                   {block.title}
                 </h3>
 
-                <p className="max-w-[333px] text-sm font-normal leading-relaxed text-[var(--theme-Contact-description)]">
+                <p className="max-w-[420px] lg:max-w-[333px] mx-auto md:mx-0 text-[13px] md:text-sm font-normal leading-relaxed text-[var(--theme-Contact-description)]">
                   {block.description}
                 </p>
               </div>
@@ -251,29 +247,29 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* ================= RIGHT COLUMN ================= */}
+        {/* ================= RIGHT COLUMN / FORM ================= */}
 
-        <div className="flex-1 md:max-w-[460px]">
+        <div className="w-full flex-1 max-w-[480px] md:max-w-[540px] lg:max-w-[460px] mx-auto lg:mx-0">
 
           <form
-            className="min-h-[530px] rounded-md border border-[var(--theme-Contact-Form-border)] bg-[var(--theme-Contact-bg-card,#ffffff)] p-4"
+            className="rounded-xl lg:rounded-md border border-[var(--theme-Contact-Form-border)] bg-[var(--theme-Contact-bg-card,#ffffff)] p-6 md:p-8 lg:p-4 shadow-sm lg:shadow-none min-h-auto lg:min-h-[530px]"
             onSubmit={handleSubmit}
             noValidate
           >
 
             {/* FORM HEADING */}
 
-            <h3 className="mb-1 text-[32px] font-medium text-[var(--theme-Contact-Form-title)]">
+            <h3 className="mb-1 text-[24px] md:text-[28px] lg:text-[32px] font-medium text-center text-[var(--theme-Contact-Form-title)]">
               {ContactUs.form.heading}
             </h3>
 
-            <p className="mb-6 text-sm font-normal text-[var(--theme-Contact-Form-description)]">
+            <p className="mb-6 text-xs md:text-sm font-normal text-center text-[var(--theme-Contact-Form-description)]">
               {ContactUs.form.description}
             </p>
 
             {/* ================= FIRST + LAST NAME ================= */}
 
-            <div className="mb-4 flex gap-1">
+            <div className="mb-4 flex flex-col gap-4 lg:flex-row lg:gap-1">
 
               {/* FIRST NAME */}
 
@@ -285,7 +281,7 @@ const Contact = () => {
                   onChange={handleFirstNameChange}
                   className={`${baseInputClasses} ${borderClasses(
                     errors.firstName,
-                  )}`}
+                  )} px-3.5`}
                 />
 
                 {errors.firstName && (
@@ -305,7 +301,7 @@ const Contact = () => {
                   onChange={handleLastNameChange}
                   className={`${baseInputClasses} ${borderClasses(
                     errors.lastName,
-                  )}`}
+                  )} px-3.5`}
                 />
 
                 {errors.lastName && (
@@ -321,16 +317,16 @@ const Contact = () => {
             <div className="mb-4">
 
               <div className="relative flex items-center">
-                <MdOutlineMailOutline className="pointer-events-none absolute left-2 h-6 w-6 text-[var(--theme-Contact-Form-description)]" />
+                <MdOutlineMailOutline className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-[var(--theme-Contact-Form-description)]" />
 
                 <input
                   type="email"
-                  placeholder="Your E-mail"
+                  placeholder="Email Address"
                   value={formData.email}
                   onChange={handleEmailChange}
                   className={`${baseInputClasses} ${borderClasses(
                     errors.email,
-                  )} pl-[38px]`}
+                  )} pl-11 pr-3.5`}
                 />
               </div>
 
@@ -346,7 +342,7 @@ const Contact = () => {
             <div className="mb-4">
 
               <div className="relative flex items-center">
-                <AiOutlinePhone className="pointer-events-none absolute left-2 h-6 w-6 text-[var(--theme-Contact-Form-description)]" />
+                <AiOutlinePhone className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-[var(--theme-Contact-Form-description)]" />
 
                 <input
                   type="tel"
@@ -355,7 +351,7 @@ const Contact = () => {
                   onChange={handlePhoneChange}
                   className={`${baseInputClasses} ${borderClasses(
                     errors.phone,
-                  )} pl-[38px]`}
+                  )} pl-11 pr-3.5`}
                 />
               </div>
 
@@ -373,11 +369,16 @@ const Contact = () => {
               <textarea
                 placeholder="How can we help?"
                 value={formData.message}
+                maxLength={ContactUs.form.messageMaxLength || 120}
                 onChange={handleMessageChange}
                 className={`${baseInputClasses} ${borderClasses(
                   errors.message,
-                )} h-[111px] resize-none overflow-y-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden`}
+                )} px-3.5 h-[111px] pb-6 resize-none overflow-y-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden`}
               />
+
+              <span className="pointer-events-none absolute bottom-2 right-3 text-xs text-[#999999]">
+                {formData.message.length}/{ContactUs.form.messageMaxLength || 120}
+              </span>
 
               {errors.message && (
                 <p className="mt-1.5 text-sm text-[#FF4D4F]">
@@ -390,7 +391,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="mt-2 w-full rounded-sm bg-[var(--theme-Contact-Form-button)] py-3.5 text-[14px] font-normal text-white transition-opacity hover:opacity-90"
+              className="mt-2 w-full rounded-md lg:rounded-sm bg-[var(--theme-Contact-Form-button)] py-3 lg:py-3.5 text-[14px] font-medium text-white transition-opacity hover:opacity-90"
             >
               Submit
             </button>

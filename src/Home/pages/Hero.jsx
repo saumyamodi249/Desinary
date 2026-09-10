@@ -48,13 +48,13 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-full w-full overflow-hidden bg-cover bg-center bg-no-repeat max-md:bg-right"
+      className="relative h-full w-full overflow-hidden bg-cover bg-right md:bg-center bg-no-repeat"
       style={{
         backgroundImage: "url('/Home/1st/bed.svg')",
       }}
     >
       {/* Main Container */}
-      <div className="relative w-full lg:w-[70%] px-[120px] pt-[93px] pb-[207px] max-md:px-4 max-md:pt-10 max-md:pb-6">
+      <div className="relative w-full lg:w-[70%] px-4 md:px-10 lg:px-[120px] pt-10 md:pt-16 lg:pt-[93px] pb-6 md:pb-12 lg:pb-[207px]">
 
         {/* Heading 1 */}
         <motion.h1
@@ -69,9 +69,9 @@ export default function Hero() {
             amount: 0.2,
             once: true,
           }}
-          className="font-[Poppins] font-semibold text-[48px] align-middle max-w-full lg:max-w-2xl text-left max-md:text-[26px] min-[390px]:max-md:text-[30px] max-md:text-center max-md:mx-auto max-md:leading-tight"
+          className="font-[Poppins] font-semibold text-[26px] md:text-[36px] lg:text-[48px] align-middle max-w-full lg:max-w-2xl text-center md:text-left mx-auto md:mx-0 leading-tight"
         >
-          Smarter Interiors Start<span className="max-md:hidden"> Here</span>
+          Smarter Interiors Start<span className="hidden md:inline"> Here</span>
         </motion.h1>
 
         {/* Heading 2 */}
@@ -87,15 +87,15 @@ export default function Hero() {
             amount: 0.2,
             once: true,
           }}
-          className="font-[Poppins] font-semibold text-[48px] align-middle mb-8 max-w-full lg:max-w-2xl text-left max-md:text-[26px] min-[390px]:max-md:text-[30px] max-md:text-center max-md:mx-auto max-md:mb-6 max-md:leading-tight"
+          className="font-[Poppins] font-semibold text-[26px] md:text-[36px] lg:text-[48px] align-middle mb-6 md:mb-8 max-w-full lg:max-w-2xl text-center md:text-left mx-auto md:mx-0 leading-tight"
         >
           <span className="whitespace-nowrap">
-            <span className="hidden max-md:inline">Here </span>— Welcome to
+            <span className="inline md:hidden">Here </span>— Welcome to
           </span>{" "}
-          <span className="text-[#D97967] max-md:block max-md:mt-1">Desinary</span>
+          <span className="text-[#D97967] block md:inline mt-1 md:mt-0">Desinary</span>
         </motion.h1>
 
-        <div className="mb-16 max-md:mb-6 max-md:flex max-md:flex-col max-md:items-center">
+        <div className="mb-6 md:mb-12 lg:mb-16 flex flex-col items-center md:items-start">
 
           {/* Paragraph */}
           <motion.p
@@ -110,7 +110,7 @@ export default function Hero() {
               amount: 0.2,
               once: true,
             }}
-            className="max-w-2xl !mb-8 text-left font-[Poppins] text-[14px] font-normal align-middle !text-[#656565] max-md:text-center max-md:mx-auto max-md:!mb-6"
+            className="max-w-2xl mb-6 md:mb-8 text-center md:text-left font-[Poppins] text-[13px] md:text-[14px] font-normal align-middle !text-[#656565] mx-auto md:mx-0"
           >
             Whether you prefer AI precision or hands-on control, Desinary lets
             you design interiors your way — smarter, faster, and beautifully
@@ -131,7 +131,7 @@ export default function Hero() {
               amount: 0.2,
               once: true,
             }}
-            className="flex items-center gap-2 rounded-md bg-[var(--theme-btn-bg)] px-[10px] py-[8px] font-[Poppins] text-[14px] font-normal text-white max-md:px-5 max-md:py-2.5"
+            className="flex items-center gap-2 rounded-md bg-[var(--theme-btn-bg)] px-5 py-2.5 md:px-[10px] md:py-[8px] font-[Poppins] text-[14px] font-normal text-white"
           >
             Start Designing
 
@@ -146,10 +146,10 @@ export default function Hero() {
 
       {/* Clients Section */}
       <div className="relative w-full mx-auto">
-        <div className="relative z-20 w-full px-[118px] pb-[103px] max-md:px-4 max-md:pb-12 max-md:flex max-md:flex-col max-md:items-center">
+        <div className="relative z-20 w-full px-4 md:px-10 lg:px-[118px] pb-12 md:pb-16 lg:pb-[103px] flex flex-col items-center md:items-start">
 
           {/* Client Images */}
-          <div className="flex items-center max-md:justify-center">
+          <div className="flex items-center justify-center md:justify-start">
 
             {/* Client 1 */}
             <motion.img
@@ -167,7 +167,7 @@ export default function Hero() {
               }}
               src="/Home/1st/4th person.svg"
               alt="Client"
-              className="relative z-10 h-[58px] w-[58px] max-md:h-[38px] max-md:w-[38px] rounded-full border-[3px] max-md:border-2 border-[#D97967] object-cover cursor-pointer"
+              className="relative z-10 h-[38px] w-[38px] md:h-[58px] md:w-[58px] rounded-full border-2 md:border-[3px] border-[#D97967] object-cover cursor-pointer"
             />
 
             {/* Client 2 */}
@@ -186,7 +186,7 @@ export default function Hero() {
               }}
               src="/Home/1st/3rd person.svg"
               alt="Client"
-              className="relative z-20 -ml-4 max-md:-ml-2.5 h-[58px] w-[58px] max-md:h-[38px] max-md:w-[38px] rounded-full border-[3px] max-md:border-2 border-[#D97967] object-cover cursor-pointer"
+              className="relative z-20 -ml-2.5 md:-ml-4 h-[38px] w-[38px] md:h-[58px] md:w-[58px] rounded-full border-2 md:border-[3px] border-[#D97967] object-cover cursor-pointer"
             />
 
             {/* Client 3 */}
@@ -205,7 +205,7 @@ export default function Hero() {
               }}
               src="/Home/1st/2nd person.svg"
               alt="Client"
-              className="relative z-30 -ml-4 max-md:-ml-2.5 h-[58px] w-[58px] max-md:h-[38px] max-md:w-[38px] rounded-full border-[3px] max-md:border-2 border-[#D97967] object-cover cursor-pointer"
+              className="relative z-30 -ml-2.5 md:-ml-4 h-[38px] w-[38px] md:h-[58px] md:w-[58px] rounded-full border-2 md:border-[3px] border-[#D97967] object-cover cursor-pointer"
             />
 
             {/* Client 4 */}
@@ -224,7 +224,7 @@ export default function Hero() {
               }}
               src="/Home/1st/1st person.svg"
               alt="Client"
-              className="relative z-40 -ml-4 max-md:-ml-2.5 h-[58px] w-[58px] max-md:h-[38px] max-md:w-[38px] rounded-full border-[3px] max-md:border-2 border-[#D97967] object-cover cursor-pointer"
+              className="relative z-40 -ml-2.5 md:-ml-4 h-[38px] w-[38px] md:h-[58px] md:w-[58px] rounded-full border-2 md:border-[3px] border-[#D97967] object-cover cursor-pointer"
             />
           </div>
 
@@ -242,14 +242,14 @@ export default function Hero() {
               once: true,
               margin: "150px",
             }}
-            className="mt-2 flex items-center gap-1 max-md:mt-1 max-md:justify-center"
+            className="mt-1 md:mt-2 flex items-center justify-center md:justify-start gap-1"
           >
-            <span className="flex items-center text-[36px] font-normal text-[var(--theme-black)] max-md:text-[20px]">
+            <span className="flex items-center text-[20px] md:text-[36px] font-normal text-[var(--theme-black)]">
               {clientCount}
-              <PiPlusThin className="h-6 w-6 max-md:h-4 max-md:w-4" />
+              <PiPlusThin className="h-4 w-4 md:h-6 md:w-6" />
             </span>
 
-            <span className="text-[36px] font-normal text-[#D97967] max-md:text-[20px]">
+            <span className="text-[20px] md:text-[36px] font-normal text-[#D97967]">
               Clients
             </span>
           </motion.div>

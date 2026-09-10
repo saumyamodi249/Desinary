@@ -95,9 +95,9 @@ export default function BeforeAfter() {
   };
 
   return (
-    <section className="mx-auto bg-[var(--theme-bg-page)] px-[120px] py-[108px] text-center max-md:px-4 max-md:py-12">
+    <section className="mx-auto bg-[var(--theme-bg-page)] px-4 md:px-10 lg:px-[120px] py-12 md:py-16 lg:py-[108px] text-center">
       {/* TITLE */}
-      <h2 className="font-poppins text-5xl font-semibold text-[var(--theme-BeforeAfter-title)] max-md:text-3xl">
+      <h2 className="font-poppins text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--theme-BeforeAfter-title)]">
         {beforeAfter.titlePrefix}
         <span className="text-[var(--theme-BeforeAfter-text-org)]">
           {beforeAfter.titleHighlight}
@@ -106,7 +106,7 @@ export default function BeforeAfter() {
       </h2>
 
       {/* DESCRIPTION */}
-      <p className="mx-auto mt-6 max-w-xl text-center font-poppins text-[14px] font-normal text-[var(--theme-bg-BeforeAfter-description)] max-md:mt-4">
+      <p className="mx-auto mt-4 md:mt-5 lg:mt-6 max-w-xl text-center font-poppins text-[14px] font-normal text-[var(--theme-bg-BeforeAfter-description)]">
         {beforeAfter.description}
       </p>
 
@@ -127,15 +127,17 @@ export default function BeforeAfter() {
         className="
           relative
           mx-auto
-          mt-[60px]
-          h-[650px]
+          mt-8
+          md:mt-12
+          lg:mt-[60px]
+          h-[320px]
+          md:h-[480px]
+          lg:h-[650px]
           w-full
           max-w-[1600px]
           overflow-hidden
           rounded-sm
           select-none
-          max-md:mt-8
-          max-md:h-[360px]
         "
       >
         {/* AFTER IMAGE */}
@@ -179,11 +181,11 @@ export default function BeforeAfter() {
               absolute
               left-0
               top-0
-              h-[650px]
+              h-full
+              lg:h-[650px]
               w-[1400px]
               max-w-none
               object-cover
-              max-md:h-full
             "
           />
         </div>
@@ -195,10 +197,11 @@ export default function BeforeAfter() {
             absolute
             inset-y-0
             z-50
-            w-[6px]
+            w-1
+            md:w-[5px]
+            lg:w-[6px]
             -translate-x-1/2
             bg-[var(--theme-FAQ-BeforeAfter-hover)]
-            max-md:w-[4px]
           "
           style={{
             left: `${split}%`,
@@ -215,20 +218,23 @@ export default function BeforeAfter() {
             absolute
             inset-y-0
             z-[60]
-            w-[20px]
+            w-10
+            md:w-8
+            lg:w-5
             -translate-x-1/2
             cursor-ew-resize
             touch-none
-            max-md:w-[40px]
           "
           style={{
             left: `${split}%`,
           }}
         />
 
-        {/* BEFORE LABEL */}
+        {/* BEFORE LABEL (Desktop) */}
         <div
           className="
+            hidden
+            lg:block
             pointer-events-none
             absolute
             top-1/2
@@ -244,7 +250,6 @@ export default function BeforeAfter() {
             font-medium
             whitespace-nowrap
             text-white
-            max-md:hidden
           "
           style={{
             left: `${split}%`,
@@ -253,9 +258,11 @@ export default function BeforeAfter() {
           Before
         </div>
 
-        {/* AFTER LABEL */}
+        {/* AFTER LABEL (Desktop) */}
         <div
           className="
+            hidden
+            lg:block
             pointer-events-none
             absolute
             top-1/2
@@ -270,7 +277,6 @@ export default function BeforeAfter() {
             font-medium
             whitespace-nowrap
             text-white
-            max-md:hidden
           "
           style={{
             left: `${split}%`,
@@ -279,11 +285,11 @@ export default function BeforeAfter() {
           After
         </div>
 
-        {/* MOBILE CONTROLS (< >) */}
+        {/* MOBILE & TABLET CONTROLS (< >) */}
         <div
           className="
-            hidden
-            max-md:flex
+            flex
+            lg:hidden
             pointer-events-none
             absolute
             top-1/2

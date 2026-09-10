@@ -77,13 +77,13 @@ function AnimatedStat({ value }) {
 
 export default function MeetDesinary() {
   return (
-    <section className="meet-desinary-page w-full pb-[108px] max-md:pb-8">
-      <div className="px-[120px] pt-[108px] pb-[60px] max-md:px-4 max-md:pt-12 max-md:pb-6">
+    <section className="meet-desinary-page w-full pb-12 md:pb-20 lg:pb-[108px]">
+      <div className="px-4 md:px-10 lg:px-[120px] pt-12 md:pt-16 lg:pt-[108px] pb-8 md:pb-12 lg:pb-[60px]">
         {/* Top Content */}
         <div className="mx-auto grid max-w-[1140px] grid-cols-1 md:grid-cols-[1.05fr_0.95fr] md:gap-14">
           {/* Heading */}
-          <div className="flex w-full max-w-[600px] items-start max-md:items-center max-md:justify-center max-md:mx-auto">
-            <h2 className="w-full max-w-[750px] -translate-x-16 -translate-y-4 text-[48px] font-semibold text-[var(--theme-title-text)] max-md:translate-x-0 max-md:translate-y-0 max-md:text-3xl max-md:text-center max-md:mb-6">
+          <div className="flex w-full max-w-[600px] items-center md:items-start justify-center md:justify-start mx-auto md:mx-0">
+            <h2 className="w-full max-w-[750px] text-3xl md:text-4xl lg:text-[48px] font-semibold text-[var(--theme-title-text)] text-center md:text-left mb-6 md:mb-0 lg:-translate-x-16 lg:-translate-y-4">
               <span className="text-[var(--theme-accent-text)]">
                 {meetDesinary.titleHighlight}
               </span>{" "}
@@ -98,8 +98,8 @@ export default function MeetDesinary() {
           </div>
 
           {/* Description */}
-          <div className="w-full max-w-[520px] max-md:mx-auto">
-            <div className="space-y-4 font-[Poppins] text-[15px] font-normal text-[var(--theme-bg-MeetDesinary-description)] max-md:text-center">
+          <div className="w-full max-w-[520px] mx-auto md:mx-0">
+            <div className="space-y-4 font-[Poppins] text-[14px] md:text-[15px] font-normal text-[var(--theme-bg-MeetDesinary-description)] text-center md:text-left">
               {meetDesinary.paragraphs.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
@@ -109,18 +109,18 @@ export default function MeetDesinary() {
       </div>
 
       {/* Stats */}
-      <div className="mx-auto w-full max-w-[1270px] bg-[var(--theme-bg-MeetDesinary-description)] max-md:bg-transparent max-md:px-4">
-        <div className="w-full rounded-sm border border-[var(--theme-bg-MeetDesinary-border)] bg-[var(--theme-bg-MeetDesinary-box)] py-[16px] pl-[89px] pr-[90px] shadow-sm max-md:px-3 max-md:py-3 max-md:rounded-xl">
+      <div className="mx-auto w-full max-w-[1270px] bg-transparent lg:bg-[var(--theme-bg-MeetDesinary-description)] px-4 md:px-10 lg:px-0">
+        <div className="w-full rounded-xl md:rounded-lg lg:rounded-sm border border-[var(--theme-bg-MeetDesinary-border)] bg-[var(--theme-bg-MeetDesinary-box)] py-3 md:py-4 lg:py-[16px] px-3 md:px-6 lg:pl-[89px] lg:pr-[90px] shadow-sm">
           {/* Inner Container */}
-          <div className="relative mx-auto flex max-w-[1140px] items-center justify-between max-md:grid max-md:grid-cols-2 max-md:gap-0">
+          <div className="relative mx-auto grid grid-cols-2 lg:flex max-w-[1140px] items-center justify-between gap-0">
             {/* Small screen '+' cross divider lines */}
-            <div className="hidden max-md:block absolute top-2 bottom-2 left-1/2 w-[1px] -translate-x-1/2 bg-[var(--theme-divider-color)] opacity-70 pointer-events-none" />
-            <div className="hidden max-md:block absolute left-2 right-2 top-1/2 h-[1px] -translate-y-1/2 bg-[var(--theme-divider-color)] opacity-70 pointer-events-none" />
+            <div className="block lg:hidden absolute top-2 bottom-2 left-1/2 w-[1px] -translate-x-1/2 bg-[var(--theme-divider-color)] opacity-70 pointer-events-none" />
+            <div className="block lg:hidden absolute left-2 right-2 top-1/2 h-[1px] -translate-y-1/2 bg-[var(--theme-divider-color)] opacity-70 pointer-events-none" />
 
             {meetDesinary.stats.map((s, index) => (
               <div
                 key={s.label}
-                className="flex flex-1 items-center justify-between max-md:py-4 max-md:px-2"
+                className="flex flex-1 items-center justify-between py-4 px-2 md:py-4 md:px-4 lg:py-0 lg:px-0"
               >
                 {/* Stat Content */}
                 <div className="flex flex-1 flex-col items-center justify-center text-center">
@@ -136,7 +136,7 @@ export default function MeetDesinary() {
 
                 {/* Vertical Divider */}
                 {index !== meetDesinary.stats.length - 1 && (
-                  <div className="hidden h-14 w-[1px] bg-[var(--theme-divider-color)] opacity-70 sm:block max-md:hidden" />
+                  <div className="hidden lg:block h-14 w-[1px] bg-[var(--theme-divider-color)] opacity-70" />
                 )}
               </div>
             ))}

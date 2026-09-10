@@ -8,11 +8,11 @@ export default function TransformBanner() {
       <img
         src={transformBanner.image}
         alt="Interior transformed with Desinary"
-        className="h-full w-full object-cover"
+        className="h-[260px] md:h-[380px] lg:h-full w-full object-cover"
       />
 
       {/* Centered Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center pl-[275px] pr-[263px] pt-[234px] pb-[222px] max-md:px-4 max-md:py-12">
+      <div className="absolute inset-0 flex items-center justify-center p-4 md:p-10 lg:pl-[275px] lg:pr-[263px] lg:pt-[234px] lg:pb-[222px]">
         
         {/* Dark Box */}
         <motion.div
@@ -32,14 +32,14 @@ export default function TransformBanner() {
             once: true,
             amount: 0.2,
           }}
-          className="flex h-[128px] w-[742px] items-center justify-center gap-[10px] rounded bg-black/60 p-4 text-center font-bold shadow-2xl backdrop-blur-sm max-md:h-auto max-md:w-full max-md:max-w-[620px] max-md:p-5"
+          className="flex h-auto w-full max-w-[340px] md:max-w-[620px] lg:h-[128px] lg:w-[742px] items-center justify-center gap-[10px] rounded-lg lg:rounded bg-black/60 p-5 md:p-6 lg:p-4 text-center font-bold shadow-2xl backdrop-blur-sm"
         >
-          <h2 className="text-center text-[32px] font-bold tracking-tight text-white capitalize max-md:text-xl">
-            <span className="block whitespace-nowrap max-md:whitespace-normal">
+          <h2 className="text-center text-xl md:text-2xl lg:text-[32px] font-bold tracking-tight text-white capitalize">
+            <span className="block whitespace-normal lg:whitespace-nowrap">
               {transformBanner.titleLine1}
             </span>
 
-            <span className="block whitespace-nowrap max-md:whitespace-normal">
+            <span className="block whitespace-normal lg:whitespace-nowrap">
               {transformBanner.titleLine2}
             </span>
           </h2>
