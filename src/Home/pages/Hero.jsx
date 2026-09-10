@@ -48,13 +48,13 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-full w-full overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="relative h-full w-full overflow-hidden bg-cover bg-center bg-no-repeat max-md:bg-right"
       style={{
         backgroundImage: "url('/Home/1st/bed.svg')",
       }}
     >
       {/* Main Container */}
-      <div className="relative w-full lg:w-[70%] px-[120px] pt-[93px] pb-[207px]">
+      <div className="relative w-full lg:w-[70%] px-[120px] pt-[93px] pb-[207px] max-md:px-4 max-md:pt-10 max-md:pb-6">
 
         {/* Heading 1 */}
         <motion.h1
@@ -69,9 +69,9 @@ export default function Hero() {
             amount: 0.2,
             once: true,
           }}
-          className="font-[Poppins] font-semibold text-[48px] align-middle max-w-full lg:max-w-2xl text-left"
+          className="font-[Poppins] font-semibold text-[48px] align-middle max-w-full lg:max-w-2xl text-left max-md:text-[26px] min-[390px]:max-md:text-[30px] max-md:text-center max-md:mx-auto max-md:leading-tight"
         >
-          Smarter Interiors Start Here
+          Smarter Interiors Start<span className="max-md:hidden"> Here</span>
         </motion.h1>
 
         {/* Heading 2 */}
@@ -87,12 +87,15 @@ export default function Hero() {
             amount: 0.2,
             once: true,
           }}
-          className="font-[Poppins] font-semibold text-[48px] align-middle mb-8 max-w-full lg:max-w-2xl text-left"
+          className="font-[Poppins] font-semibold text-[48px] align-middle mb-8 max-w-full lg:max-w-2xl text-left max-md:text-[26px] min-[390px]:max-md:text-[30px] max-md:text-center max-md:mx-auto max-md:mb-6 max-md:leading-tight"
         >
-          — Welcome to <span className="text-[#D97967]">Desinary</span>
+          <span className="whitespace-nowrap">
+            <span className="hidden max-md:inline">Here </span>— Welcome to
+          </span>{" "}
+          <span className="text-[#D97967] max-md:block max-md:mt-1">Desinary</span>
         </motion.h1>
 
-        <div className="mb-16">
+        <div className="mb-16 max-md:mb-6 max-md:flex max-md:flex-col max-md:items-center">
 
           {/* Paragraph */}
           <motion.p
@@ -107,7 +110,7 @@ export default function Hero() {
               amount: 0.2,
               once: true,
             }}
-            className="max-w-2xl !mb-8 text-left font-[Poppins] text-[14px] font-normal align-middle !text-[#656565]"
+            className="max-w-2xl !mb-8 text-left font-[Poppins] text-[14px] font-normal align-middle !text-[#656565] max-md:text-center max-md:mx-auto max-md:!mb-6"
           >
             Whether you prefer AI precision or hands-on control, Desinary lets
             you design interiors your way — smarter, faster, and beautifully
@@ -115,112 +118,120 @@ export default function Hero() {
           </motion.p>
 
           {/* Button */}
-         <motion.button
-  type="button"
-  initial={{ opacity: 0, y: 30}}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{
-    duration: 0.8,
-    delay: 0.4,
-    ease: "easeInOut",
-  }}
-  viewport={{
-    amount: 0.2,
-    once: true,
-  }}
-  className="flex items-center gap-2 rounded-md bg-[var(--theme-btn-bg)] px-[10px] py-[8px] font-[Poppins] text-[14px] font-normal text-white"
->
-  Start Designing
+          <motion.button
+            type="button"
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.4,
+              ease: "easeInOut",
+            }}
+            viewport={{
+              amount: 0.2,
+              once: true,
+            }}
+            className="flex items-center gap-2 rounded-md bg-[var(--theme-btn-bg)] px-[10px] py-[8px] font-[Poppins] text-[14px] font-normal text-white max-md:px-5 max-md:py-2.5"
+          >
+            Start Designing
 
-  <img
-    src="/Home/1st/arrow.svg"
-    alt="Arrow"
-    className="h-3.5 w-3.5 translate-y-[1px]"
-  />
-</motion.button>
+            <img
+              src="/Home/1st/arrow.svg"
+              alt="Arrow"
+              className="h-3.5 w-3.5 translate-y-[1px]"
+            />
+          </motion.button>
         </div>
       </div>
 
       {/* Clients Section */}
       <div className="relative w-full mx-auto">
-        <div className="relative z-20 w-full px-[118px] pb-[103px]">
+        <div className="relative z-20 w-full px-[118px] pb-[103px] max-md:px-4 max-md:pb-12 max-md:flex max-md:flex-col max-md:items-center">
 
           {/* Client Images */}
-          <div className="flex items-center">
+          <div className="flex items-center max-md:justify-center">
 
             {/* Client 1 */}
             <motion.img
-              initial={{ opacity: 0, y: 170 }}
+              initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8, scale: 1.1 }}
               transition={{
-                duration: 0.7,
+                duration: 0.6,
                 delay: 0,
                 ease: "easeOut",
               }}
               viewport={{
                 once: true,
+                margin: "150px",
               }}
               src="/Home/1st/4th person.svg"
               alt="Client"
-              className="relative z-10 h-[58px] w-[58px] rounded-full border-[3px] border-[#D97967] object-cover"
+              className="relative z-10 h-[58px] w-[58px] max-md:h-[38px] max-md:w-[38px] rounded-full border-[3px] max-md:border-2 border-[#D97967] object-cover cursor-pointer"
             />
 
             {/* Client 2 */}
             <motion.img
-              initial={{ opacity: 0, y: 170 }}
+              initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8, scale: 1.1 }}
               transition={{
-                duration: 0.7,
+                duration: 0.6,
                 delay: 0.15,
                 ease: "easeOut",
               }}
               viewport={{
                 once: true,
+                margin: "150px",
               }}
               src="/Home/1st/3rd person.svg"
               alt="Client"
-              className="relative z-20 -ml-4 h-[58px] w-[58px] rounded-full border-[3px] border-[#D97967] object-cover"
+              className="relative z-20 -ml-4 max-md:-ml-2.5 h-[58px] w-[58px] max-md:h-[38px] max-md:w-[38px] rounded-full border-[3px] max-md:border-2 border-[#D97967] object-cover cursor-pointer"
             />
 
             {/* Client 3 */}
             <motion.img
-              initial={{ opacity: 0, y: 170 }}
+              initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8, scale: 1.1 }}
               transition={{
-                duration: 0.7,
+                duration: 0.6,
                 delay: 0.3,
                 ease: "easeOut",
               }}
               viewport={{
                 once: true,
+                margin: "150px",
               }}
               src="/Home/1st/2nd person.svg"
               alt="Client"
-              className="relative z-30 -ml-4 h-[58px] w-[58px] rounded-full border-[3px] border-[#D97967] object-cover"
+              className="relative z-30 -ml-4 max-md:-ml-2.5 h-[58px] w-[58px] max-md:h-[38px] max-md:w-[38px] rounded-full border-[3px] max-md:border-2 border-[#D97967] object-cover cursor-pointer"
             />
 
             {/* Client 4 */}
             <motion.img
-              initial={{ opacity: 0, y: 170 }}
+              initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8, scale: 1.1 }}
               transition={{
-                duration: 0.7,
+                duration: 0.6,
                 delay: 0.45,
                 ease: "easeOut",
               }}
               viewport={{
                 once: true,
+                margin: "150px",
               }}
               src="/Home/1st/1st person.svg"
               alt="Client"
-              className="relative z-40 -ml-4 h-[58px] w-[58px] rounded-full border-[3px] border-[#D97967] object-cover"
+              className="relative z-40 -ml-4 max-md:-ml-2.5 h-[58px] w-[58px] max-md:h-[38px] max-md:w-[38px] rounded-full border-[3px] max-md:border-2 border-[#D97967] object-cover cursor-pointer"
             />
           </div>
 
           {/* Client Count */}
           <motion.div
             ref={countRef}
-            initial={{ opacity: 0, y: 70 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.9,
@@ -229,16 +240,16 @@ export default function Hero() {
             }}
             viewport={{
               once: true,
-              amount: 0.2,
+              margin: "150px",
             }}
-            className="mt-2 flex items-center gap-1"
+            className="mt-2 flex items-center gap-1 max-md:mt-1 max-md:justify-center"
           >
-            <span className="flex items-center text-[36px] font-normal text-[var(--theme-black)]">
+            <span className="flex items-center text-[36px] font-normal text-[var(--theme-black)] max-md:text-[20px]">
               {clientCount}
-              <PiPlusThin className="h-6 w-6" />
+              <PiPlusThin className="h-6 w-6 max-md:h-4 max-md:w-4" />
             </span>
 
-            <span className="text-[36px] font-normal text-[#D97967]">
+            <span className="text-[36px] font-normal text-[#D97967] max-md:text-[20px]">
               Clients
             </span>
           </motion.div>
