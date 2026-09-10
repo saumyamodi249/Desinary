@@ -13,7 +13,7 @@ initial={{ opacity: 0, y: 40 }}
 whileInView={{ opacity: 1, y: 0 }}
 viewport={{ once: true, amount: 0.2 }}
 transition={{ duration: 0.7, ease: "easeOut" }}
-className="w-full px-[120px] py-[108px] md:px-10"
+className="w-full px-[120px] py-[108px] md:px-10 max-md:px-4 max-md:py-12"
 style={{
 backgroundColor: "var(--theme-FAQ-bg)",
 }}
@@ -25,6 +25,7 @@ font-[Poppins]
 text-[48px]
 font-semibold
 text-center
+max-md:text-3xl
 "
 style={{
 color: "var(--theme-FAQ-text)",
@@ -38,7 +39,6 @@ color: "var(--theme-FAQ-text-org)",
 >
 {faq.titleHighlight} </span> </h2>
 
-```
       <p
         className="
           mx-auto
@@ -50,6 +50,7 @@ color: "var(--theme-FAQ-text-org)",
           leading-[180%]
           text-center
           align-middle
+          max-md:mt-4
         "
         style={{
           color: "var(--theme-FAQ-text-small)",
@@ -58,23 +59,25 @@ color: "var(--theme-FAQ-text-org)",
         {faq.subtitle}
       </p>
 
-      <p
-        className="
-          mx-auto
-          max-w-[850px]
-          font-[Poppins]
-          text-[14px]
-          font-normal
-          leading-[180%]
-          text-center
-          align-middle
-        "
-        style={{
-          color: "var(--theme-FAQ-text-small)",
-        }}
-      >
-        {faq.subtitle2}
-      </p>
+      {faq.subtitle2 && (
+        <p
+          className="
+            mx-auto
+            max-w-[850px]
+            font-[Poppins]
+            text-[14px]
+            font-normal
+            leading-[180%]
+            text-center
+            align-middle
+          "
+          style={{
+            color: "var(--theme-FAQ-text-small)",
+          }}
+        >
+          {faq.subtitle2}
+        </p>
+      )}
     </div>
 
     {/* ================= FAQ LIST ================= */}

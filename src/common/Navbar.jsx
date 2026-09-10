@@ -19,7 +19,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
         duration-300
       "
     >
-      <nav className="w-full  px-[120px] py-4 flex items-center justify-between gap-2">
+      <nav className="w-full px-[120px] max-md:px-4 py-4 flex items-center justify-between gap-2">
         {/* ================= LOGO ================= */}
         <div className="flex-shrink-0">
           <Link to="/welcome" className="w-full">

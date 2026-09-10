@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, animate } from "motion/react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { beforeAfter } from "../data/data";
 
 export default function BeforeAfter() {
   const [split, setSplit] = useState(50);
+  const containerRef = useRef(null);
+  const [containerWidth, setContainerWidth] = useState(1400);
 
   const isDragging = useRef(false);
   const animationRef = useRef(null);
@@ -38,10 +41,19 @@ export default function BeforeAfter() {
     animationRef.current = controls;
   };
 
-  // Cleanup
+  // Cleanup & Resize Listener
   useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth);
+      }
+    };
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+
     return () => {
       animationRef.current?.stop();
+      window.removeEventListener("resize", updateWidth);
     };
   }, []);
 
@@ -83,9 +95,9 @@ export default function BeforeAfter() {
   };
 
   return (
-    <section className="mx-auto bg-[var(--theme-bg-page)] px-[120px] py-[108px] text-center">
+    <section className="mx-auto bg-[var(--theme-bg-page)] px-[120px] py-[108px] text-center max-md:px-4 max-md:py-12">
       {/* TITLE */}
-      <h2 className="font-poppins text-5xl font-semibold text-[var(--theme-BeforeAfter-title)]">
+      <h2 className="font-poppins text-5xl font-semibold text-[var(--theme-BeforeAfter-title)] max-md:text-3xl">
         {beforeAfter.titlePrefix}
         <span className="text-[var(--theme-BeforeAfter-text-org)]">
           {beforeAfter.titleHighlight}
@@ -94,12 +106,13 @@ export default function BeforeAfter() {
       </h2>
 
       {/* DESCRIPTION */}
-      <p className="mx-auto mt-6 max-w-xl text-center font-poppins text-[14px] font-normal text-[var(--theme-bg-BeforeAfter-description)]">
+      <p className="mx-auto mt-6 max-w-xl text-center font-poppins text-[14px] font-normal text-[var(--theme-bg-BeforeAfter-description)] max-md:mt-4">
         {beforeAfter.description}
       </p>
 
       {/* BEFORE / AFTER BOX */}
       <motion.div
+        ref={containerRef}
         initial={{ opacity: 0, scale: 1 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{
@@ -121,6 +134,8 @@ export default function BeforeAfter() {
           overflow-hidden
           rounded-sm
           select-none
+          max-md:mt-8
+          max-md:h-[360px]
         "
       >
         {/* AFTER IMAGE */}
@@ -156,6 +171,9 @@ export default function BeforeAfter() {
             src={beforeAfter.before}
             alt="Before Desinary redesign"
             draggable="false"
+            style={{
+              width: `${containerWidth}px`,
+            }}
             className="
               pointer-events-none
               absolute
@@ -165,6 +183,7 @@ export default function BeforeAfter() {
               w-[1400px]
               max-w-none
               object-cover
+              max-md:h-full
             "
           />
         </div>
@@ -179,6 +198,7 @@ export default function BeforeAfter() {
             w-[6px]
             -translate-x-1/2
             bg-[var(--theme-FAQ-BeforeAfter-hover)]
+            max-md:w-[4px]
           "
           style={{
             left: `${split}%`,
@@ -199,6 +219,7 @@ export default function BeforeAfter() {
             -translate-x-1/2
             cursor-ew-resize
             touch-none
+            max-md:w-[40px]
           "
           style={{
             left: `${split}%`,
@@ -223,6 +244,7 @@ export default function BeforeAfter() {
             font-medium
             whitespace-nowrap
             text-white
+            max-md:hidden
           "
           style={{
             left: `${split}%`,
@@ -248,12 +270,39 @@ export default function BeforeAfter() {
             font-medium
             whitespace-nowrap
             text-white
+            max-md:hidden
           "
           style={{
             left: `${split}%`,
           }}
         >
           After
+        </div>
+
+        {/* MOBILE CONTROLS (< >) */}
+        <div
+          className="
+            hidden
+            max-md:flex
+            pointer-events-none
+            absolute
+            top-1/2
+            z-40
+            -translate-x-1/2
+            -translate-y-1/2
+            items-center
+            shadow-md
+          "
+          style={{
+            left: `${split}%`,
+          }}
+        >
+          <div className="flex h-8 w-8 items-center justify-center rounded-l bg-[var(--theme-FAQ-BeforeAfter-left-right)] text-white shadow-sm border-r border-white/20">
+            <FaChevronLeft className="text-[12px]" />
+          </div>
+          <div className="flex h-8 w-8 items-center justify-center rounded-r bg-[var(--theme-FAQ-BeforeAfter-left-right)] text-white shadow-sm">
+            <FaChevronRight className="text-[12px]" />
+          </div>
         </div>
       </motion.div>
     </section>

@@ -12,7 +12,7 @@ export default function TransformBanner() {
       />
 
       {/* Centered Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center pl-[275px] pr-[263px] pt-[234px] pb-[222px]">
+      <div className="absolute inset-0 flex items-center justify-center pl-[275px] pr-[263px] pt-[234px] pb-[222px] max-md:px-4 max-md:py-12">
         
         {/* Dark Box */}
         <motion.div
@@ -32,14 +32,14 @@ export default function TransformBanner() {
             once: true,
             amount: 0.2,
           }}
-          className="flex h-[128px] w-[742px] items-center justify-center gap-[10px] rounded bg-black/60 p-4 text-center font-bold shadow-2xl backdrop-blur-xs"
+          className="flex h-[128px] w-[742px] items-center justify-center gap-[10px] rounded bg-black/60 p-4 text-center font-bold shadow-2xl backdrop-blur-sm max-md:h-auto max-md:w-full max-md:max-w-[620px] max-md:p-5"
         >
-          <h2 className="text-center text-[32px] font-bold tracking-tight text-white capitalize">
-            <span className="block whitespace-nowrap">
+          <h2 className="text-center text-[32px] font-bold tracking-tight text-white capitalize max-md:text-xl">
+            <span className="block whitespace-nowrap max-md:whitespace-normal">
               {transformBanner.titleLine1}
             </span>
 
-            <span className="block whitespace-nowrap">
+            <span className="block whitespace-nowrap max-md:whitespace-normal">
               {transformBanner.titleLine2}
             </span>
           </h2>

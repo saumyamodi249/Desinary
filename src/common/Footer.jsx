@@ -40,7 +40,7 @@ export default function Footer() {
     <footer className="w-full">
 
       {/* ================= CTA STRIP ================= */}
-      <div className="bg-[var(--theme-bg-Footer)] pt-[60px] pr-[242.5px] pl-[242.5px] text-center">
+      <div className="bg-[var(--theme-bg-Footer)] py-[60px] pr-[242.5px] pl-[242.5px] text-center max-md:px-8 max-md:py-10">
 
         {/* CTA TITLE */}
         <motion.h2
@@ -51,7 +51,7 @@ export default function Footer() {
             ...reveal.transition,
             delay: 0,
           }}
-          className="mx-auto text-center font-[Poppins] text-5xl font-semibold text-[var(--theme-Footer-text)]"
+          className="mx-auto text-center font-[Poppins] text-5xl font-semibold text-[var(--theme-Footer-text)] max-md:text-2xl"
         >
           {ctaBanner.title}
         </motion.h2>
@@ -65,7 +65,7 @@ export default function Footer() {
             ...reveal.transition,
             delay: 0.12,
           }}
-          className="mx-auto mt-3 max-w-xl text-center font-[Poppins] text-[14px] font-normal leading-[180%] text-[var(--theme-Footer-text-small)]"
+          className="mx-auto mt-3 max-w-xl text-center font-[Poppins] text-[14px] font-normal leading-[180%] text-[var(--theme-Footer-text-small)] max-md:text-[12px] max-md:leading-relaxed"
         >
           {ctaBanner.description}
         </motion.p>
@@ -85,7 +85,7 @@ export default function Footer() {
           whileTap={{
             scale: 0.97,
           }}
-          className="mt-8 mb-[60px] rounded-md bg-[var(--theme-btn-bg)] px-6 py-3 font-[Poppins] text-[14px] font-normal text-[var(--theme-white)] hover:bg-[var(--theme-btn-bg)]"
+          className="mt-8 rounded-md bg-[var(--theme-btn-bg)] px-6 py-3 font-[Poppins] text-[14px] font-normal text-[var(--theme-white)] hover:bg-[var(--theme-btn-bg)]"
         >
           {ctaBanner.ctaLabel}
         </motion.button>

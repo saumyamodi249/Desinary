@@ -3,10 +3,10 @@ import { journey } from "../data/data";
 
 export default function Journey() {
   return (
-    <section className="w-full bg-[var(--theme-bg-journey)] py-[108px]">
+    <section className="w-full bg-[var(--theme-bg-journey)] py-[108px] max-md:py-12">
       {/* Heading */}
-      <div className="mb-[60px] flex flex-col items-center gap-6 text-center">
-        <h2 className="text-5xl font-semibold text-[var(--theme-title-text)]">
+      <div className="mb-[60px] flex flex-col items-center gap-6 text-center max-md:mb-8 max-md:gap-4 max-md:px-4">
+        <h2 className="text-5xl font-semibold text-[var(--theme-title-text)] max-md:text-3xl">
           {journey.titlePrefix}{" "}
           <span className="text-[var(--theme-bg-bg-box-hover)]">
             {journey.titleHighlight}
@@ -14,23 +14,22 @@ export default function Journey() {
           <span> {journey.titlePostfix}</span>
         </h2>
 
-        <p className="mx-auto mt-4 max-w-[650px] px-10 text-sm text-[var(--theme-journey-text-small)]">
+        <p className="mx-auto mt-4 max-w-[650px] px-10 text-sm text-[var(--theme-journey-text-small)] max-md:px-2 max-md:mt-2">
           {journey.subtitle}
         </p>
       </div>
 
       {/* Journey Cards */}
-      <div className="mx-auto w-full px-[120px]">
-        <div className="space-y-10 rounded-lg bg-[var(--theme-bg-journey)] pb-7 pl-9 pt-[29px]">
+      <div className="mx-auto w-full px-[120px] max-md:px-4">
+        <div className="space-y-10 rounded-lg bg-[var(--theme-bg-journey)] pb-7 pl-9 pt-[29px] max-md:space-y-6 max-md:p-0">
           {journey.steps.map((step, i) => (
             <div
               key={step.number}
-              className={`group flex w-full flex-col items-center rounded-lg border border-[var(--theme-border-color)] bg-[var(--theme-bg-primary)] transition-all duration-300 hover:border-[var(--theme-bg-bg-box-hover)] hover:shadow-xl sm:p-8 lg:flex-row lg:gap-10 ${
-                i % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
+              className={`group flex w-full flex-col items-center rounded-lg border border-[var(--theme-border-color)] bg-[var(--theme-bg-primary)] transition-all duration-300 hover:border-[var(--theme-bg-bg-box-hover)] hover:shadow-xl sm:p-8 lg:flex-row lg:gap-10 max-md:p-5 ${i % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
             >
               {/* Image */}
-              <div className="w-full shrink-0 overflow-hidden rounded-lg lg:w-[48%]">
+              <div className="w-full shrink-0 overflow-hidden rounded-lg lg:w-[48%] max-md:mb-4">
                 <motion.img
                   initial={{ scale: 1 }}
                   whileInView={{ scale: 1.08 }}
@@ -45,17 +44,17 @@ export default function Journey() {
                   }}
                   src={step.image}
                   alt={step.title}
-                  className="h-[362px] w-full object-cover"
+                  className="h-[362px] w-full object-cover max-md:h-[220px]"
                 />
               </div>
 
               {/* Text */}
-              <div className="flex w-full flex-col justify-center gap-4 space-y-4 px-2 lg:w-[46%] lg:px-6">
+              <div className="flex w-full flex-col justify-center gap-4 space-y-4 px-2 lg:w-[46%] lg:px-6 max-md:items-center max-md:text-center max-md:space-y-2 max-md:gap-3">
                 <span className="text-xl font-medium text-[var(--theme-journey-number)]">
                   {step.number}
                 </span>
 
-                <h3 className="mr-52 text-xl font-medium text-[var(--theme-journey-title)]">
+                <h3 className="mr-52 text-xl font-medium text-[var(--theme-journey-title)] max-md:mr-0">
                   {step.title}
                 </h3>
 
@@ -67,9 +66,9 @@ export default function Journey() {
           ))}
 
           {/* ================= RESULT SECTION ================= */}
-          <div className="group flex w-full flex-col items-center rounded-lg border border-[var(--theme-border-color)] bg-[var(--theme-bg-primary)] p-6 transition-all duration-300 hover:shadow-xl sm:p-8 lg:flex-row lg:gap-x-8">
+          <div className="group flex w-full flex-col items-center rounded-lg border border-[var(--theme-border-color)] bg-[var(--theme-bg-primary)] p-6 transition-all duration-300 hover:shadow-xl sm:p-8 lg:flex-row lg:gap-x-8 max-md:p-5">
             {/* Result Image - LEFT */}
-            <div className="w-full shrink-0 overflow-hidden rounded-lg lg:w-[48%]">
+            <div className="w-full shrink-0 overflow-hidden rounded-lg lg:w-[48%] max-md:mb-4">
               <motion.img
                 initial={{ scale: 1 }}
                 whileInView={{ scale: 1.08 }}
@@ -84,12 +83,12 @@ export default function Journey() {
                 }}
                 src={journey.result.image}
                 alt="The Result"
-                className="aspect-[7.67%] w-full object-cover"
+                className="aspect-[7.67%] w-full object-cover max-md:h-[220px] max-md:aspect-auto"
               />
             </div>
 
             {/* Result Content - RIGHT */}
-            <div className="flex w-full flex-col justify-center space-y-4 px-8 py-[100px] lg:w-[50%]">
+            <div className="flex w-full flex-col justify-center space-y-4 px-8 py-[100px] lg:w-[50%] max-md:px-2 max-md:py-6 max-md:items-center max-md:text-center">
               <h3 className="text-[20px] font-medium tracking-tight text-[var(--theme-journey-title)]">
                 {journey.result.titlePrefix}{" "}
                 <span className="text-coral-500">
@@ -98,7 +97,7 @@ export default function Journey() {
                 {journey.result.titlePostfix}
               </h3>
 
-              <div className="space-y-5">
+              <div className="space-y-5 max-md:space-y-4 max-md:text-left max-md:w-full">
                 {journey.result.points.map((point, index) => (
                   <div
                     key={index}

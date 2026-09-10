@@ -30,7 +30,7 @@ export default function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 transition-colors duration-300 dark:bg-[#121212] dark:text-white">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-white text-gray-900 transition-colors duration-300 dark:bg-[#121212] dark:text-white">
       <ScrollToTop />
 
       <Navbar

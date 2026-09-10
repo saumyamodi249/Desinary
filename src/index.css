@@ -5,12 +5,13 @@
 html {
   scroll-behavior: smooth;
 }
+
 :root {
   --theme-white: #f8f8f8;
   --theme-bg-primary: #ffffff;
   --theme-bg-secondary: #f8fafc;
 
-  --theme-title-text: #202020;
+  --theme-title-text: #656565;
   --theme-body-text: #666666;
   --theme-accent-text: #d97967;
 
@@ -26,8 +27,8 @@ html {
   --theme-bg-MeetDesinary: #2a110d;
   --theme-bg-MeetDesinary-description: #656565;
   --theme-bg-MeetDesinary-border: #EFEFEF;
-  --theme-bg-MeetDesinary-box:#FFFAF9;
-  --theme-bg-MeetDesinary-box-text:#D97967;
+  --theme-bg-MeetDesinary-box: #FFFAF9;
+  --theme-bg-MeetDesinary-box-text: #D97967;
 
   --theme-card-bg: #fffaf9;
   --theme-bg-journey: #fffaf9;
@@ -36,7 +37,7 @@ html {
   --theme-bg-bg-box-hover: #d97967;
   --theme-bg-box-journey-inside: #fffaf9;
 
-  --theme-journey-number: #2a110d;
+  --theme-journey-number: #d97967;
   --theme-journey-title: #2a110d;
   --theme-journey-description: #656565;
   --theme-journey-text-small: #656565;
@@ -46,7 +47,7 @@ html {
 
   --theme-Features-img-text-left: #2a110d;
   --theme-Features-img-text-right: #656565;
-  --theme-Features-heading:#020C13;
+  --theme-Features-heading: #020C13;
 
 
   --theme-about-us-bg: #f8f8f8;
@@ -66,22 +67,22 @@ html {
   --theme-FAQ-hover-text: #ffffff;
   --theme-FAQ-border: #e5e5e5;
 
-  --theme-bg-page:#FFFAF9;
+  --theme-bg-page: #FFFAF9;
   --theme-BeforeAfter-title: #2a110d;
   --theme-BeforeAfter-text-org: #d97967;
   --theme-bg-BeforeAfter-description: #656565;
 
- --theme-FAQ-BeforeAfter-hover: #d97967;
- --theme-FAQ-BeforeAfter-left-right: #d05741;
+  --theme-FAQ-BeforeAfter-hover: #d97967;
+  --theme-FAQ-BeforeAfter-left-right: #d05741;
 
 
-  --theme-bg-Testimonials-title-text:#2A110D;
-  --theme-bg-Testimonials-title-description:#656565;
-  --theme-bg-Testimonials-bg:#EFEFEF;
+  --theme-bg-Testimonials-title-text: #2A110D;
+  --theme-bg-Testimonials-title-description: #656565;
+  --theme-bg-Testimonials-bg: #EFEFEF;
 
-  --theme-bg-Footer:#EFEFEF;
+  --theme-bg-Footer: #EFEFEF;
 
-   /* AboutUs */
+  /* AboutUs */
 
   --theme-bg: #ffffff;
   --theme-title: #2a110d;
@@ -92,9 +93,9 @@ html {
   --theme-vision-mission-story: #2a110d;
   --theme-vision-mission-story-description: #BBBBBB;
   --theme-vision-mission-story-border: #EFEFEF;
-  --theme-vision-mission-story-box:#F8F8F8;
-  --theme-vision-mission-story-hover-box :#FFFAF9;
-  --theme-vision-mission-story-hover-border:#d97967;
+  --theme-vision-mission-story-box: #F8F8F8;
+  --theme-vision-mission-story-hover-box: #FFFAF9;
+  --theme-vision-mission-story-hover-border: #d97967;
 
 
   --theme-magic-title: #2a110d;
@@ -104,35 +105,35 @@ html {
   --theme-box-bio: #2a110d;
   --theme-box-bio-description: #656565;
 
-   /* ContactUs */
-   
-  --theme-Contact-bg:#FFFAF9;
-  --theme-Contact-title:#2A110D;
-  --theme-Contact-org:#D97967;
-  --theme-Contact-description:#656565;
-  --theme-Contact-Form-border:#EFEFEF;
-  --theme-Contact-Form-title:#2A110D;
-  --theme-Contact-Form-description:#656565;
-  --theme-Contact-Form-description-border:#EFEFEF;
-  --theme-Contact-Form-description-border-hover:#2A110D;
-  --theme-Contact-Form-button:#D05741;
-  --theme-Contact-bg-card:#FFFFFF;
-  
-  --theme-loction-bg:#FFFFFF;
-  --theme-loction-title:#2A110D;
-  --theme-loction-org:#D97967;
-  --theme-loction-description:#656565;
+  /* ContactUs */
+
+  --theme-Contact-bg: #FFFAF9;
+  --theme-Contact-title: #2A110D;
+  --theme-Contact-org: #D97967;
+  --theme-Contact-description: #656565;
+  --theme-Contact-Form-border: #EFEFEF;
+  --theme-Contact-Form-title: #2A110D;
+  --theme-Contact-Form-description: #656565;
+  --theme-Contact-Form-description-border: #EFEFEF;
+  --theme-Contact-Form-description-border-hover: #2A110D;
+  --theme-Contact-Form-button: #D05741;
+  --theme-Contact-bg-card: #FFFFFF;
+
+  --theme-loction-bg: #FFFFFF;
+  --theme-loction-title: #2A110D;
+  --theme-loction-org: #D97967;
+  --theme-loction-description: #656565;
 
   /* Portfolio */
 
-    --theme-Portfolio-bg:#FFFFFF;
-    --theme-Portfolio-title:#2A110D;
-    --theme-Portfolio-org:#D05741;
-    --theme-Portfolio-description:#656565;
-    --theme-body-text-color: #656565;
-    
-    --theme-portfolio-btn-bg-hover:#B64C38;
-    --theme-portfolio-btn-bg:#fffaf9;
+  --theme-Portfolio-bg: #FFFFFF;
+  --theme-Portfolio-title: #2A110D;
+  --theme-Portfolio-org: #D05741;
+  --theme-Portfolio-description: #656565;
+  --theme-body-text-color: #656565;
+
+  --theme-portfolio-btn-bg-hover: #B64C38;
+  --theme-portfolio-btn-bg: #fffaf9;
 
 }
 
@@ -148,7 +149,7 @@ html {
   --theme-btn-bg: #d05741;
   --theme-btn-bg-hover: #b94734;
 
-  --theme-border-color:#3E3E3E;
+  --theme-border-color: #3E3E3E;
   --theme-divider-color: #d97967;
 
   --theme-white: #ffffff;
@@ -157,8 +158,8 @@ html {
   --theme-bg-MeetDesinary: #ffffff;
   --theme-bg-MeetDesinary-description: #bbbbbb;
   --theme-bg-MeetDesinary-border: #3E3E3E;
-  --theme-bg-MeetDesinary-box:#2a2a2a;
-  --theme-bg-MeetDesinary-box-text:#D97967;
+  --theme-bg-MeetDesinary-box: #2a2a2a;
+  --theme-bg-MeetDesinary-box-text: #D97967;
 
 
   --theme-card-bg: #2a2a2a;
@@ -168,7 +169,7 @@ html {
   --theme-bg-bg-box-hover: #BBBBBB;
   --theme-bg-box-journey-inside: #2a2a2a;
 
-  --theme-journey-number: #fff2f0;
+  --theme-journey-number: #d97967;
   --theme-journey-title: #ffffff;
   --theme-journey-description: #bbbbbb;
   --theme-journey-text-small: #BBBBBB;
@@ -177,12 +178,13 @@ html {
   --theme-Features-text-right: #bbbbbb;
   --theme-Features-img-text-left: #ffffff;
   --theme-Features-img-text-right: #bbbbbb;
-  --theme-Features-heading:#FFFFFF;
+  --theme-Features-heading: #FFFFFF;
 
   --theme-about-us-bg: #303030;
   --theme-about-us-border: #303030;
   --theme-about-us-bg-hover: #333333;
-  --theme-about-us-border-hover: #7b7b7b; /* 1 */  
+  --theme-about-us-border-hover: #7b7b7b;
+  /* 1 */
 
   --theme-Footer-text: #ffffff;
   --theme-Footer-text-small: #bbbbbb;
@@ -196,7 +198,7 @@ html {
   --theme-FAQ-border: #3a3a3a;
 
   /* 3 down all changes */
-  --theme-bg-page:#1C1C1C;
+  --theme-bg-page: #1C1C1C;
   --theme-BeforeAfter-title: #FFFFFF;
   --theme-BeforeAfter-text-org: #d97967;
   --theme-bg-BeforeAfter-description: #BBBBBB;
@@ -205,11 +207,11 @@ html {
   --theme-FAQ-BeforeAfter-left-right: #d05741;
 
 
-  --theme-bg-Testimonials-title-text:#FFFFFF;
-  --theme-bg-Testimonials-title-description:#BBBBBB;
-  --theme-bg-Testimonials-bg:#2A2A2A;
+  --theme-bg-Testimonials-title-text: #FFFFFF;
+  --theme-bg-Testimonials-title-description: #BBBBBB;
+  --theme-bg-Testimonials-bg: #2A2A2A;
 
-  --theme-bg-Footer:#303030 ;
+  --theme-bg-Footer: #303030;
 
   /* AboutUs */
 
@@ -222,50 +224,51 @@ html {
   --theme-vision-mission-story: #ffffff;
   --theme-vision-mission-story-description: #BBBBBB;
   --theme-vision-mission-story-border: #3E3E3E;
-  --theme-vision-mission-story-box:#303030;
-  --theme-vision-mission-story-hover-box :#303030;
-  --theme-vision-mission-story-hover-border:#BBBBBB;
+  --theme-vision-mission-story-box: #303030;
+  --theme-vision-mission-story-hover-box: #303030;
+  --theme-vision-mission-story-hover-border: #BBBBBB;
 
 
   --theme-magic-title: #ffffff;
   --theme-magic-description: #BBBBBB;
   --theme-box: #3E3E3E;
   --theme-box-name: #d97967;
-  --theme-box-bio:#ffffff;
+  --theme-box-bio: #ffffff;
   --theme-box-bio-description: #BBBBBB;
 
-   /* ContactUs */
+  /* ContactUs */
 
-  --theme-Contact-bg:#303030;
-  --theme-Contact-title:#FFFFFF;
-  --theme-Contact-org:#D97967;
-  --theme-Contact-description:#BBBBBB;
-  --theme-Contact-Form-border:#3e3e3e;
-  --theme-Contact-Form-title:#FFFFFF;
-  --theme-Contact-Form-description:#BBBBBB;
-  --theme-Contact-Form-description-border:#7b7b7b;
-  --theme-Contact-Form-description-border-hover:#1c1c1c;
-  --theme-Contact-Form-button:#D05741;
-  --theme-Contact-bg-card:#2A2A2A;
-  
-  --theme-loction-bg:#1C1C1C;
-  --theme-loction-title:#FFFFFF;
-  --theme-loction-org:#D97967;
-  --theme-loction-description:#BBBBBB;
+  --theme-Contact-bg: #303030;
+  --theme-Contact-title: #FFFFFF;
+  --theme-Contact-org: #D97967;
+  --theme-Contact-description: #BBBBBB;
+  --theme-Contact-Form-border: #3e3e3e;
+  --theme-Contact-Form-title: #FFFFFF;
+  --theme-Contact-Form-description: #BBBBBB;
+  --theme-Contact-Form-description-border: #7b7b7b;
+  --theme-Contact-Form-description-border-hover: #1c1c1c;
+  --theme-Contact-Form-button: #D05741;
+  --theme-Contact-bg-card: #2A2A2A;
+
+  --theme-loction-bg: #1C1C1C;
+  --theme-loction-title: #FFFFFF;
+  --theme-loction-org: #D97967;
+  --theme-loction-description: #BBBBBB;
 
   /* Portfolio */
 
-  --theme-Portfolio-bg:#1C1C1C;
+  --theme-Portfolio-bg: #1C1C1C;
 
-  --theme-Portfolio-title:#FFFFFF;
-  --theme-Portfolio-org:#D05741;
-  --theme-Portfolio-description:#BBBBBB;
+  --theme-Portfolio-title: #FFFFFF;
+  --theme-Portfolio-org: #D05741;
+  --theme-Portfolio-description: #BBBBBB;
   --theme-body-text-color: #BBBBBB;
-  
-  --theme-portfolio-btn-bg-hover:#f26c53;
-  --theme-portfolio-btn-bg:#303030;
+
+  --theme-portfolio-btn-bg-hover: #f26c53;
+  --theme-portfolio-btn-bg: #303030;
 
 }
+
 .meet-desinary-page {
   background-color: #ffffff;
 }
@@ -281,6 +284,9 @@ html {
 html,
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   background-color: var(--theme-bg-primary);
   color: var(--theme-title-text);

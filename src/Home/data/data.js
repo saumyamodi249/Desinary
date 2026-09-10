@@ -239,7 +239,7 @@ export const beforeAfter = {
   before:
     "https://www.desinary.com/assets/images/before-img.jpg",
   after:
-    "	https://www.desinary.com/assets/images/after-img.jpg",
+    "https://www.desinary.com/assets/images/after-img.jpg",
 };
 
 export const faq = {

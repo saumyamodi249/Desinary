@@ -57,13 +57,13 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="w-full overflow-hidden bg-[var(--theme-about-us-bg)] py-[108px]">
+    <section className="w-full overflow-hidden bg-[var(--theme-about-us-bg)] py-[108px] max-md:py-12">
       {/* ================= HEADER ================= */}
-      <div className="mx-auto w-full max-w-[1520px] px-[120px]">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+      <div className="mx-auto w-full max-w-[1520px] px-[120px] max-md:px-4">
+        <div className="grid grid-cols-1 gap-15 md:grid-cols-2 max-md:text-center max-md:items-center">
           {/* TITLE */}
           <div>
-            <h2 className=" text-5xl font-semibold tracking-tight text-[var(--theme-bg-Testimonials-title-text)]">
+            <h2 className=" text-5xl font-semibold tracking-tight text-[var(--theme-bg-Testimonials-title-text)] max-md:text-3xl">
               {testimonials.titlePrefix}
 
               <br />
@@ -78,7 +78,7 @@ export default function Testimonials() {
 
           {/* DESCRIPTION */}
           <div className="pt-3 md:pl-12 lg:pl-20">
-            <p className="max-w-[500px] font-poppins text-sm font-normal text-[var(--theme-bg-Testimonials-title-description)]">
+            <p className="max-w-[500px] font-poppins text-sm font-normal text-[var(--theme-bg-Testimonials-title-description)] max-md:max-w-xl max-md:mx-auto">
               {testimonials.description}
             </p>
           </div>
@@ -88,7 +88,7 @@ export default function Testimonials() {
       {/* ================= SLIDER ================= */}
       <div
         ref={sliderContainerRef}
-        className="relative mt-[60px] w-full overflow-visible"
+        className="relative mt-[60px] w-full overflow-visible max-md:mt-8 max-md:px-4"
       >
         <Swiper
           modules={[Navigation, Pagination]}
@@ -100,7 +100,7 @@ export default function Testimonials() {
           }}
           slidesPerView={1}
 
-      
+
           spaceBetween={24}
 
           loop={true}
@@ -117,7 +117,7 @@ export default function Testimonials() {
           breakpoints={{
             0: {
               slidesPerView: 1,
-              spaceBetween: 24,
+              spaceBetween: 20,
             },
 
             640: {
@@ -145,7 +145,7 @@ export default function Testimonials() {
           {testimonials.reviews.map((review, index) => (
             <SwiperSlide
               key={index}
-              className="!h-[180px] !overflow-visible "
+              className="!h-[180px] !overflow-visible max-md:!h-auto max-md:min-h-[160px]"
             >
               <div
                 className="
@@ -172,51 +172,54 @@ export default function Testimonials() {
                   hover:bg-[var(--theme-about-us-bg)]
                   lg:gap-8
                   lg:p-7
+                  max-md:gap-4
+                  max-md:p-4
+                  max-md:rounded-xl
                 "
               >
                 {/* IMAGE */}
-                <div className="h-[128px] w-[128px] shrink-0 overflow-hidden rounded-[4px]">
+                <div className="h-[128px] w-[128px] shrink-0 overflow-hidden rounded-[4px] max-md:h-[95px] max-md:w-[95px] max-md:rounded-lg">
                   <img
                     src={review.avatar}
                     alt={review.name}
-                    className="h-full w-full object-cover "
+                    className="h-full w-full object-cover"
                   />
                 </div>
 
                 {/* CONTENT */}
-               <div className="flex h-full min-w-0 flex-1 flex-col justify-between py-1">
-  {/* STARS */}
-  <div className="flex gap-[6.62px] mb-[15.96px] ">
-    {Array.from({
-      length: review.rating,
-    }).map((_, starIndex) => (
-      <span
-        key={starIndex}
-        className="text-[22px] leading-none text-[#D97662]"
-      >
-        ★
-      </span>
-    ))}
-  </div>
+                <div className="flex h-full min-w-0 flex-1 flex-col justify-between py-1">
+                  {/* STARS */}
+                  <div className="flex gap-[6.62px] mb-[15.96px] max-md:gap-1 max-md:mb-2">
+                    {Array.from({
+                      length: review.rating,
+                    }).map((_, starIndex) => (
+                      <span
+                        key={starIndex}
+                        className="text-[22px] leading-none text-[#D97662] max-md:text-[18px]"
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </div>
 
-  {/* QUOTE + NAME */}
-  <div>
-    <p className="line-clamp-2 font-poppins text-[14px] font-normal mb-[15.96px] text-[var(--theme-bg-Testimonials-title-description)]">
-      {review.quote}
-    </p>
+                  {/* QUOTE + NAME */}
+                  <div>
+                    <p className="line-clamp-2 font-poppins text-[14px] font-normal mb-[15.96px] text-[var(--theme-bg-Testimonials-title-description)] max-md:line-clamp-3 max-md:text-xs max-md:mb-2">
+                      {review.quote}
+                    </p>
 
-    <p className="mt-4 text-[18px] font-medium text-[var(--theme-title-text)]">
-      {review.name}
-    </p>
-  </div>
-</div>
+                    <p className="mt-4 text-[18px] font-medium text-[var(--theme-title-text)] max-md:mt-1 max-md:text-base">
+                      {review.name}
+                    </p>
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
         {/* ================= CONTROLS ================= */}
-        <div className="mt-7 flex w-full items-center justify-center gap-4">
+        <div className="mt-7 flex w-full items-center justify-center gap-4 max-md:mt-6 max-md:gap-6">
           {/* LEFT ARROW */}
           <button
             type="button"
@@ -237,6 +240,7 @@ export default function Testimonials() {
               text-gray-400
               transition
               hover:text-[#D97662]
+              max-md:text-[#D97662]
             "
           >
             ←
@@ -254,6 +258,7 @@ export default function Testimonials() {
               items-center
               justify-center
               gap-2
+              max-md:hidden
             "
           />
 
