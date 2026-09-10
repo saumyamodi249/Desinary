@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { ctaBanner, footer } from "../Home/data/data";
 import { motion } from "motion/react";
+import { FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   const location = useLocation();
@@ -65,7 +66,7 @@ export default function Footer() {
             ...reveal.transition,
             delay: 0.12,
           }}
-          className="mx-auto mt-3 max-w-xl text-center font-[Poppins] text-[14px] font-normal leading-[180%] text-[var(--theme-Footer-text-small)] max-md:text-[12px] max-md:leading-relaxed"
+          className="mx-auto mt-3 max-w-xl text-center font-[Poppins] text-[12px] md:text-[14px] font-normal leading-[180%] text-[var(--theme-Footer-text-small)] max-md:leading-relaxed max-md:max-w-[340px]"
         >
           {ctaBanner.description}
         </motion.p>
@@ -92,8 +93,8 @@ export default function Footer() {
       </div>
 
       {/* ================= FOOTER BODY ================= */}
-      <div className="bg-[#1c1a1a] text-[#a9a9a9]">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="bg-[#1c1a1a] text-[#a9a9a9] max-md:bg-black">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4 max-md:flex max-md:flex-col max-md:items-center max-md:gap-8 max-md:py-12 max-md:px-4 max-md:text-center">
 
           {/* ================= BRAND ================= */}
           <motion.div
@@ -104,21 +105,22 @@ export default function Footer() {
               ...reveal.transition,
               delay: 0,
             }}
+            className="max-md:flex max-md:flex-col max-md:items-center max-md:text-center"
           >
-            <Link to="/" className="inline-block">
+            <Link to="/" className="inline-block max-md:mx-auto">
               <img
                 src="/navbar/Logo_white.svg"
                 alt="Desinary"
-                className="h-auto w-[135px]"
+                className="h-auto w-[135px] max-md:w-[150px] max-md:mx-auto"
               />
             </Link>
 
-            <p className="mt-5 max-w-xs font-[Poppins] font-normal text-[14px] text-[var(--theme-white)]">
+            <p className="mt-5 max-w-xs font-[Poppins] font-normal text-[12px] md:text-[14px] text-[var(--theme-white)] max-md:mt-4 max-md:text-center max-md:mx-auto max-md:leading-relaxed max-md:max-w-[280px]">
               {footer.tagline}
             </p>
 
             {/* ================= SOCIAL ICONS ================= */}
-            <div className="flex items-center gap-3 rounded-[50px] p-[10px]">
+            <div className="flex items-center gap-3 rounded-[50px] p-[10px] max-md:justify-center max-md:gap-7 max-md:mt-5">
 
               {/* FACEBOOK */}
               <motion.a
@@ -146,12 +148,12 @@ export default function Footer() {
                 whileHover={{
                   y: -3,
                 }}
-                className="flex items-center justify-center"
+                className="flex items-center justify-center text-white"
               >
                 <img
                   src="/navbar/facebook.svg"
                   alt="Facebook"
-                  className="h-5 w-5"
+                  className="h-5 w-5 max-md:h-8 max-md:w-8"
                 />
               </motion.a>
 
@@ -181,12 +183,12 @@ export default function Footer() {
                 whileHover={{
                   y: -3,
                 }}
-                className="flex items-center justify-center"
+                className="flex items-center justify-center text-white"
               >
                 <img
                   src="/navbar/ig.svg"
                   alt="Instagram"
-                  className="h-5 w-5"
+                  className="h-5 w-5 max-md:h-8 max-md:w-8"
                 />
               </motion.a>
 
@@ -216,13 +218,9 @@ export default function Footer() {
                 whileHover={{
                   y: -3,
                 }}
-                className="flex items-center justify-center"
+                className="flex items-center justify-center text-white"
               >
-                <img
-                  src="/navbar/x.svg"
-                  alt="LinkedIn"
-                  className="h-5 w-5"
-                />
+                <FaLinkedinIn className="h-5 w-5 max-md:h-8 max-md:w-8" />
               </motion.a>
             </div>
           </motion.div>
@@ -236,12 +234,13 @@ export default function Footer() {
               ...reveal.transition,
               delay: 0.12,
             }}
+            className="max-md:flex max-md:flex-col max-md:items-center max-md:text-center"
           >
-            <h3 className="mb-5 font-[Poppins] text-[20px] font-medium text-[var(--theme-white)]">
+            <h3 className="mb-5 font-[Poppins] text-[22px] md:text-[20px] font-normal md:font-medium text-[var(--theme-white)] max-md:mb-4 max-md:text-center">
               Quick Links
             </h3>
 
-            <ul className="space-y-6 font-[Poppins] text-[14px] font-normal">
+            <ul className="space-y-6 font-[Poppins] text-[12px] md:text-[14px] font-normal max-md:space-y-3 max-md:text-center">
               {footer.quickLinks.map((l, index) => (
                 <motion.li
                   key={l.label}
@@ -266,7 +265,7 @@ export default function Footer() {
                   <Link
                     to={l.href}
                     onClick={(e) => handleQuickLink(e, l.href)}
-                    className="text-[var(--theme-white)] transition hover:text-white hover:underline"
+                    className="text-[12px] md:text-[14px] font-normal text-[var(--theme-white)] transition hover:text-white hover:underline"
                   >
                     {l.label}
                   </Link>
@@ -284,14 +283,15 @@ export default function Footer() {
               ...reveal.transition,
               delay: 0.24,
             }}
+            className="max-md:flex max-md:flex-col max-md:items-center max-md:text-center"
           >
-            <h3 className="mb-5 font-[Poppins] text-[20px] font-medium text-[var(--theme-white)]">
+            <h3 className="mb-5 font-[Poppins] text-[22px] md:text-[20px] font-normal md:font-medium text-[var(--theme-white)] max-md:mb-4 max-md:text-center">
               Contact
             </h3>
 
-            <ul className="space-y-6 font-[Poppins] text-[14px]">
+            <ul className="space-y-6 font-[Poppins] text-[12px] md:text-[14px] font-normal max-md:space-y-3.5 max-md:flex max-md:flex-col max-md:items-center">
 
-              {/* ================= LOCATION ================= */}
+              {/* ================= LOCATION (Hidden on mobile per design) ================= */}
               <motion.li
                 initial={{
                   opacity: 0,
@@ -310,6 +310,7 @@ export default function Footer() {
                   delay: 0.38,
                   ease: [0.22, 1, 0.36, 1],
                 }}
+                className="max-md:hidden"
               >
                 <a
                   href="https://www.google.com/maps"
@@ -348,18 +349,19 @@ export default function Footer() {
                   delay: 0.48,
                   ease: [0.22, 1, 0.36, 1],
                 }}
+                className="max-md:flex max-md:justify-center"
               >
                 <a
                   href={`tel:${footer.contact.phone.replace(/\s+/g, "")}`}
-                  className="flex items-center gap-4 text-[var(--theme-white)] transition hover:opacity-80"
+                  className="flex items-center gap-4 text-[var(--theme-white)] transition hover:opacity-80 max-md:gap-3.5 max-md:justify-center text-[12px] md:text-[14px] font-normal"
                 >
                   <img
                     src="/navbar/telephone.svg"
                     alt="Telephone"
-                    className="h-5 w-5 shrink-0"
+                    className="h-5 w-5 shrink-0 max-md:h-6 max-md:w-6"
                   />
 
-                  <span>
+                  <span className="text-[12px] md:text-[14px] font-normal">
                     {footer.contact.phone}
                   </span>
                 </a>
@@ -384,18 +386,19 @@ export default function Footer() {
                   delay: 0.58,
                   ease: [0.22, 1, 0.36, 1],
                 }}
+                className="max-md:flex max-md:justify-center"
               >
                 <a
                   href={`mailto:${footer.contact.email}`}
-                  className="flex items-center gap-4 text-[var(--theme-white)] transition hover:opacity-80"
+                  className="flex items-center gap-4 text-[var(--theme-white)] transition hover:opacity-80 max-md:gap-3.5 max-md:justify-center text-[12px] md:text-[14px] font-normal"
                 >
                   <img
                     src="/navbar/mail.svg"
                     alt="Email"
-                    className="h-5 w-5 shrink-0"
+                    className="h-5 w-5 shrink-0 max-md:h-6 max-md:w-6"
                   />
 
-                  <span>
+                  <span className="text-[12px] md:text-[14px] font-normal">
                     {footer.contact.email}
                   </span>
                 </a>
@@ -413,12 +416,13 @@ export default function Footer() {
               ...reveal.transition,
               delay: 0.36,
             }}
+            className="max-md:flex max-md:flex-col max-md:items-center max-md:text-center"
           >
-            <h3 className="mb-5 gap-4 font-[Poppins] text-[18px] font-medium text-[var(--theme-white)]">
+            <h3 className="mb-5 gap-4 font-[Poppins] text-[22px] md:text-[18px] font-normal md:font-medium text-[var(--theme-white)] max-md:mb-4 max-md:text-center">
               Newsletter
             </h3>
 
-            <p className="mb-5 max-w-sm font-[Poppins] text-[14px] text-[var(--theme-white)]">
+            <p className="mb-5 max-w-sm font-[Poppins] text-[12px] md:text-[14px] font-normal leading-[180%] text-[var(--theme-white)] max-md:text-center max-md:mx-auto max-md:max-w-[280px] max-md:mb-6">
               {footer.newsletter.description}
             </p>
 
@@ -441,7 +445,7 @@ export default function Footer() {
                 delay: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex h-[52px] items-center overflow-hidden rounded-md border border-[#3d4650] bg-[var(--theme-card-bg)]"
+              className="flex h-[52px] items-center overflow-hidden rounded-md border border-[#3d4650] bg-[var(--theme-card-bg)] max-md:w-full max-md:max-w-xs max-md:mx-auto"
             >
               <input
                 type="email"

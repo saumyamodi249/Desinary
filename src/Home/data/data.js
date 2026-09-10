@@ -299,12 +299,12 @@ export const footer = {
   ],
   contact: {
     address: "Office 357, Block D Business Avenue Ahmedabad",
-    phone: "+91 829956 8797",
-    email: "info@Desinary.com",
+    phone: "+91 8630278040 , +91 8408080201",
+    email: "desinary.info@gmail.com",
   },
   newsletter: {
     description:
-      "Join countless happy clients who have embraced AI-driven design with Desinary.",
+      "Join a growing community of design-forward thinkers who trust Desinary to transform their spaces with AI-powered interior design.",
     placeholder: "E-mail",
   },
 };
