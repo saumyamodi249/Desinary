@@ -83,15 +83,21 @@ export default function MeetDesinary() {
         <div className="mx-auto grid max-w-[1140px] grid-cols-1 md:grid-cols-[1.05fr_0.95fr] md:gap-14">
           {/* Heading */}
           <div className="flex w-full max-w-[600px] items-center md:items-start justify-center md:justify-start mx-auto md:mx-0">
-            <h2 className="w-full max-w-[750px] text-3xl md:text-4xl lg:text-[48px] font-semibold text-[var(--theme-title-text)] text-center md:text-left mb-6 md:mb-0 lg:-translate-x-16 lg:-translate-y-4">
-              <span className="text-[var(--theme-accent-text)]">
-                {meetDesinary.titleHighlight}
-              </span>{" "}
-              <span className="text-[var(--theme-bg-MeetDesinary)]">
-                {meetDesinary.titleSuffix}
+            <h2 className="w-full max-w-[750px] -translate-x-16 -translate-y-4 text-[48px] font-semibold text-[var(--theme-title-text)] max-md:translate-x-0 max-md:translate-y-0 max-md:text-3xl max-md:text-center max-md:mb-6">
+              <span className="block">
+                <span className="text-[var(--theme-accent-text)]">
+                  {meetDesinary.titleHighlight}
+                </span>{" "}
+                <span className="text-[var(--theme-bg-MeetDesinary)]">
+                  {meetDesinary.titleSuffix}
+                </span>
               </span>
-              <br />
-              <span className="text-[var(--theme-accent-text)]">
+
+              <span className="block text-[var(--theme-bg-MeetDesinary)]">
+                {meetDesinary.titleMiddle}
+              </span>
+
+              <span className="block text-[var(--theme-accent-text)]">
                 {meetDesinary.titleHighlight2}
               </span>
             </h2>

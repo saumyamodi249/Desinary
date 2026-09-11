@@ -11,10 +11,12 @@ export default function TransformBanner() {
         className="h-[260px] md:h-[380px] lg:h-full w-full object-cover"
       />
 
-      {/* Centered Overlay */}
+      {/* Global 60% dark overlay on entire background */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* Centered Overlay — ORIGINAL padding untouched */}
       <div className="absolute inset-0 flex items-center justify-center p-4 md:p-10 lg:pl-[275px] lg:pr-[263px] lg:pt-[234px] lg:pb-[222px]">
-        
-        {/* Dark Box */}
+        {/* Dark Box — w-full to fill the available space */}
         <motion.div
           initial={{
             opacity: 0,
@@ -32,19 +34,18 @@ export default function TransformBanner() {
             once: true,
             amount: 0.2,
           }}
-          className="flex h-auto w-full max-w-[340px] md:max-w-[620px] lg:h-[128px] lg:w-[742px] items-center justify-center gap-[10px] rounded-lg lg:rounded bg-black/60 p-5 md:p-6 lg:p-4 text-center font-bold shadow-2xl backdrop-blur-sm"
+          className="flex h-auto w-full max-w-[340px] md:max-w-[620px] lg:h-[128px] lg:max-w-[750px] items-center justify-center rounded-lg lg:rounded bg-black/60 px-10 md:px-16 lg:px-[80px] py-5 md:py-6 lg:py-4 text-center font-bold shadow-2xl backdrop-blur-sm"
         >
           <h2 className="text-center text-xl md:text-2xl lg:text-[32px] font-bold tracking-tight text-white capitalize">
             <span className="block whitespace-normal lg:whitespace-nowrap">
               {transformBanner.titleLine1}
             </span>
 
-            <span className="block whitespace-normal lg:whitespace-nowrap">
+            <span className="block whitespace-normal lg:whitespace-nowrap mt-[10px]">
               {transformBanner.titleLine2}
             </span>
           </h2>
         </motion.div>
-
       </div>
     </section>
   );

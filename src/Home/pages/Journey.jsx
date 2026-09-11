@@ -6,7 +6,7 @@ export default function Journey() {
     <section className="w-full bg-[var(--theme-bg-journey)] py-12 md:py-16 lg:py-[108px]">
       {/* Heading */}
       <div className="mb-8 md:mb-12 lg:mb-[60px] flex flex-col items-center gap-4 md:gap-6 text-center px-4 md:px-10 lg:px-0">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--theme-title-text)]">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--theme-journey-title)]">
           {journey.titlePrefix}{" "}
           <span className="text-[var(--theme-bg-bg-box-hover)]">
             {journey.titleHighlight}
@@ -66,7 +66,9 @@ export default function Journey() {
           ))}
 
           {/* ================= RESULT SECTION ================= */}
-          <div className="group flex w-full flex-col lg:flex-row items-center rounded-lg border border-[var(--theme-border-color)] bg-[var(--theme-bg-primary)] p-5 md:p-8 lg:gap-x-8 transition-all duration-300 hover:shadow-xl">
+          {/* ================= RESULT SECTION ================= */}
+          <div className="group flex w-full flex-col lg:flex-row items-center rounded-lg border border-[var(--theme-border-color)] bg-[var(--theme-bg-primary)] p-5 md:p-8 lg:gap-10 transition-all duration-300 hover:border-[var(--theme-bg-bg-box-hover)] hover:shadow-xl">
+
             {/* Result Image - LEFT */}
             <div className="w-full shrink-0 overflow-hidden rounded-lg lg:w-[48%] mb-4 lg:mb-0">
               <motion.img
@@ -83,12 +85,13 @@ export default function Journey() {
                 }}
                 src={journey.result.image}
                 alt="The Result"
-                className="h-[220px] md:h-[300px] lg:aspect-[7.67%] w-full object-cover"
+                className="h-[220px] md:h-[300px] lg:h-[362px] w-full object-cover"
               />
             </div>
 
             {/* Result Content - RIGHT */}
-            <div className="flex w-full flex-col justify-center items-center md:items-start text-center md:text-left space-y-4 px-2 md:px-6 py-6 md:py-10 lg:w-[50%] lg:px-8 lg:py-[100px]">
+            <div className="flex w-full flex-col justify-center items-center md:items-start text-center md:text-left gap-3 md:gap-4 space-y-2 md:space-y-4 px-2 md:px-4 lg:w-[46%] lg:px-6">
+
               <h3 className="text-[20px] font-medium tracking-tight text-[var(--theme-journey-title)]">
                 {journey.result.titlePrefix}{" "}
                 <span className="text-coral-500">
@@ -117,6 +120,7 @@ export default function Journey() {
                   </div>
                 ))}
               </div>
+
             </div>
           </div>
         </div>

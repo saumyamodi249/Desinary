@@ -48,15 +48,15 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-full w-full overflow-hidden bg-cover bg-right md:bg-center bg-no-repeat"
+      className="relative h-full w-full overflow-hidden bg-cover bg-right bg-no-repeat md:bg-center"
       style={{
         backgroundImage: "url('/Home/1st/bed.svg')",
       }}
     >
-      {/* Main Container */}
-      <div className="relative w-full lg:w-[70%] px-4 md:px-10 lg:px-[120px] pt-10 md:pt-16 lg:pt-[93px] pb-6 md:pb-12 lg:pb-[207px]">
+      {/* ================= MAIN CONTAINER ================= */}
+      <div className="relative w-full px-4 pb-6 pt-10 md:px-10 md:pb-12 md:pt-16 lg:w-[70%] lg:px-[120px] lg:pb-[207px] lg:pt-[93px]">
 
-        {/* Heading 1 */}
+        {/* ================= HEADING 1 ================= */}
         <motion.h1
           initial={{ opacity: 0, y: 170 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,12 +69,13 @@ export default function Hero() {
             amount: 0.2,
             once: true,
           }}
-          className="font-[Poppins] font-semibold text-[26px] md:text-[36px] lg:text-[48px] align-middle max-w-full lg:max-w-2xl text-center md:text-left mx-auto md:mx-0 leading-tight"
+          className="mx-auto max-w-full text-center font-[Poppins] text-[26px] font-semibold leading-tight align-middle md:mx-0 md:text-left md:text-[36px] lg:max-w-2xl lg:text-[48px]"
         >
-          Smarter Interiors Start<span className="hidden md:inline"> Here</span>
+          Smarter Interiors Start
+          <span className="hidden md:inline"> Here</span>
         </motion.h1>
 
-        {/* Heading 2 */}
+        {/* ================= HEADING 2 ================= */}
         <motion.h1
           initial={{ opacity: 0, y: 170 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,15 +88,18 @@ export default function Hero() {
             amount: 0.2,
             once: true,
           }}
-          className="font-[Poppins] font-semibold text-[26px] md:text-[36px] lg:text-[48px] align-middle mb-6 md:mb-8 max-w-full lg:max-w-2xl text-center md:text-left mx-auto md:mx-0 leading-tight"
+          className="mx-auto mb-6 max-w-full text-center font-[Poppins] text-[26px] font-semibold leading-tight align-middle md:mx-0 md:mb-8 md:text-left md:text-[36px] lg:max-w-2xl lg:text-[48px]"
         >
           <span className="whitespace-nowrap">
             <span className="inline md:hidden">Here </span>— Welcome to
           </span>{" "}
-          <span className="text-[#D97967] block md:inline mt-1 md:mt-0">Desinary</span>
+          <span className="mt-1 block text-[#D97967] md:mt-0 md:inline">
+            Desinary
+          </span>
         </motion.h1>
 
-        <div className="mb-6 md:mb-12 lg:mb-16 flex flex-col items-center md:items-start">
+        {/* ================= DESCRIPTION + BUTTON ================= */}
+        <div className="mb-6 flex flex-col items-center md:mb-12 md:items-start lg:mb-16">
 
           {/* Paragraph */}
           <motion.p
@@ -110,7 +114,7 @@ export default function Hero() {
               amount: 0.2,
               once: true,
             }}
-            className="max-w-2xl mb-6 md:mb-8 text-center md:text-left font-[Poppins] text-[13px] md:text-[14px] font-normal align-middle !text-[#656565] mx-auto md:mx-0"
+            className="mx-auto mb-6 max-w-2xl text-center font-[Poppins] text-[13px] font-normal align-middle !text-[#656565] md:mx-0 md:mb-8 md:text-left md:text-[14px]"
           >
             Whether you prefer AI precision or hands-on control, Desinary lets
             you design interiors your way — smarter, faster, and beautifully
@@ -120,7 +124,7 @@ export default function Hero() {
           {/* Button */}
           <motion.button
             type="button"
-            initial={{ opacity: 0, y: 30}}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.8,
@@ -131,7 +135,7 @@ export default function Hero() {
               amount: 0.2,
               once: true,
             }}
-            className="flex items-center gap-2 rounded-md bg-[var(--theme-btn-bg)] px-5 py-2.5 md:px-[10px] md:py-[8px] font-[Poppins] text-[14px] font-normal text-white"
+            className="flex items-center gap-2 rounded-md bg-[var(--theme-btn-bg)] px-5 py-2.5 font-[Poppins] text-[14px] font-normal text-white md:px-[10px] md:py-[8px]"
           >
             Start Designing
 
@@ -144,11 +148,11 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Clients Section */}
-      <div className="relative w-full mx-auto">
-        <div className="relative z-20 w-full px-4 md:px-10 lg:px-[118px] pb-12 md:pb-16 lg:pb-[103px] flex flex-col items-center md:items-start">
+      {/* ================= CLIENTS SECTION ================= */}
+      <div className="relative mx-auto w-full">
+        <div className="relative z-20 flex w-full flex-col items-center px-4 pb-12 md:items-start md:px-10 md:pb-16 lg:px-[118px] lg:pb-[103px]">
 
-          {/* Client Images */}
+          {/* ================= CLIENT IMAGES ================= */}
           <div className="flex items-center justify-center md:justify-start">
 
             {/* Client 1 */}
@@ -163,11 +167,11 @@ export default function Hero() {
               }}
               viewport={{
                 once: true,
-                margin: "150px",
+                amount: 0.6,
               }}
               src="/Home/1st/4th person.svg"
               alt="Client"
-              className="relative z-10 h-[38px] w-[38px] md:h-[58px] md:w-[58px] rounded-full border-2 md:border-[3px] border-[#D97967] object-cover cursor-pointer"
+              className="relative z-10 h-[38px] w-[38px] cursor-pointer rounded-full border-2 border-[#D97967] object-cover md:h-[58px] md:w-[58px] md:border-[3px]"
             />
 
             {/* Client 2 */}
@@ -182,11 +186,11 @@ export default function Hero() {
               }}
               viewport={{
                 once: true,
-                margin: "150px",
+                amount: 0.6,
               }}
               src="/Home/1st/3rd person.svg"
               alt="Client"
-              className="relative z-20 -ml-2.5 md:-ml-4 h-[38px] w-[38px] md:h-[58px] md:w-[58px] rounded-full border-2 md:border-[3px] border-[#D97967] object-cover cursor-pointer"
+              className="relative z-20 -ml-2.5 h-[38px] w-[38px] cursor-pointer rounded-full border-2 border-[#D97967] object-cover md:-ml-4 md:h-[58px] md:w-[58px] md:border-[3px]"
             />
 
             {/* Client 3 */}
@@ -201,11 +205,11 @@ export default function Hero() {
               }}
               viewport={{
                 once: true,
-                margin: "150px",
+                amount: 0.6,
               }}
               src="/Home/1st/2nd person.svg"
               alt="Client"
-              className="relative z-30 -ml-2.5 md:-ml-4 h-[38px] w-[38px] md:h-[58px] md:w-[58px] rounded-full border-2 md:border-[3px] border-[#D97967] object-cover cursor-pointer"
+              className="relative z-30 -ml-2.5 h-[38px] w-[38px] cursor-pointer rounded-full border-2 border-[#D97967] object-cover md:-ml-4 md:h-[58px] md:w-[58px] md:border-[3px]"
             />
 
             {/* Client 4 */}
@@ -220,15 +224,15 @@ export default function Hero() {
               }}
               viewport={{
                 once: true,
-                margin: "150px",
+                amount: 0.6,
               }}
               src="/Home/1st/1st person.svg"
               alt="Client"
-              className="relative z-40 -ml-2.5 md:-ml-4 h-[38px] w-[38px] md:h-[58px] md:w-[58px] rounded-full border-2 md:border-[3px] border-[#D97967] object-cover cursor-pointer"
+              className="relative z-40 -ml-2.5 h-[38px] w-[38px] cursor-pointer rounded-full border-2 border-[#D97967] object-cover md:-ml-4 md:h-[58px] md:w-[58px] md:border-[3px]"
             />
           </div>
 
-          {/* Client Count */}
+          {/* ================= CLIENT COUNT ================= */}
           <motion.div
             ref={countRef}
             initial={{ opacity: 0, y: 40 }}
@@ -240,16 +244,16 @@ export default function Hero() {
             }}
             viewport={{
               once: true,
-              margin: "150px",
+              amount: 0.6,
             }}
-            className="mt-1 md:mt-2 flex items-center justify-center md:justify-start gap-1"
+            className="mt-1 flex items-center justify-center gap-1 md:mt-2 md:justify-start"
           >
-            <span className="flex items-center text-[20px] md:text-[36px] font-normal text-[var(--theme-black)]">
+            <span className="flex items-center text-[20px] font-normal text-[var(--theme-black)] md:text-[36px]">
               {clientCount}
               <PiPlusThin className="h-4 w-4 md:h-6 md:w-6" />
             </span>
 
-            <span className="text-[20px] md:text-[36px] font-normal text-[#D97967]">
+            <span className="text-[20px] font-normal text-[#D97967] md:text-[36px]">
               Clients
             </span>
           </motion.div>
