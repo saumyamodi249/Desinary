@@ -41,9 +41,9 @@ const Contact = () => {
     setErrors((prev) =>
       prev[field]
         ? {
-            ...prev,
-            [field]: "",
-          }
+          ...prev,
+          [field]: "",
+        }
         : prev,
     );
   };
@@ -207,25 +207,25 @@ const Contact = () => {
           {/* CONTACT INTRO */}
 
           <div className="text-center lg:text-left">
-            <h2 className="mb-4 lg:mb-8 text-[32px] md:text-[38px] lg:text-5xl font-semibold text-[var(--theme-Contact-title)]">
+            <h2 className="mb-4 lg:mb-8 text-2xl md:text-[36px] lg:text-5xl font-semibold text-[var(--theme-Contact-title)]">
               {ContactUs.intro.heading}
               <span className="text-[var(--theme-Contact-org)]">
                 {ContactUs.intro.headingAccent}
               </span>
             </h2>
 
-            <p className="mb-3 max-w-[620px] lg:max-w-[340px] mx-auto lg:mx-0 text-[13px] md:text-sm font-normal leading-[180%] text-[var(--theme-Contact-description)]">
+            <p className="mb-3 max-w-[620px] lg:max-w-[340px] mx-auto lg:mx-0 text-[12px] md:text-[12px] lg:text-sm font-normal leading-[180%] text-[var(--theme-Contact-description)]">
               {ContactUs.intro.description}
             </p>
 
             <a
-              className="mb-2 block w-fit mx-auto lg:mx-0 text-sm font-normal text-[var(--theme-Contact-description)] underline-offset-1 transition-colors hover:underline"
+              className="mb-2 block w-fit mx-auto lg:mx-0 text-xs lg:text-sm font-normal text-[var(--theme-Contact-description)] underline-offset-1 transition-colors hover:underline"
               href={`mailto:${ContactUs.intro.email}`}
             >
               {ContactUs.intro.email}
             </a>
 
-            <p className="block w-full text-center lg:text-left text-sm font-normal text-[var(--theme-Contact-description)]">
+            <p className="block w-full text-center lg:text-left text-xs lg:text-sm font-normal text-[var(--theme-Contact-description)]">
               {ContactUs.intro.phone}
             </p>
           </div>
@@ -235,11 +235,11 @@ const Contact = () => {
           <div className="grid w-full lg:w-fit grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-[29px]">
             {ContactUs.blocks.map((block) => (
               <div key={block.title} className="text-center md:text-left">
-                <h3 className="mb-2 text-xl font-medium text-[var(--theme-Contact-title)]">
+                <h3 className="mb-2 text-[16px] lg:text-xl font-medium text-[var(--theme-Contact-title)]">
                   {block.title}
                 </h3>
 
-                <p className="max-w-[420px] lg:max-w-[333px] mx-auto md:mx-0 text-[13px] md:text-sm font-normal leading-relaxed text-[var(--theme-Contact-description)]">
+                <p className="max-w-[420px] lg:max-w-[333px] mx-auto md:mx-0 text-[12px] md:text-[12px] lg:text-sm font-normal leading-relaxed text-[var(--theme-Contact-description)]">
                   {block.description}
                 </p>
               </div>
@@ -259,11 +259,11 @@ const Contact = () => {
 
             {/* FORM HEADING */}
 
-            <h3 className="mb-1 text-[24px] md:text-[28px] lg:text-[32px] font-medium text-center text-[var(--theme-Contact-Form-title)]">
+            <h3 className="mb-1 text-[20px] lg:text-[32px] font-medium text-center text-[var(--theme-Contact-Form-title)]">
               {ContactUs.form.heading}
             </h3>
 
-            <p className="mb-6 text-xs md:text-sm font-normal text-center text-[var(--theme-Contact-Form-description)]">
+            <p className="mb-6 text-[12px] md:text-[12px] lg:text-sm font-normal text-center text-[var(--theme-Contact-Form-description)]">
               {ContactUs.form.description}
             </p>
 
@@ -391,7 +391,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="mt-2 w-full rounded-md lg:rounded-sm bg-[var(--theme-Contact-Form-button)] py-3 lg:py-3.5 text-[14px] font-medium text-white transition-opacity hover:opacity-90"
+              className="mt-2 w-full rounded-md lg:rounded-sm bg-[var(--theme-Contact-Form-button)] py-3 lg:py-3.5 text-[16px] font-medium text-white transition-opacity hover:opacity-90"
             >
               Submit
             </button>

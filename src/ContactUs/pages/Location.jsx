@@ -31,14 +31,14 @@ const Location = () => {
           {locationData.branches &&
             locationData.branches.map((branch) => (
               <div key={branch.name} className="mb-6 last:mb-0">
-                <h3 className="mb-2 text-lg md:text-xl font-medium text-[var(--theme-loction-title)]">
+                <h3 className="mb-2 text-[16px] lg:text-xl font-medium text-[var(--theme-loction-title)]">
                   {branch.name}
                 </h3>
 
                 {branch.lines.map((line, i) => (
                   <p
                     key={i}
-                    className="text-sm font-normal leading-[180%] text-[var(--theme-loction-description)]"
+                    className="text-[12px] lg:text-sm font-normal leading-[180%] text-[var(--theme-loction-description)]"
                   >
                     {line}
                   </p>

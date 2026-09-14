@@ -23,14 +23,10 @@ export const ContactUs = {
 
   form: {
     heading: "Get In Touch",
-    description: "Reach out to us anytime, we’ll get back to you as quickly as possible.",
+    description:
+      "Reach out to us anytime, we’ll get back to you as quickly as possible.",
     messageMaxLength: 120,
-    allowedEmailDomains: [
-      "gmail.com",
-      "outlook.in",
-      "yahoo.com",
-      "yahoo.in",
-    ],
+    allowedEmailDomains: ["gmail.com", "outlook.in", "yahoo.com", "yahoo.in"],
   },
 };
 
@@ -47,12 +43,9 @@ export const Location = {
 
   branches: [
     {
-      name: "Main Branch",
+      name: "We’re proudly digital and available worldwide",
       lines: [
-        "Desinary Pvt. Ltd",
-        "Office no. 4517 Maruti Business Park",
-        "Swarnim Road, New Delhi",
-        "39495",
+        "Desinary is an online-first platform, which means you can access our interior design solutions from anywhere, at any time. Whether you're designing your first home or refreshing your space, we're just a click away—ready to help you create interiors that reflect your style and fit your life.",
       ],
     },
   ],
