@@ -346,7 +346,7 @@ export default function Hero() {
             /* LAPTOP */
             lg:items-start
             lg:px-[118px]
-            lg:pb-[103px]
+            lg:pb-[22px]
           "
         >
           {/* =================================================

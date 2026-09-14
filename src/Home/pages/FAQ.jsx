@@ -5,14 +5,14 @@ import { FaAngleUp } from "react-icons/fa6";
 import { faq } from "../data/data";
 
 export default function FAQ() {
-const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(0);
 
-return (
-<motion.section
-initial={{ opacity: 0, y: 40 }}
-whileInView={{ opacity: 1, y: 0 }}
-viewport={{ once: true, amount: 0.2 }}
-transition={{ duration: 0.7, ease: "easeOut" }}
+  return (
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
       className="w-full px-4 md:px-10 lg:px-[120px] py-12 md:py-16 lg:py-[108px]"
       style={{
         backgroundColor: "var(--theme-FAQ-bg)",
@@ -22,7 +22,7 @@ transition={{ duration: 0.7, ease: "easeOut" }}
         {/* ================= HEADING ================= */}
         <div className="text-center">
           <h2
-            className="font-[Poppins] text-3xl md:text-4xl lg:text-[48px] font-semibold text-center"
+            className="font-[Poppins] text-2xl md:text-4xl lg:text-[48px] font-semibold text-center"
             style={{
               color: "var(--theme-FAQ-text)",
             }}
@@ -171,37 +171,37 @@ transition={{ duration: 0.7, ease: "easeOut" }}
                       borderBottom: "1px solid var(--theme-FAQ-border)",
                     }}
                   >
-                <p
-                  className="
+                    <p
+                      className="
                     font-[Poppins]
                     text-[14px]
                     font-normal
                     leading-[180%]
                     align-middle
                   "
-                  style={{
-                    color: "var(--theme-FAQ-text-small)",
-                  }}
-                >
-                  {item.answer}
-                </p>
-              </div>
-            )}
+                      style={{
+                        color: "var(--theme-FAQ-text-small)",
+                      }}
+                    >
+                      {item.answer}
+                    </p>
+                  </div>
+                )}
 
-            {/* ================= DIVIDER ================= */}
-            {!isOpen && (
-              <div
-                className="h-px w-full"
-                style={{
-                  backgroundColor: "var(--theme-FAQ-border)",
-                }}
-              />
-            )}
-          </div>
-        );
-      })}
-    </div>
-  </div>
-</motion.section>
-);
+                {/* ================= DIVIDER ================= */}
+                {!isOpen && (
+                  <div
+                    className="h-px w-full"
+                    style={{
+                      backgroundColor: "var(--theme-FAQ-border)",
+                    }}
+                  />
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </motion.section>
+  );
 }

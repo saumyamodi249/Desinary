@@ -84,7 +84,7 @@ export const journey = {
       image: "/Home/2nd/4th.svg",
     },
   ],
-   result: {
+  result: {
     titlePrefix: "The",
     titleHighlight: "Result",
     titlePostfix: ", You Will Get",
@@ -109,7 +109,7 @@ export const features = {
 
   items: [
     {
-      title: "Multiple Layout Input Options",
+      title: "Multiple Layout Input Methods",
       heading: "Start your project your way.",
       description:
         "Upload room photos, measurements, or scanned layouts, or choose from existing templates to begin designing instantly. Desinary adapts to the input method that best suits your space and comfort level.",
@@ -150,18 +150,17 @@ export const features = {
   ],
 };
 export const transformBanner = {
-  titleLine1: "Transform Your Space Into A Masterpiece",
-  titleLine2: "With Our Design Platform.",
+  title: "Transform Your Space Into A Masterpiece With Our Design Platform.",
   image:
     "/Home/4th/hall.png",
 };
 export const testimonials = {
-  titlePrefix: "Voices of Satisfaction",
-  titleLine2Prefix: "— Our ",
-  titleHighlight: "Clients Speak",
+  titlePrefix: "Voices of Satisfaction —",
+  titleLine2Prefix: "What Our ",
+  titleHighlight: "Clients Say",
 
   description:
-    "Hear firsthand how Desinary’s innovative interior design solutions have transformed spaces and exceeded expectations, earning the trust and satisfaction of our valued clients.",
+    "Discover how Desinary has transformed ordinary rooms into extraordinary spaces. From first-time users to design enthusiasts, our clients share how intelligent design, seamless tools, and personalized support made all the difference.",
 
   reviews: [
     {

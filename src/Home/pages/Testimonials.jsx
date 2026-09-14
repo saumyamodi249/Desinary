@@ -8,6 +8,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+function renderDescription() {
+  return (
+    <>
+      Discover how Desinary has transformed ordinary
+      <br className="inline md:hidden" />{" "}
+      rooms into extraordinary spaces. From first-time
+      <br className="inline md:hidden" />{" "}
+      users to design
+      <br className="hidden md:inline lg:hidden" />{" "}
+      enthusiasts, our clients share
+      <br className="inline md:hidden" />{" "}
+      how intelligent design, seamless tools, and
+      <br className="inline md:hidden" />{" "}
+      personalized support made all the difference.
+    </>
+  );
+}
+
 export default function Testimonials() {
   const swiperRef = useRef(null);
   const sliderContainerRef = useRef(null);
@@ -59,16 +77,23 @@ export default function Testimonials() {
   return (
     <section className="w-full overflow-hidden bg-[var(--theme-about-us-bg)] py-12 md:py-16 lg:py-[108px]">
       {/* ================= HEADER ================= */}
-      <div className="mx-auto w-full max-w-[1520px] px-4 md:px-10 lg:px-[120px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center md:items-start text-center md:text-left">
+      <div className="mx-auto w-full max-w-[1520px] px-4 md:px-4 lg:px-[120px]">
+        <div className="flex flex-col items-center text-center lg:grid lg:grid-cols-2 lg:gap-10 lg:items-start lg:text-left">
           {/* TITLE */}
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-[var(--theme-bg-Testimonials-title-text)]">
-              {testimonials.titlePrefix}
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-[var(--theme-bg-Testimonials-title-text)] leading-snug">
+              {/* Default (mobile) & lg (laptop) break */}
+              <span className="inline md:hidden lg:inline">
+                {testimonials.titlePrefix}
+                <br />
+                {testimonials.titleLine2Prefix}
+              </span>
 
-              <br />
-
-              {testimonials.titleLine2Prefix}
+              {/* md (tablet) break */}
+              <span className="hidden md:inline lg:hidden">
+                {testimonials.titlePrefix} {testimonials.titleLine2Prefix}
+                <br />
+              </span>
 
               <span className="text-[var(--theme-accent-text)]">
                 {testimonials.titleHighlight}
@@ -77,9 +102,9 @@ export default function Testimonials() {
           </div>
 
           {/* DESCRIPTION */}
-          <div className="pt-3 md:pl-12 lg:pl-20">
-            <p className="max-w-[500px] font-poppins text-sm font-normal text-[var(--theme-bg-Testimonials-title-description)] mx-auto md:mx-0">
-              {testimonials.description}
+          <div className="mt-3 md:mt-4 lg:mt-0 lg:pt-3 lg:pl-12 xl:pl-20">
+            <p className="w-full max-w-[480px] md:max-w-none lg:max-w-[500px] font-poppins text-xs md:text-xs lg:text-sm font-normal text-[var(--theme-bg-Testimonials-title-description)] leading-relaxed md:leading-normal lg:leading-relaxed mx-auto lg:mx-0 tracking-tight md:tracking-tight lg:tracking-normal">
+              {renderDescription()}
             </p>
           </div>
         </div>
@@ -88,7 +113,7 @@ export default function Testimonials() {
       {/* ================= SLIDER ================= */}
       <div
         ref={sliderContainerRef}
-        className="relative mt-8 md:mt-12 lg:mt-[60px] w-full overflow-visible px-4 md:px-10 lg:px-0"
+        className="relative mt-8 md:mt-12 lg:mt-[60px] w-full overflow-visible px-4 md:px-0"
       >
         <Swiper
           modules={[Navigation, Pagination]}
@@ -99,10 +124,7 @@ export default function Testimonials() {
             swiperRef.current = null;
           }}
           slidesPerView={1}
-
-
           spaceBetween={24}
-
           loop={true}
           speed={600}
           grabCursor={true}
@@ -117,23 +139,33 @@ export default function Testimonials() {
           breakpoints={{
             0: {
               slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2,
               spaceBetween: 24,
             },
+
+            768: {
+              slidesPerView: 1.85,
+              spaceBetween: 24,
+              centeredSlides: true,
+            },
+
             1024: {
               slidesPerView: 3.5,
               spaceBetween: 24,
+              centeredSlides: false,
+            },
+
+            1280: {
+              slidesPerView: 3.5,
+              spaceBetween: 24,
+              centeredSlides: false,
             },
           }}
-          className="testimonials-swiper !overflow-visible"
+          className="testimonials-swiper overflow-hidden md:!overflow-visible"
         >
           {testimonials.reviews.map((review, index) => (
             <SwiperSlide
               key={index}
-              className="!h-auto min-h-[160px] md:!h-[180px] !overflow-visible"
+              className="!h-[160px] md:!h-[180px] lg:!h-[180px] !overflow-visible"
             >
               <div
                 className="
@@ -145,16 +177,14 @@ export default function Testimonials() {
                   w-full  
                   items-center
                   gap-4
-                  md:gap-6
-                  lg:gap-8
-                  rounded-xl
-                  md:rounded-md
+                  md:gap-8
+                  rounded-md
                   border
                   border-solid
                   border-[var(--theme-about-us-border)]
                   bg-[var(--theme-bg-Testimonials-bg)]
                   p-4
-                  md:p-6
+                  md:p-8
                   lg:p-7
                   transition-all
                   duration-300
@@ -166,7 +196,7 @@ export default function Testimonials() {
                 "
               >
                 {/* IMAGE */}
-                <div className="h-[95px] w-[95px] md:h-[128px] md:w-[128px] shrink-0 overflow-hidden rounded-lg md:rounded-[4px]">
+                <div className="h-[102px] w-[102px] md:h-[128px] md:w-[128px] shrink-0 overflow-hidden rounded-[4px]">
                   <img
                     src={review.avatar}
                     alt={review.name}
@@ -175,31 +205,30 @@ export default function Testimonials() {
                 </div>
 
                 {/* CONTENT */}
-                <div className="flex h-full min-w-0 flex-1 flex-col justify-between py-1">
-                  {/* STARS */}
-                  <div className="flex gap-1 md:gap-[6.62px] mb-2 md:mb-[15.96px]">
+                <div className="flex h-full min-w-0 flex-1 flex-col justify-between py-0.5 md:py-1">
+                  {/* STARS (TOP) */}
+                  <div className="flex gap-1 md:gap-[6.62px]">
                     {Array.from({
                       length: review.rating,
                     }).map((_, starIndex) => (
                       <span
                         key={starIndex}
-                        className="text-[18px] md:text-[22px] leading-none text-[#D97662]"
+                        className="text-[17px] md:text-[22px] leading-none text-[#D97662]"
                       >
                         ★
                       </span>
                     ))}
                   </div>
 
-                  {/* QUOTE + NAME */}
-                  <div>
-                    <p className="line-clamp-3 md:line-clamp-2 font-poppins text-xs md:text-[14px] font-normal mb-2 md:mb-[15.96px] text-[var(--theme-bg-Testimonials-title-description)]">
-                      {review.quote}
-                    </p>
+                  {/* QUOTE (MIDDLE) */}
+                  <p className="line-clamp-2 font-poppins text-xs md:text-[14px] font-normal text-[var(--theme-bg-Testimonials-title-description)]">
+                    {review.quote}
+                  </p>
 
-                    <p className="mt-1 md:mt-4 text-base md:text-[18px] font-medium text-[var(--theme-title-text)]">
-                      {review.name}
-                    </p>
-                  </div>
+                  {/* NAME (BOTTOM) */}
+                  <p className="text-sm md:text-[16px] font-medium text-[var(--theme-title-text)]">
+                    {review.name}
+                  </p>
                 </div>
               </div>
             </SwiperSlide>
@@ -207,7 +236,7 @@ export default function Testimonials() {
         </Swiper>
 
         {/* ================= CONTROLS ================= */}
-        <div className="mt-6 md:mt-7 flex w-full items-center justify-center gap-6 md:gap-4">
+        <div className="mt-7 flex w-full items-center justify-center gap-4">
           {/* LEFT ARROW */}
           <button
             type="button"
@@ -226,7 +255,7 @@ export default function Testimonials() {
               leading-none
               font-light
               text-[#D97662]
-              md:text-gray-400
+              lg:text-gray-400
               transition
               hover:text-[#D97662]
             "
@@ -243,7 +272,7 @@ export default function Testimonials() {
               !w-auto
               !translate-x-0
               hidden
-              md:flex
+              lg:flex
               items-center
               justify-center
               gap-2

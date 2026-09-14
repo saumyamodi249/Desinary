@@ -20,23 +20,23 @@ export default function BeforeAfter() {
       animationRef.current.stop();
     }
 
-   const controls = animate(
-  50,
-  [50, 85, 15, 50],
-  {
-    duration: 2.5,
-    times: [0, 0.28, 0.72, 1],
-    ease: "easeInOut",
-    onUpdate: (value) => {
-      if (!isDragging.current) {
-        setSplit(value);
+    const controls = animate(
+      50,
+      [50, 85, 15, 50],
+      {
+        duration: 2.5,
+        times: [0, 0.28, 0.72, 1],
+        ease: "easeInOut",
+        onUpdate: (value) => {
+          if (!isDragging.current) {
+            setSplit(value);
+          }
+        },
+        onComplete: () => {
+          setSplit(50);
+        },
       }
-    },
-    onComplete: () => {
-      setSplit(50);
-    },
-  }
-);
+    );
 
     animationRef.current = controls;
   };
@@ -97,16 +97,17 @@ export default function BeforeAfter() {
   return (
     <section className="mx-auto bg-[var(--theme-bg-page)] px-4 md:px-10 lg:px-[120px] py-12 md:py-16 lg:py-[108px] text-center">
       {/* TITLE */}
-      <h2 className="font-poppins text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--theme-BeforeAfter-title)]">
+      <h2 className="font-poppins text-[24px] md:text-[36px] lg:text-5xl font-semibold text-[var(--theme-BeforeAfter-title)] leading-tight md:leading-snug">
         {beforeAfter.titlePrefix}
         <span className="text-[var(--theme-BeforeAfter-text-org)]">
           {beforeAfter.titleHighlight}
         </span>
+        <br className="inline md:hidden" />
         {beforeAfter.titleSuffix}
       </h2>
 
       {/* DESCRIPTION */}
-      <p className="mx-auto mt-4 md:mt-5 lg:mt-6 max-w-xl text-center font-poppins text-[14px] font-normal text-[var(--theme-bg-BeforeAfter-description)]">
+      <p className="mx-auto mt-3 md:mt-4 lg:mt-6 max-w-[390px] md:max-w-2xl lg:max-w-xl text-center font-poppins text-[12px] md:text-[12px] lg:text-[14px] font-normal text-[var(--theme-bg-BeforeAfter-description)] leading-relaxed">
         {beforeAfter.description}
       </p>
 
@@ -127,16 +128,17 @@ export default function BeforeAfter() {
         className="
           relative
           mx-auto
-          mt-8
-          md:mt-12
+          mt-7
+          md:mt-10
           lg:mt-[60px]
-          h-[320px]
+          h-[380px]
           md:h-[480px]
           lg:h-[650px]
           w-full
           max-w-[1600px]
           overflow-hidden
-          rounded-sm
+          rounded-md
+          
           select-none
         "
       >
@@ -182,8 +184,7 @@ export default function BeforeAfter() {
               left-0
               top-0
               h-full
-              lg:h-[650px]
-              w-[1400px]
+              w-full
               max-w-none
               object-cover
             "
