@@ -39,10 +39,8 @@ export default function Footer() {
 
   return (
     <footer className="w-full">
-
       {/* ================= CTA STRIP ================= */}
       <div className="bg-[var(--theme-bg-Footer)] px-4 md:px-10 lg:px-[120px] py-10 md:py-12 lg:py-[60px] text-center">
-
         {/* CTA TITLE */}
         <motion.h2
           initial={reveal.initial}
@@ -93,9 +91,8 @@ export default function Footer() {
       </div>
 
       {/* ================= FOOTER BODY ================= */}
-      <div className="bg-black md:bg-[#1c1a1a] text-[#a9a9a9]">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 px-4 md:px-10 lg:px-6 py-12 md:py-14 text-center md:text-left">
-
+      <div className="bg-black text-[#a9a9a9]">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-4 gap-8 md:gap-10 px-4 md:px-10 lg:px-6 py-12 md:py-14 text-center lg:text-left">
           {/* ================= BRAND ================= */}
           <motion.div
             initial={reveal.initial}
@@ -105,23 +102,22 @@ export default function Footer() {
               ...reveal.transition,
               delay: 0,
             }}
-            className="flex flex-col items-center md:items-start text-center md:text-left"
+            className="flex flex-col items-center lg:items-start text-center lg:text-left"
           >
-            <Link to="/" className="inline-block mx-auto md:mx-0">
+            <Link to="/" className="inline-block mx-auto lg:mx-0">
               <img
                 src="/navbar/Logo_white.svg"
                 alt="Desinary"
-                className="h-auto w-[150px] md:w-[135px] mx-auto md:mx-0"
+                className="h-auto w-[150px] lg:w-[135px] mx-auto lg:mx-0"
               />
             </Link>
 
-            <p className="mt-4 md:mt-5 max-w-[280px] md:max-w-xs font-[Poppins] font-normal text-[12px] md:text-[14px] text-[var(--theme-white)] text-center md:text-left mx-auto md:mx-0 leading-relaxed">
+            <p className="mt-4 md:mt-5 max-w-[280px] md:max-w-md lg:max-w-xs font-[Poppins] font-normal text-[12px] text-[var(--theme-white)] text-center lg:text-left mx-auto lg:mx-0 leading-relaxed">
               {footer.tagline}
             </p>
 
             {/* ================= SOCIAL ICONS ================= */}
-            <div className="flex items-center justify-center md:justify-start gap-6 md:gap-3 rounded-[50px] p-[10px] mt-4 md:mt-5">
-
+            <div className="flex items-center justify-center lg:justify-start gap-6 lg:gap-3 rounded-[50px] p-[10px] mt-4 md:mt-5">
               {/* FACEBOOK */}
               <motion.a
                 href="https://www.facebook.com/people/Desinary/61577718226747/?mibextid=wwXIfr&rdid=PDvHYzdGXLxKcdU5&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F168ausrecq%252F%253Fmibextid%253DwwXIfr&checkpoint_src=any"
@@ -153,7 +149,7 @@ export default function Footer() {
                 <img
                   src="/navbar/facebook.svg"
                   alt="Facebook"
-                  className="h-8 w-8 md:h-5 md:w-5"
+                  className="h-8 w-8"
                 />
               </motion.a>
 
@@ -188,7 +184,7 @@ export default function Footer() {
                 <img
                   src="/navbar/ig.svg"
                   alt="Instagram"
-                  className="h-8 w-8 md:h-5 md:w-5"
+                  className="h-8 w-8 "
                 />
               </motion.a>
 
@@ -220,7 +216,7 @@ export default function Footer() {
                 }}
                 className="flex items-center justify-center text-white"
               >
-                <FaLinkedinIn className="h-8 w-8 md:h-5 md:w-5" />
+                <FaLinkedinIn className="h-8 w-8 " />
               </motion.a>
             </div>
           </motion.div>
@@ -234,13 +230,13 @@ export default function Footer() {
               ...reveal.transition,
               delay: 0.12,
             }}
-            className="flex flex-col items-center text-center md:block md:text-left"
+            className="flex flex-col items-center text-center lg:block lg:text-left"
           >
-            <h3 className="mb-4 md:mb-5 font-[Poppins] text-[22px] md:text-[20px] font-normal md:font-medium text-center md:text-left text-[var(--theme-white)]">
+            <h3 className="mb-4 md:mb-5 font-[Poppins] text-[20px] font-medium text-center lg:text-left text-[var(--theme-white)]">
               Quick Links
             </h3>
 
-            <ul className="space-y-3 md:space-y-6 font-[Poppins] text-[12px] md:text-[14px] font-normal text-center md:text-left">
+            <ul className="space-y-3 md:space-y-4 lg:space-y-6 font-[Poppins] text-[12px] md:text-[14px] font-normal text-center lg:text-left">
               {footer.quickLinks.map((l, index) => (
                 <motion.li
                   key={l.label}
@@ -265,7 +261,7 @@ export default function Footer() {
                   <Link
                     to={l.href}
                     onClick={(e) => handleQuickLink(e, l.href)}
-                    className="text-[12px] md:text-[14px] font-normal text-[var(--theme-white)] transition hover:text-white hover:underline"
+                    className="text-[12px] font-normal text-[var(--theme-white)] transition hover:text-white hover:underline"
                   >
                     {l.label}
                   </Link>
@@ -283,15 +279,14 @@ export default function Footer() {
               ...reveal.transition,
               delay: 0.24,
             }}
-            className="flex flex-col items-center text-center md:block md:text-left"
+            className="flex flex-col items-center text-center lg:block lg:text-left"
           >
-            <h3 className="mb-4 md:mb-5 font-[Poppins] text-[22px] md:text-[20px] font-normal md:font-medium text-center md:text-left text-[var(--theme-white)]">
+            <h3 className="mb-4 md:mb-5 font-[Poppins] text-[20px] font-medium text-center lg:text-left text-[var(--theme-white)]">
               Contact
             </h3>
 
-            <ul className="space-y-3.5 md:space-y-6 font-[Poppins] text-[12px] md:text-[14px] font-normal flex flex-col items-center md:block">
-
-              {/* ================= LOCATION (Hidden on mobile per design) ================= */}
+            <ul className="space-y-3.5 md:space-y-4 lg:space-y-6 font-[Poppins] text-[12px] font-normal flex flex-col items-center lg:block">
+              {/* ================= LOCATION (Hidden on mobile & tablet per design) ================= */}
               <motion.li
                 initial={{
                   opacity: 0,
@@ -310,7 +305,7 @@ export default function Footer() {
                   delay: 0.38,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="hidden md:block"
+                className="hidden lg:block"
               >
                 <a
                   href="https://www.google.com/maps"
@@ -324,9 +319,7 @@ export default function Footer() {
                     className="mt-1 h-5 w-5 shrink-0"
                   />
 
-                  <span>
-                    {footer.contact.address}
-                  </span>
+                  <span>{footer.contact.address}</span>
                 </a>
               </motion.li>
 
@@ -349,11 +342,11 @@ export default function Footer() {
                   delay: 0.48,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="flex justify-center md:block"
+                className="flex justify-center lg:block"
               >
                 <a
                   href={`tel:${footer.contact.phone.replace(/\s+/g, "")}`}
-                  className="flex items-center gap-3.5 md:gap-4 justify-center md:justify-start text-[var(--theme-white)] transition hover:opacity-80 text-[12px] md:text-[14px] font-normal"
+                  className="flex items-center gap-3.5 md:gap-4 justify-center lg:justify-start text-[var(--theme-white)] transition hover:opacity-80 text-[12px] md:text-[14px] font-normal"
                 >
                   <img
                     src="/navbar/telephone.svg"
@@ -386,11 +379,11 @@ export default function Footer() {
                   delay: 0.58,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="flex justify-center md:block"
+                className="flex justify-center lg:block"
               >
                 <a
                   href={`mailto:${footer.contact.email}`}
-                  className="flex items-center gap-3.5 md:gap-4 justify-center md:justify-start text-[var(--theme-white)] transition hover:opacity-80 text-[12px] md:text-[14px] font-normal"
+                  className="flex items-center gap-3.5 md:gap-4 justify-center lg:justify-start text-[var(--theme-white)] transition hover:opacity-80 text-[12px] font-normal"
                 >
                   <img
                     src="/navbar/mail.svg"
@@ -398,12 +391,11 @@ export default function Footer() {
                     className="h-6 w-6 md:h-5 md:w-5 shrink-0"
                   />
 
-                  <span className="text-[12px] md:text-[14px] font-normal">
+                  <span className="text-[12px] font-normal">
                     {footer.contact.email}
                   </span>
                 </a>
               </motion.li>
-
             </ul>
           </motion.div>
 
@@ -416,13 +408,13 @@ export default function Footer() {
               ...reveal.transition,
               delay: 0.36,
             }}
-            className="flex flex-col items-center text-center md:block md:text-left"
+            className="flex flex-col items-center text-center lg:block lg:text-left"
           >
-            <h3 className="mb-4 md:mb-5 gap-4 font-[Poppins] text-[22px] md:text-[18px] font-normal md:font-medium text-center md:text-left text-[var(--theme-white)]">
+            <h3 className="mb-4 md:mb-5 font-[Poppins] text-[20px] font-medium text-center lg:text-left text-[var(--theme-white)]">
               Newsletter
             </h3>
 
-            <p className="mb-6 md:mb-5 max-w-[280px] md:max-w-sm font-[Poppins] text-[12px] md:text-[14px] font-normal leading-[180%] text-center md:text-left mx-auto md:mx-0 text-[var(--theme-white)]">
+            <p className="mb-6 md:mb-5 max-w-[320px] md:max-w-xl lg:max-w-sm font-[Poppins] text-[12px] font-normal leading-[180%] text-center lg:text-left mx-auto lg:mx-0 text-[var(--theme-white)]">
               {footer.newsletter.description}
             </p>
 
@@ -445,12 +437,12 @@ export default function Footer() {
                 delay: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex h-[52px] w-full max-w-xs md:max-w-none mx-auto md:mx-0 items-center overflow-hidden rounded-md border border-[#3d4650] bg-[var(--theme-card-bg)]"
+              className="flex h-[52px] w-full max-w-xs md:max-w-[420px] lg:max-w-none mx-auto lg:mx-0 items-center overflow-hidden rounded-lg bg-white"
             >
               <input
                 type="email"
                 placeholder={footer.newsletter.placeholder}
-                className="w-full bg-transparent px-5 font-[Poppins] text-[15px] text-[var(--theme-white)] placeholder-[#737b86] outline-none"
+                className="w-full bg-transparent px-5 font-[Poppins] text-[15px] text-black placeholder-[#737b86] outline-none"
               />
 
               <button
@@ -461,12 +453,11 @@ export default function Footer() {
                 <img
                   src="/navbar/mess.svg"
                   alt="Subscribe"
-                  className="h-5 w-5"
+                  className="h-18 w-22"
                 />
               </button>
             </motion.form>
           </motion.div>
-
         </div>
       </div>
     </footer>
