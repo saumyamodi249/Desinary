@@ -8,9 +8,11 @@ export const heroData = {
   title: [
     { text: "Discover ", variant: "title" },
     { text: "Desinary", variant: "org" },
-    { text: "Crafting Intelligent Interiors, ", variant: "title" },
+    { text: "Crafting Intelligent ", variant: "title" },
+    { text: "Interiors, ", variant: "title" },
     { text: "Uniquely ", variant: "org" },
-    { text: "for You", variant: "title" },
+    { text: "for ", variant: "title" },
+    { text: "You", variant: "title" },
   ],
 
   description:
@@ -39,7 +41,7 @@ export const visionMissionStoryData = [
     id: "story",
     title: "Story",
     description:
-      "We started with a simple idea: to make interior design easy, smart, and personal. Today, our platform helps anyone turn their space into a reflection of who they are—guided by technology, creativity, and a love for thoughtful design.",
+      "Desinary began with a simple question: Why is interior design still so complicated?. We experienced the struggle of making sense of design choices, product options, and space planning, especially without expensive professionals. So, we set out to build a smarter way.\n\nWhat started as a classroom project has grown into a vision to democratize design. Today, Desinary helps people everywhere transform their spaces with confidence using AI, smart layouts, and a human touch to create interiors that are truly yours.",
   },
 ];
 

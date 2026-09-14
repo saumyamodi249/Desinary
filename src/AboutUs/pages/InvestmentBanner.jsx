@@ -8,11 +8,11 @@ export default function InvestmentBanner() {
       <img
         src={investmentBannerData.Image}
         alt="Interior transformed with Desinary"
-        className="h-[260px] md:h-[380px] lg:h-screen w-full object-cover"
+        className="h-[260px] md:h-[380px] lg:h-[520px] w-full object-cover"
       />
 
       {/* Centered Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center p-4 md:p-10 lg:p-0">
+      <div className="absolute inset-0 flex items-center justify-center p-4 md:p-6 lg:p-0">
         <motion.div
           initial={{
             opacity: 0,
@@ -30,11 +30,28 @@ export default function InvestmentBanner() {
             once: true,
             amount: 0.2,
           }}
-          className="flex h-auto w-full max-w-[340px] md:max-w-xl lg:w-[742px] items-center justify-center rounded-lg lg:rounded bg-black/60 text-center shadow-2xl backdrop-blur-sm"
+          className="flex h-auto w-full max-w-[340px] md:max-w-[720px] lg:max-w-[780px] items-center justify-center rounded-lg bg-black/60 text-center shadow-2xl backdrop-blur-sm"
         >
-          <h2 className="text-center text-[20px] md:text-[26px] lg:text-[32px] font-bold tracking-tight text-white capitalize leading-snug lg:leading-tight">
-            <span className="block py-4 px-6 md:px-[60px]">
-              {investmentBannerData.heading}
+          <h2 className="text-center text-[20px] md:text-[24px] lg:text-[32px] font-bold tracking-tight text-white capitalize leading-snug lg:leading-tight">
+            <span className="block py-4 md:py-6 lg:py-8 px-6 md:px-8 lg:px-12">
+              {/* Desktop view (lg+) */}
+              <span className="hidden lg:block">
+                Build Tomorrow's World Now An
+                <br />
+                Investment Platform To Enable You
+              </span>
+
+              {/* Tablet view (md to < lg) */}
+              <span className="hidden md:block lg:hidden">
+                Build Tomorrow's World Now An Investment Platform To
+                <br />
+                Enable You
+              </span>
+
+              {/* Mobile view (< md) */}
+              <span className="block md:hidden">
+                {investmentBannerData.heading}
+              </span>
             </span>
           </h2>
         </motion.div>

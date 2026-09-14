@@ -6,7 +6,7 @@ const VisionMissionStory = () => {
   return (
     <section className="w-full bg-[var(--theme-bg)] px-4 md:px-10 lg:px-[120px] py-10 md:py-14 lg:py-[80px] transition-colors duration-300">
       {/* ================= MOBILE & TABLET VIEW (< lg) ================= */}
-      <div className="flex flex-col gap-4 md:gap-6 lg:hidden max-w-2xl mx-auto">
+      <div className="flex flex-col gap-3 lg:hidden w-full max-w-4xl mx-auto">
         {visionMissionStoryData.map((item, index) => (
           <motion.div
             key={item.id}
@@ -18,12 +18,12 @@ const VisionMissionStory = () => {
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{ once: true, amount: 0.15 }}
-            className="rounded-xl border border-[var(--theme-vision-mission-story-border)] bg-[var(--theme-vision-mission-story-box)] p-6 transition-all duration-300"
+            className="rounded-xl border border-[var(--theme-vision-mission-story-border)] bg-[var(--theme-vision-mission-story-box)] p-6 md:p-8 transition-all duration-300 hover:bg-[var(--theme-vision-mission-story-hover-box)] hover:border-[var(--theme-vision-mission-story-hover-border)]"
           >
-            <h2 className="text-[20px] font-medium text-[var(--theme-bg-Testimonials-title-text)] mb-4">
+            <h2 className="text-[20px] font-medium text-[var(--theme-vision-mission-story)] mb-3 md:mb-4">
               {item.title}
             </h2>
-            <p className="text-[12px] font-normal leading-[1.7] text-[var(--theme-vision-mission-story-description)]">
+            <p className="text-[12px] font-normal leading-[1.7] text-[var(--theme-vision-mission-story-description)] whitespace-pre-line">
               {item.description}
             </p>
           </motion.div>
@@ -86,7 +86,7 @@ const VisionMissionStory = () => {
                   {item.title}
                 </h2>
 
-                <p className="w-[450px] text-[14px] font-normal leading-relaxed text-[var(--theme-vision-mission-story-description)]">
+                <p className="w-[450px] text-[14px] font-normal leading-relaxed text-[var(--theme-vision-mission-story-description)] whitespace-pre-line">
                   {item.description}
                 </p>
               </div>

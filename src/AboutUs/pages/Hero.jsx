@@ -13,15 +13,19 @@ const Hero = () => {
             <span className="text-[var(--theme-org)]">{heroData.title[1]?.text}</span>
           </span>
 
-          {/* Line 2 (Desktop: single line | Mobile: breaks into 2 lines) */}
+          {/* Line 2+ (Desktop: single line | Tablet: 2 lines | Mobile: 3 lines) */}
           <span className="block lg:whitespace-nowrap">
             <span className="text-[var(--theme-title)]">{heroData.title[2]?.text}</span>
-            <br className="block lg:hidden" />
-            <span className="text-[var(--theme-org)]">{heroData.title[3]?.text}</span>
-            <span className="text-[var(--theme-title)]">{heroData.title[4]?.text}</span>
+            <br className="block md:hidden" />
+            <span className="text-[var(--theme-title)]">{heroData.title[3]?.text}</span>
+            <span className="text-[var(--theme-org)]">{heroData.title[4]?.text}</span>
+            <br className="hidden md:block lg:hidden" />
+            <span className="text-[var(--theme-title)]">{heroData.title[5]?.text}</span>
+            <br className="block md:hidden" />
+            <span className="text-[var(--theme-title)]">{heroData.title[6]?.text}</span>
           </span>
         </h1>
-        <p className="text-[var(--theme-description)] text-[12px] md:text-[14px] font-normal leading-[24px] max-w-[340px] md:max-w-xl mx-auto">
+        <p className="text-[var(--theme-description)] text-[12px] md:text-[14px] font-normal leading-[22px] md:leading-[24px] max-w-[325px] md:max-w-[700px] lg:max-w-xl mx-auto">
           {heroData.description}
         </p>
       </div>

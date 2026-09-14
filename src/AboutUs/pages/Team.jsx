@@ -105,30 +105,39 @@ const Team = () => {
     <section className="w-full overflow-hidden bg-[var(--theme-bg)] py-10 md:py-14 lg:py-[80px] transition-colors duration-300">
       {/* ================= HEADER ================= */}
       <div className="mx-auto mb-8 md:mb-10 w-full max-w-[1520px] px-4 md:px-10 lg:px-[120px]">
-        <div className="grid grid-cols-1 items-start gap-4 md:gap-8 lg:gap-10 md:grid-cols-2">
+        <div className="flex flex-col items-center text-center lg:grid lg:grid-cols-2 lg:items-start lg:gap-10 lg:text-left">
           {/* TITLE */}
-          <div className="text-center md:text-left">
-            <h2 className="text-[24px] md:text-[34px] lg:text-[42px] font-semibold leading-[1.3] text-[var(--theme-magic-title)]">
-              {teamData.heading.map((part, i) => (
-                <React.Fragment key={i}>
-                  <span
-                    className={
-                      part.variant === "org"
-                        ? "text-[var(--theme-org)]"
-                        : "text-[var(--theme-magic-title)]"
-                    }
-                  >
-                    {part.text}
-                  </span>
-                  {i === 1 && <br />}
-                </React.Fragment>
-              ))}
+          <div className="w-full text-center lg:text-left">
+            <h2 className="text-[24px] md:text-[34px] lg:text-[48px] font-semibold leading-[1.3] text-[var(--theme-magic-title)]">
+              {/* Desktop View (lg+) */}
+              <span className="hidden lg:block">
+                <span>The Minds </span>
+                <span className="text-[var(--theme-org)]">Behind </span>
+                <br />
+                <span>the Magic</span>
+              </span>
+
+              {/* Tablet View (md to < lg) */}
+              <span className="hidden md:block lg:hidden">
+                <span>The Minds </span>
+                <span className="text-[var(--theme-org)]">Behind </span>
+                <span>the</span>
+                <br />
+                <span>Magic</span>
+              </span>
+
+              {/* Mobile View (< md) */}
+              <span className="block md:hidden">
+                <span>The Minds </span>
+                <span className="text-[var(--theme-org)]">Behind </span>
+                <span>the Magic</span>
+              </span>
             </h2>
           </div>
 
           {/* DESCRIPTION */}
-          <div className="text-center md:text-left md:pt-2 md:pl-8 lg:pl-20">
-            <p className="max-w-[350px] md:max-w-md lg:max-w-[500px] mx-auto md:mx-0 text-[13px] md:text-[14px] leading-[1.7] text-[var(--theme-magic-description)]">
+          <div className="w-full mt-3 md:mt-4 lg:mt-0 text-center lg:text-left lg:pt-2 lg:pl-20">
+            <p className="max-w-[350px] md:max-w-2xl lg:max-w-[500px] mx-auto lg:mx-0 text-[12px] md:text-[12px] leading-[1.7] text-[var(--theme-magic-description)]">
               {teamData.description}
             </p>
           </div>
@@ -199,13 +208,15 @@ const Team = () => {
                   <img
                     src={
                       member.image ||
-                      `https://randomuser.me/api/portraits/${index % 2 === 0 ? "women" : "men"
+                      `https://randomuser.me/api/portraits/${
+                        index % 2 === 0 ? "women" : "men"
                       }/${(index % 50) + 10}.jpg`
                     }
                     alt={member.name}
                     onError={(e) => {
-                      e.currentTarget.src = `https://randomuser.me/api/portraits/${index % 2 === 0 ? "women" : "men"
-                        }/${(index % 50) + 10}.jpg`;
+                      e.currentTarget.src = `https://randomuser.me/api/portraits/${
+                        index % 2 === 0 ? "women" : "men"
+                      }/${(index % 50) + 10}.jpg`;
                     }}
                     className="mx-auto md:mx-0 h-[88px] w-[88px] shrink-0 rounded-[6px] lg:rounded-[4px] object-cover"
                   />
@@ -216,7 +227,7 @@ const Team = () => {
                   </h3>
 
                   {/* ROLE */}
-                  <p className="mt-1 text-center md:text-left text-[14px] lg:text-[20px] font-medium text-[var(--theme-box-bio)]">
+                  <p className="mt-1 text-center md:text-left text-[12px] lg:text-[12px] font-medium text-[var(--theme-box-bio)]">
                     {member.role}
                   </p>
 
@@ -227,8 +238,8 @@ const Team = () => {
                       lg:mt-5
                       text-center
                       md:text-left
-                      text-[13px]
-                      md:text-[14px]
+                      text-[12px]
+                      lg:text-[14px]
                       leading-[1.7]
                       text-[var(--theme-box-bio-description)]
                       ${isExpanded ? "" : "line-clamp-4"}
@@ -253,7 +264,7 @@ const Team = () => {
                       border-0
                       bg-transparent
                       p-0
-                      text-[13px]
+                      text-[12px]
                       font-medium
                       text-[var(--theme-org)]
                       underline
