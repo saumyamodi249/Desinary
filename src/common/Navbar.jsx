@@ -23,7 +23,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
         duration-300
       "
     >
-      <nav className="w-full px-4 md:px-10 lg:px-[120px] py-3.5 md:py-4 flex items-center justify-between gap-2 md:gap-4">
+      <nav className="w-full px-4 md:px-8 lg:px-8 xl:px-[120px] py-3.5 md:py-4 flex items-center justify-between gap-2 md:gap-4">
         {/* ================= LOGO ================= */}
         <div className="flex-shrink-0">
           <Link to="/" className="w-full">
@@ -42,7 +42,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
         </div>
 
         {/* ================= NAVIGATION ================= */}
-        <nav className="hidden lg:flex gap-0">
+        <nav className="hidden lg:flex items-center gap-0">
           {navLinks.map((link) => {
             const active = pathname === link.href;
 
@@ -54,9 +54,11 @@ export default function Navbar({ darkMode, setDarkMode }) {
                   text-xs
                   lg:text-sm
                   font-normal
-                  px-4
+                  px-3
+                  xl:px-4
                   py-[10px]
                   border-b-2
+                  whitespace-nowrap
                   transition-colors
                   duration-200
 
@@ -116,6 +118,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
               text-sm
               font-normal
               align-middle
+              whitespace-nowrap
             "
           >
             Workspace
@@ -131,12 +134,13 @@ export default function Navbar({ darkMode, setDarkMode }) {
               bg-[var(--theme-btn-bg)]
               border
               border-[var(--theme-btn-bg)]
-              px-2
+              px-4
               py-[6px]
               font-Poppins
               font-normal
               text-white
               tracking-wide
+              whitespace-nowrap
               transition-all
               duration-300
               ease-in-out
