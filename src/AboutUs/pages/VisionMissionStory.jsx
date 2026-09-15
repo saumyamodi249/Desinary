@@ -4,7 +4,7 @@ import { visionMissionStoryData } from "../data/data";
 
 const VisionMissionStory = () => {
   return (
-    <section className="w-full bg-[var(--theme-bg)] px-4 md:px-10 lg:px-[120px] py-10 md:py-14 lg:py-[80px] transition-colors duration-300">
+    <section className="w-full overflow-hidden bg-[var(--theme-bg)] px-4 md:px-8 lg:px-10 xl:px-[120px] py-10 md:py-14 lg:py-[80px] transition-colors duration-300">
       {/* ================= MOBILE & TABLET VIEW (< lg) ================= */}
       <div className="flex flex-col gap-3 lg:hidden w-full max-w-4xl mx-auto">
         {visionMissionStoryData.map((item, index) => (
@@ -31,10 +31,12 @@ const VisionMissionStory = () => {
       </div>
 
       {/* ================= DESKTOP VIEW (lg+) ================= */}
-      <div className="relative mx-auto hidden h-[680px] w-full max-w-[1200px] lg:block">
+      <div className="relative mx-auto hidden h-[760px] w-full max-w-[1200px] lg:block">
         {visionMissionStoryData.map((item, index) => {
-          const leftOffset = index * 200;
-          const topOffset = index * 215;
+          const stepOffset = 80;
+          const leftOffset = index * stepOffset;
+          const topOffset = index * 230;
+          const maxOffset = (visionMissionStoryData.length - 1) * stepOffset; // 160px
 
           return (
             <motion.div
@@ -60,33 +62,33 @@ const VisionMissionStory = () => {
                 absolute
                 flex
                 items-start
-                gap-[137px]
                 rounded-md
                 border
                 border-[var(--theme-vision-mission-story-border)]
                 bg-[var(--theme-vision-mission-story-box)]
                 px-[32px]
                 pt-[32px]
-                pb-[50px]
+                pb-[36px]
                 transition-all
                 duration-300
                 hover:bg-[var(--theme-vision-mission-story-hover-box)]
                 hover:border-[var(--theme-vision-mission-story-hover-border)]
+                shadow-sm
               "
               style={{
                 top: `${topOffset}px`,
                 left: `${leftOffset}px`,
-                width: `calc(100% - ${leftOffset}px)`,
-                height: "240px",
+                width: `calc(100% - ${maxOffset}px)`,
+                minHeight: index === 2 ? "260px" : "220px",
               }}
             >
               {/* Title + Description */}
-              <div className="flex items-start gap-[137px]">
-                <h2 className="w-[180px] shrink-0 text-[32px] text-[var(--theme-bg-Testimonials-title-text)]">
+              <div className="flex items-start gap-8 xl:gap-14 2xl:gap-16 w-full">
+                <h2 className="w-[140px] xl:w-[180px] shrink-0 text-[32px] text-[var(--theme-bg-Testimonials-title-text)]">
                   {item.title}
                 </h2>
 
-                <p className="w-[450px] text-[14px] font-normal leading-relaxed text-[var(--theme-vision-mission-story-description)] whitespace-pre-line">
+                <p className="flex-1 text-[14px] font-normal leading-relaxed text-[var(--theme-vision-mission-story-description)] whitespace-pre-line">
                   {item.description}
                 </p>
               </div>
