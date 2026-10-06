@@ -8,23 +8,20 @@ const VisionMissionStory = () => {
       {/* ================= MOBILE & TABLET VIEW (< lg) ================= */}
       <div className="flex flex-col gap-3 lg:hidden w-full max-w-4xl mx-auto">
         {visionMissionStoryData.map((item, index) => {
-          const mlMobile = index === 0 ? "0%" : index === 1 ? "5%" : "10%";
-          const mlTablet = index === 0 ? "0%" : index === 1 ? "7%" : "14%";
+          // Final x offset for each card in px (staircase shift)
+          const xOffset = index === 0 ? 0 : index === 1 ? 28 : 56;
 
           return (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, x: 0 }}
+              whileInView={{ opacity: 1, y: 0, x: xOffset }}
               transition={{
-                duration: 0.6,
-                delay: index * 0.12,
+                duration: 0.65,
+                delay: index * 0.14,
                 ease: [0.22, 1, 0.36, 1],
               }}
               viewport={{ once: true, amount: 0.15 }}
-              style={{
-                marginLeft: `clamp(${mlMobile}, 5vw, ${mlTablet})`,
-              }}
               className="rounded-xl border border-[var(--theme-vision-mission-story-border)] bg-[var(--theme-vision-mission-story-box)] p-6 md:p-8 transition-all duration-300 hover:bg-[var(--theme-vision-mission-story-hover-box)] hover:border-[var(--theme-vision-mission-story-hover-border)]"
             >
               <h2 className="text-[20px] font-medium text-[var(--theme-vision-mission-story)] mb-3 md:mb-4">
