@@ -92,6 +92,10 @@ export default function Navbar({ darkMode, setDarkMode }) {
                 bg-[var(--theme-toggle-bg)]
                 transition-all
                 duration-300
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-[var(--theme-btn-bg)]
+                cursor-pointer
               "
             >
               <img

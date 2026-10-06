@@ -211,6 +211,8 @@ const Team = () => {
                         index % 2 === 0 ? "women" : "men"
                       }/${(index % 50) + 10}.jpg`;
                     }}
+                    loading="lazy"
+                    decoding="async"
                     className="mx-auto md:mx-0 h-[88px] w-[88px] shrink-0 rounded-[6px] lg:rounded-[4px] object-cover"
                   />
 

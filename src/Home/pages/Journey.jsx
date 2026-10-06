@@ -44,6 +44,8 @@ export default function Journey() {
                   }}
                   src={step.image}
                   alt={step.title}
+                  loading="lazy"
+                  decoding="async"
                   className="h-[160px] md:h-[210px] lg:h-[362px] w-full object-cover"
                 />
               </div>
@@ -85,6 +87,8 @@ export default function Journey() {
                 }}
                 src={journey.result.image}
                 alt="The Result"
+                loading="lazy"
+                decoding="async"
                 className="h-[160px] md:h-[210px] lg:h-[362px] w-full object-cover"
               />
             </div>

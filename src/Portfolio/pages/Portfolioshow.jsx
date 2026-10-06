@@ -106,6 +106,8 @@ const Portfolioshow = () => {
             <img
               src={item.image.startsWith("/") ? item.image : `/${item.image}`}
               alt={item.category}
+              loading="lazy"
+              decoding="async"
               className="w-full h-auto lg:h-full object-cover"
             />
           </motion.div>

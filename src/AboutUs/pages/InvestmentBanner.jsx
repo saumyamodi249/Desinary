@@ -8,6 +8,8 @@ export default function InvestmentBanner() {
       <img
         src={investmentBannerData.Image}
         alt="Interior transformed with Desinary"
+        loading="lazy"
+        decoding="async"
         className="h-[260px] md:h-[380px] lg:h-[520px] w-full object-cover"
       />
 

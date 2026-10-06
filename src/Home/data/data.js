@@ -3,6 +3,7 @@
 // Edit copy, numbers, and images here; components just render it.
 // ============================================================
 
+/** @type {Array<{ label: string, href: string }>} */
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Portfolio", href: "/portfolio" },
@@ -10,6 +11,21 @@ export const navLinks = [
   { label: "Contact Us", href: "/contact" },
 ];
 
+/**
+ * @typedef {Object} HeroData
+ * @property {string} eyebrow
+ * @property {string} titleLine1
+ * @property {string} titleLine2Prefix
+ * @property {string} titleLine2Highlight
+ * @property {string} description
+ * @property {string} ctaLabel
+ * @property {string} clientCount
+ * @property {string} clientLabel
+ * @property {string[]} avatars
+ * @property {string} image
+ */
+
+/** @type {HeroData} */
 export const hero = {
   eyebrow: "",
   titleLine1: "Smarter Interiors Start Here",
