@@ -34,24 +34,7 @@ export default function InvestmentBanner() {
         >
           <h2 className="text-center text-[20px] md:text-[24px] lg:text-[32px] font-bold tracking-tight text-white capitalize leading-snug lg:leading-tight">
             <span className="block py-4 md:py-6 lg:py-8 px-6 md:px-8 lg:px-12">
-              {/* Desktop view (lg+) */}
-              <span className="hidden lg:block">
-                Build Tomorrow's World Now An
-                <br />
-                Investment Platform To Enable You
-              </span>
-
-              {/* Tablet view (md to < lg) */}
-              <span className="hidden md:block lg:hidden">
-                Build Tomorrow's World Now An Investment Platform To
-                <br />
-                Enable You
-              </span>
-
-              {/* Mobile view (< md) */}
-              <span className="block md:hidden">
-                {investmentBannerData.heading}
-              </span>
+              {investmentBannerData.heading}
             </span>
           </h2>
         </motion.div>

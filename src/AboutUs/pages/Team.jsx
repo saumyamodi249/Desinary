@@ -109,29 +109,22 @@ const Team = () => {
           {/* TITLE */}
           <div className="w-full text-center lg:text-left">
             <h2 className="text-[24px] md:text-[34px] lg:text-[48px] font-semibold leading-[1.3] text-[var(--theme-magic-title)]">
-              {/* Desktop View (lg+) */}
-              <span className="hidden lg:block">
-                <span>The Minds </span>
-                <span className="text-[var(--theme-org)]">Behind </span>
-                <br />
-                <span>the Magic</span>
-              </span>
-
-              {/* Tablet View (md to < lg) */}
-              <span className="hidden md:block lg:hidden">
-                <span>The Minds </span>
-                <span className="text-[var(--theme-org)]">Behind </span>
-                <span>the</span>
-                <br />
-                <span>Magic</span>
-              </span>
-
-              {/* Mobile View (< md) */}
-              <span className="block md:hidden">
-                <span>The Minds </span>
-                <span className="text-[var(--theme-org)]">Behind </span>
-                <span>the Magic</span>
-              </span>
+              {Array.isArray(teamData.heading) ? (
+                teamData.heading.map((part, idx) => (
+                  <span
+                    key={idx}
+                    className={
+                      part.variant === "org"
+                        ? "text-[var(--theme-org)]"
+                        : "text-[var(--theme-magic-title)]"
+                    }
+                  >
+                    {part.text}
+                  </span>
+                ))
+              ) : (
+                teamData.heading
+              )}
             </h2>
           </div>
 

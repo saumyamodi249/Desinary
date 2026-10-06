@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { PiPlusThin } from "react-icons/pi";
 import { motion, useInView } from "motion/react";
+import { hero } from "../data/data";
 
 export default function Hero() {
   const [clientCount, setClientCount] = useState(0);
@@ -130,8 +131,7 @@ export default function Hero() {
             lg:leading-tight
           "
         >
-          Smarter Interiors Start
-          <span className="hidden md:inline"> Here</span>
+          {hero.titleLine1}
         </motion.h1>
 
         {/* =====================================================
@@ -180,7 +180,7 @@ export default function Hero() {
           "
         >
           <span className="whitespace-nowrap">
-            <span className="inline md:hidden">Here </span>— Welcome to
+            {hero.titleLine2Prefix}
           </span>{" "}
           <span
             className="
@@ -192,7 +192,7 @@ export default function Hero() {
               md:inline
             "
           >
-            Desinary
+            {hero.titleLine2Highlight}
           </span>
         </motion.h1>
 
@@ -260,9 +260,7 @@ export default function Hero() {
               lg:leading-normal
             "
           >
-            Whether you prefer AI precision or hands-on control, Desinary lets
-            you design interiors your way — smarter, faster, and beautifully
-            tailored.
+            {hero.description}
           </motion.p>
 
           {/* ================= BUTTON ================= */}
@@ -306,7 +304,7 @@ export default function Hero() {
               lg:text-[14px]
             "
           >
-            Start Designing
+            {hero.ctaLabel || "Design now"}
 
             <img
               src="/Home/1st/arrow.svg"
@@ -629,7 +627,7 @@ export default function Hero() {
                 lg:text-[36px]
               "
             >
-              Clients
+              {hero.clientLabel || "Clients"}
             </span>
           </motion.div>
         </div>

@@ -42,7 +42,7 @@ const Hero = () => {
             once: true,
             amount: 0.2,
           }}
-          src="/AboutUs/1st.svg"
+          src={heroData.decorSvg || "/AboutUs/1st.svg"}
           alt="Desinary interior"
           className="w-full h-auto rounded-xl lg:rounded-md block object-cover"
         />

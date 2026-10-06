@@ -39,27 +39,23 @@ const Portfolioshow = () => {
         {/* Heading */}
         <div className="max-w-2xl lg:max-w-xl">
           <h2 className="text-center lg:text-left text-[24px] md:text-[36px] lg:text-5xl font-semibold text-[var(--theme-Portfolio-title)] leading-normal tracking-tight md:tracking-normal mb-4 md:mb-6 lg:mb-[64.19px]">
-            {/* Mobile (default): exact 3 lines matching screenshot */}
+            {/* Mobile (default) */}
             <span className="inline md:hidden">
-              Transform Your Space
+              {portfolioHeading.titleLine1}
               <br />
-              with Stunning{" "}
+              {portfolioHeading.titleLine2Normal}{portfolioHeading.titleLine2Highlight}{" "}
               <span className="text-[var(--theme-Portfolio-org)]">
-                Design
-              </span>
-              <br />
-              <span className="text-[var(--theme-Portfolio-org)]">
-                Ideas
+                {portfolioHeading.titleLine2End?.trim()}
               </span>
             </span>
 
-            {/* Tablet & Desktop: break after 'Stunning' */}
+            {/* Tablet & Desktop */}
             <span className="hidden md:inline">
-              Transform Your Space with Stunning
+              {portfolioHeading.titleLine1} {portfolioHeading.titleLine2Normal}{portfolioHeading.titleLine2Highlight}
               <br />
             </span>
             <span className="hidden md:inline text-[var(--theme-Portfolio-org)]">
-              Design Ideas
+              {portfolioHeading.titleLine2End?.trim()}
             </span>
           </h2>
         </div>

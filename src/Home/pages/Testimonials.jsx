@@ -9,21 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 function renderDescription() {
-  return (
-    <>
-      Discover how Desinary has transformed ordinary
-      <br className="inline md:hidden" />{" "}
-      rooms into extraordinary spaces. From first-time
-      <br className="inline md:hidden" />{" "}
-      users to design
-      <br className="hidden md:inline lg:hidden" />{" "}
-      enthusiasts, our clients share
-      <br className="inline md:hidden" />{" "}
-      how intelligent design, seamless tools, and
-      <br className="inline md:hidden" />{" "}
-      personalized support made all the difference.
-    </>
-  );
+  return testimonials.description;
 }
 
 export default function Testimonials() {
