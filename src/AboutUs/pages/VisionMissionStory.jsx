@@ -6,28 +6,40 @@ const VisionMissionStory = () => {
   return (
     <section className="w-full overflow-hidden bg-[var(--theme-bg)] px-4 md:px-8 lg:px-10 xl:px-[120px] py-10 md:py-14 lg:py-[80px] transition-colors duration-300">
       {/* ================= MOBILE & TABLET VIEW (< lg) ================= */}
-      <div className="flex flex-col gap-3 lg:hidden w-full max-w-4xl mx-auto">
-        {visionMissionStoryData.map((item, index) => (
-          <motion.div
-            key={item.id}
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.12,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            viewport={{ once: true, amount: 0.15 }}
-            className="rounded-xl border border-[var(--theme-vision-mission-story-border)] bg-[var(--theme-vision-mission-story-box)] p-6 md:p-8 transition-all duration-300 hover:bg-[var(--theme-vision-mission-story-hover-box)] hover:border-[var(--theme-vision-mission-story-hover-border)]"
-          >
-            <h2 className="text-[20px] font-medium text-[var(--theme-vision-mission-story)] mb-3 md:mb-4">
-              {item.title}
-            </h2>
-            <p className="text-[12px] font-normal leading-[1.7] text-[var(--theme-vision-mission-story-description)] whitespace-pre-line">
-              {item.description}
-            </p>
-          </motion.div>
-        ))}
+      <div className="relative lg:hidden w-full max-w-4xl mx-auto" style={{ paddingBottom: `${(visionMissionStoryData.length - 1) * 20}px` }}>
+        {visionMissionStoryData.map((item, index) => {
+          const mlMobile = index === 0 ? "0%" : index === 1 ? "5%" : "10%";
+          const mlTablet = index === 0 ? "0%" : index === 1 ? "7%" : "14%";
+          const marginTop = index === 0 ? "0px" : "-20px";
+
+          return (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.12,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              viewport={{ once: true, amount: 0.15 }}
+              style={{
+                marginLeft: `clamp(${mlMobile}, 5vw, ${mlTablet})`,
+                marginTop,
+                zIndex: (index + 1) * 10,
+                position: "relative",
+              }}
+              className="rounded-xl border border-[var(--theme-vision-mission-story-border)] bg-[var(--theme-vision-mission-story-box)] p-6 md:p-8 transition-all duration-300 hover:bg-[var(--theme-vision-mission-story-hover-box)] hover:border-[var(--theme-vision-mission-story-hover-border)]"
+            >
+              <h2 className="text-[20px] font-medium text-[var(--theme-vision-mission-story)] mb-3 md:mb-4">
+                {item.title}
+              </h2>
+              <p className="text-[12px] font-normal leading-[1.7] text-[var(--theme-vision-mission-story-description)] whitespace-pre-line">
+                {item.description}
+              </p>
+            </motion.div>
+          );
+        })}
       </div>
 
       {/* ================= DESKTOP VIEW (lg+) ================= */}
