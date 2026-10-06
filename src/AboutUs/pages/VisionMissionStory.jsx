@@ -35,7 +35,7 @@ const VisionMissionStory = () => {
         {visionMissionStoryData.map((item, index) => {
           const stepOffset = 80;
           const leftOffset = index * stepOffset;
-          const topOffset = index * 230;
+          const topOffset = index * 180;
           const maxOffset = (visionMissionStoryData.length - 1) * stepOffset; // 160px
 
           return (
