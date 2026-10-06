@@ -6,11 +6,10 @@ const VisionMissionStory = () => {
   return (
     <section className="w-full overflow-hidden bg-[var(--theme-bg)] px-4 md:px-8 lg:px-10 xl:px-[120px] py-10 md:py-14 lg:py-[80px] transition-colors duration-300">
       {/* ================= MOBILE & TABLET VIEW (< lg) ================= */}
-      <div className="relative lg:hidden w-full max-w-4xl mx-auto" style={{ paddingBottom: `${(visionMissionStoryData.length - 1) * 20}px` }}>
+      <div className="flex flex-col gap-3 lg:hidden w-full max-w-4xl mx-auto">
         {visionMissionStoryData.map((item, index) => {
           const mlMobile = index === 0 ? "0%" : index === 1 ? "5%" : "10%";
           const mlTablet = index === 0 ? "0%" : index === 1 ? "7%" : "14%";
-          const marginTop = index === 0 ? "0px" : "-20px";
 
           return (
             <motion.div
@@ -25,9 +24,6 @@ const VisionMissionStory = () => {
               viewport={{ once: true, amount: 0.15 }}
               style={{
                 marginLeft: `clamp(${mlMobile}, 5vw, ${mlTablet})`,
-                marginTop,
-                zIndex: (index + 1) * 10,
-                position: "relative",
               }}
               className="rounded-xl border border-[var(--theme-vision-mission-story-border)] bg-[var(--theme-vision-mission-story-box)] p-6 md:p-8 transition-all duration-300 hover:bg-[var(--theme-vision-mission-story-hover-box)] hover:border-[var(--theme-vision-mission-story-hover-border)]"
             >
